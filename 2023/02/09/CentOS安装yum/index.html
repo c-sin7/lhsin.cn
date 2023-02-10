@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Centos下安装yum, sin">
+    <meta name="keywords" content="CentOS下安装yum, sin">
     <meta name="description" content="呆头鹅的随手记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Centos下安装yum | sin</title>
+    <title>CentOS下安装yum | sin</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Centos下安装yum</h1>
+                    <h1 class="description center-align post-title">CentOS下安装yum</h1>
                 </div>
             </div>
         </div>
@@ -429,12 +429,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                                <span class="chip bg-color">环境配置</span>
+                            </a>
+                        
+                            <a href="/tags/CentOS/">
+                                <span class="chip bg-color">CentOS</span>
+                            </a>
+                        
+                            <a href="/tags/yum/">
+                                <span class="chip bg-color">yum</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Markdown/" class="post-category">
+                                Markdown
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -464,23 +485,14 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Centos下安装yum"><a href="#Centos下安装yum" class="headerlink" title="Centos下安装yum"></a>Centos下安装yum</h1><p>查看已安装的yumrpm -qa|grep yum</p>
+                <h1 id="CentOS下安装yum"><a href="#CentOS下安装yum" class="headerlink" title="CentOS下安装yum"></a>CentOS下安装yum</h1><p>查看已安装的yumrpm -qa|grep yum</p>
 <p>删除已有的yumrpm -aq|grep yum|xargs rpm -e –nodeps</p>
 <p>下载以下安装包wget <a target="_blank" rel="noopener" href="http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/pyth">http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/pyth</a></p>
-<ol>
-<li>查看已安装的yum</li>
-</ol>
-<pre><code class="vim">rpm -qa|grep yum
+<h2 id="1-查看已安装的yum"><a href="#1-查看已安装的yum" class="headerlink" title="1.查看已安装的yum"></a>1.查看已安装的yum</h2><pre><code class="vim">rpm -qa|grep yum
 </code></pre>
-<ol start="2">
-<li>删除已有的yum</li>
-</ol>
-<pre><code class="perl">rpm -aq|grep yum|xargs rpm -e --nodeps 
+<h2 id="2-删除已有的yum"><a href="#2-删除已有的yum" class="headerlink" title="2.删除已有的yum"></a>2.删除已有的yum</h2><pre><code class="perl">rpm -aq|grep yum|xargs rpm -e --nodeps 
 </code></pre>
-<ol start="3">
-<li>下载以下安装包</li>
-</ol>
-<pre><code class="awk">wget http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/python-2.7.5-89.el7.x86_64.rpm 
+<h2 id="3-下载所需安装包"><a href="#3-下载所需安装包" class="headerlink" title="3.下载所需安装包"></a>3.下载所需安装包</h2><pre><code class="awk">wget http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/python-2.7.5-89.el7.x86_64.rpm 
 wget http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/python-iniparse-0.4-9.el7.noarch.rpm 
 wget http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/yum-3.4.3-168.el7.centos.noarch.rpm
 wget http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/yum-metadata-parser-1.1.4-10.el7.x86_64.rpm
@@ -488,15 +500,11 @@ wget http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/yum-plugin-fastestmi
 </code></pre>
 <p>如果找不到以上版本，可以到 <a target="_blank" rel="noopener" href="http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/?login=from_csdn">http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/</a> 下载最新版本</p>
 <p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/20210505211959838.png" alt="下载最新版本"></p>
-<ol start="4">
-<li>安装</li>
-</ol>
-<pre><code class="stylus">rpm -ivh python-2.7.5-89.el7.x86_64.rpm python-iniparse-0.4-9.el7.noarch.rpm --nodeps --force
+<h2 id="4-安装"><a href="#4-安装" class="headerlink" title="4.安装"></a>4.安装</h2><pre><code class="stylus">rpm -ivh python-2.7.5-89.el7.x86_64.rpm python-iniparse-0.4-9.el7.noarch.rpm --nodeps --force
 rpm -ivh yum-metadata-parser-1.1.4-10.el7.x86_64.rpm --nodeps --force
 rpm -ivh yum-3.4.3-168.el7.centos.noarch.rpm yum-plugin-fastestmirror-1.1.31-54.el7_8.noarch.rpm --nodeps --force
 </code></pre>
-<p>   5.更改 yum源</p>
-<ul>
+<h2 id="5-更改-yum源"><a href="#5-更改-yum源" class="headerlink" title="5.更改 yum源"></a>5.更改 yum源</h2><ul>
 <li><p>到该网站 <a target="_blank" rel="noopener" href="http://mirrors.163.com/.help/centos.html?login=from_csdn">http://mirrors.163.com/.help/centos.html</a> 下载配置文件，重命名为CentOS-Base.repo</p>
 <ul>
 <li><p>首先备份/etc/yum.repos.d/CentOS-Base.repo</p>
@@ -645,7 +653,19 @@ yum makecache
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                                    <span class="chip bg-color">环境配置</span>
+                                </a>
+                            
+                                <a href="/tags/CentOS/">
+                                    <span class="chip bg-color">CentOS</span>
+                                </a>
+                            
+                                <a href="/tags/yum/">
+                                    <span class="chip bg-color">yum</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -795,6 +815,60 @@ yum makecache
     </div>
 
     
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: null,
+        id: '2023-02-09T00-00-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+        <link rel="stylesheet" href="/libs/gitment/gitment-default.css">
+<link rel="stylesheet" href="/css/gitment.css">
+
+<div class="gitment-card card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitment-content" class="card-content"></div>
+</div>
+
+<script src="/libs/gitment/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+    id: 'Thu Feb 09 2023 00:00:00 GMT+0800',
+    owner: '',
+    repo: '',
+    oauth: {
+        client_id: '',
+        client_secret: ''
+    }
+});
+
+gitment.render('gitment-content');
+</script>
 
     
 
@@ -829,7 +903,7 @@ yum makecache
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            git安装 密钥创建 建立 SSH 信任关系 nginx安装
                         
                     </div>
                     <div class="publish-info">
@@ -838,8 +912,12 @@ yum makecache
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            sin
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="post-category">
+                                    环境配置
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -847,8 +925,24 @@ yum makecache
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo%E9%83%A8%E7%BD%B2/">
-                        <span class="chip bg-color">hexo部署</span>
+                    <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                        <span class="chip bg-color">环境配置</span>
+                    </a>
+                    
+                    <a href="/tags/CentOS/">
+                        <span class="chip bg-color">CentOS</span>
+                    </a>
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                    <a href="/tags/nginx/">
+                        <span class="chip bg-color">nginx</span>
                     </a>
                     
                 </div>

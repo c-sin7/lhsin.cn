@@ -431,14 +431,39 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo%E9%83%A8%E7%BD%B2/">
-                                <span class="chip bg-color">hexo部署</span>
+                            <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                                <span class="chip bg-color">环境配置</span>
+                            </a>
+                        
+                            <a href="/tags/CentOS/">
+                                <span class="chip bg-color">CentOS</span>
+                            </a>
+                        
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
+                            </a>
+                        
+                            <a href="/tags/git/">
+                                <span class="chip bg-color">git</span>
+                            </a>
+                        
+                            <a href="/tags/nginx/">
+                                <span class="chip bg-color">nginx</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="post-category">
+                                环境配置
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -478,7 +503,7 @@ yum install -y git
 <p>查看git版本</p>
 <pre><code class="bash">git --version 
 </code></pre>
-<h3 id="2-配置参数"><a href="#2-配置参数" class="headerlink" title="2. 配置参数"></a>2. 配置参数</h3><p>接下来在git中配置自己的名称和电子邮件地址，可以通过使用以下命令来完成此操作：</p>
+<h2 id="2-配置参数"><a href="#2-配置参数" class="headerlink" title="2. 配置参数"></a>2. 配置参数</h2><p>接下来在git中配置自己的名称和电子邮件地址，可以通过使用以下命令来完成此操作：</p>
 <pre><code class=".vim">git config --global user.name &quot;用户名&quot; 
 git config --global user.email &quot;用户邮箱&quot;
 </code></pre>
@@ -487,7 +512,7 @@ git config --global user.email &quot;用户邮箱&quot;
 </code></pre>
 <img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230209171308239.png" alt="git安装与配置" style="zoom: 80%;" />
 
-<h3 id="3-创建一个ssh-key"><a href="#3-创建一个ssh-key" class="headerlink" title="3.创建一个ssh key"></a>3.创建一个ssh key</h3><p>作用：将电脑和github账号联系在一起的密钥，可以十分方便的通过git上传代码。</p>
+<h2 id="3-创建一个ssh-key"><a href="#3-创建一个ssh-key" class="headerlink" title="3.创建一个ssh key"></a>3.创建一个ssh key</h2><p>作用：将电脑和github账号联系在一起的密钥，可以十分方便的通过git上传代码。</p>
 <p>获取密钥的方法如下：</p>
 <p>首先在命令行输入cd ~/.ssh，第一次配置会显示没有那个文件或目录，这是正常现象。</p>
 <p>然后在命令行输入ssh-keygen -t rsa -C “邮箱地址”，接下来连按三次回车就可以了。</p>
@@ -715,8 +740,24 @@ nginx -s reload //重启nginx
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo%E9%83%A8%E7%BD%B2/">
-                                    <span class="chip bg-color">hexo部署</span>
+                                <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                                    <span class="chip bg-color">环境配置</span>
+                                </a>
+                            
+                                <a href="/tags/CentOS/">
+                                    <span class="chip bg-color">CentOS</span>
+                                </a>
+                            
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
+                                </a>
+                            
+                                <a href="/tags/git/">
+                                    <span class="chip bg-color">git</span>
+                                </a>
+                            
+                                <a href="/tags/nginx/">
+                                    <span class="chip bg-color">nginx</span>
                                 </a>
                             
                         </div>
@@ -868,6 +909,60 @@ nginx -s reload //重启nginx
     </div>
 
     
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: null,
+        id: '2023-02-09T20-23-52',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+        <link rel="stylesheet" href="/libs/gitment/gitment-default.css">
+<link rel="stylesheet" href="/css/gitment.css">
+
+<div class="gitment-card card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitment-content" class="card-content"></div>
+</div>
+
+<script src="/libs/gitment/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+    id: 'Thu Feb 09 2023 20:23:52 GMT+0800',
+    owner: '',
+    repo: '',
+    oauth: {
+        client_id: '',
+        client_secret: ''
+    }
+});
+
+gitment.render('gitment-content');
+</script>
 
     
 
@@ -903,7 +998,7 @@ nginx -s reload //重启nginx
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            git安装 密钥创建 建立 SSH 信任关系 nginx安装
                         
                     </div>
                     <div class="publish-info">
@@ -912,8 +1007,12 @@ nginx -s reload //重启nginx
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            sin
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="post-category">
+                                    环境配置
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -922,8 +1021,24 @@ nginx -s reload //重启nginx
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo%E9%83%A8%E7%BD%B2/">
-                        <span class="chip bg-color">hexo部署</span>
+                    <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                        <span class="chip bg-color">环境配置</span>
+                    </a>
+                    
+                    <a href="/tags/CentOS/">
+                        <span class="chip bg-color">CentOS</span>
+                    </a>
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                    <a href="/tags/nginx/">
+                        <span class="chip bg-color">nginx</span>
                     </a>
                     
                 </div>
@@ -941,15 +1056,15 @@ nginx -s reload //重启nginx
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Centos下安装yum">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="CentOS下安装yum">
                         
-                        <span class="card-title">Centos下安装yum</span>
+                        <span class="card-title">CentOS下安装yum</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            CentOS下安装yum
                         
                     </div>
                     <div class="publish-info">
@@ -958,11 +1073,31 @@ nginx -s reload //重启nginx
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            sin
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                        <span class="chip bg-color">环境配置</span>
+                    </a>
+                    
+                    <a href="/tags/CentOS/">
+                        <span class="chip bg-color">CentOS</span>
+                    </a>
+                    
+                    <a href="/tags/yum/">
+                        <span class="chip bg-color">yum</span>
+                    </a>
+                    
                 </div>
                 
             </div>
