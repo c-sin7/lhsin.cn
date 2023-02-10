@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -473,15 +473,17 @@
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    3 分
+                </div>
+                
 
                 
             </div>
         </div>
         <hr class="clearfix">
 
-        
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
         
 
         
@@ -491,27 +493,21 @@
                 <h1 id="CentOS下安装yum"><a href="#CentOS下安装yum" class="headerlink" title="CentOS下安装yum"></a>CentOS下安装yum</h1><p>查看已安装的yumrpm -qa|grep yum</p>
 <p>删除已有的yumrpm -aq|grep yum|xargs rpm -e –nodeps</p>
 <p>下载以下安装包wget <a target="_blank" rel="noopener" href="http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/pyth">http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/pyth</a></p>
-<h2 id="1-查看已安装的yum"><a href="#1-查看已安装的yum" class="headerlink" title="1.查看已安装的yum"></a>1.查看已安装的yum</h2><pre class="line-numbers language-vim" data-language="vim"><code class="language-vim">rpm <span class="token operator">-</span><span class="token keyword">qa</span>|<span class="token keyword">grep</span> yum<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="1-查看已安装的yum"><a href="#1-查看已安装的yum" class="headerlink" title="1.查看已安装的yum"></a>1.查看已安装的yum</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -<span class="keyword">qa</span>|<span class="keyword">grep</span> yum</span><br></pre></td></tr></table></figure>
 
-<h2 id="2-删除已有的yum"><a href="#2-删除已有的yum" class="headerlink" title="2.删除已有的yum"></a>2.删除已有的yum</h2><pre class="line-numbers language-perl" data-language="perl"><code class="language-perl">rpm <span class="token operator">-</span>aq<span class="token operator">|</span>grep yum<span class="token operator">|</span>xargs rpm <span class="token operator">-e</span> <span class="token operator">--</span>nodeps <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="2-删除已有的yum"><a href="#2-删除已有的yum" class="headerlink" title="2.删除已有的yum"></a>2.删除已有的yum</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -aq|<span class="keyword">grep</span> yum|xargs rpm -<span class="keyword">e</span> --nodeps </span><br></pre></td></tr></table></figure>
 
-<h2 id="3-下载所需安装包"><a href="#3-下载所需安装包" class="headerlink" title="3.下载所需安装包"></a>3.下载所需安装包</h2><pre class="line-numbers language-awk" data-language="awk"><code class="language-awk">wget http<span class="token operator">:</span><span class="token regex">//</span>tel.mirrors.<span class="token number">163</span>.com<span class="token operator">/</span>centos<span class="token operator">/</span><span class="token number">7</span><span class="token operator">/</span>os<span class="token operator">/</span>x86_64<span class="token operator">/</span>Packages<span class="token operator">/</span>python<span class="token operator">-</span><span class="token number">2.7</span>.<span class="token number">5</span><span class="token operator">-</span><span class="token number">89</span>.el7.x86_64.rpm 
-wget http<span class="token operator">:</span><span class="token regex">//</span>tel.mirrors.<span class="token number">163</span>.com<span class="token operator">/</span>centos<span class="token operator">/</span><span class="token number">7</span><span class="token operator">/</span>os<span class="token operator">/</span>x86_64<span class="token operator">/</span>Packages<span class="token operator">/</span>python<span class="token operator">-</span>iniparse<span class="token operator">-</span><span class="token number">0.4</span><span class="token operator">-</span><span class="token number">9</span>.el7.noarch.rpm 
-wget http<span class="token operator">:</span><span class="token regex">//</span>tel.mirrors.<span class="token number">163</span>.com<span class="token operator">/</span>centos<span class="token operator">/</span><span class="token number">7</span><span class="token operator">/</span>os<span class="token operator">/</span>x86_64<span class="token operator">/</span>Packages<span class="token operator">/</span>yum<span class="token operator">-</span><span class="token number">3.4</span>.<span class="token number">3</span><span class="token operator">-</span><span class="token number">168</span>.el7.centos.noarch.rpm
-wget http<span class="token operator">:</span><span class="token regex">//</span>tel.mirrors.<span class="token number">163</span>.com<span class="token operator">/</span>centos<span class="token operator">/</span><span class="token number">7</span><span class="token operator">/</span>os<span class="token operator">/</span>x86_64<span class="token operator">/</span>Packages<span class="token operator">/</span>yum<span class="token operator">-</span>metadata<span class="token operator">-</span>parser<span class="token operator">-</span><span class="token number">1.1</span>.<span class="token number">4</span><span class="token operator">-</span><span class="token number">10</span>.el7.x86_64.rpm
-wget http<span class="token operator">:</span><span class="token regex">//</span>tel.mirrors.<span class="token number">163</span>.com<span class="token operator">/</span>centos<span class="token operator">/</span><span class="token number">7</span><span class="token operator">/</span>os<span class="token operator">/</span>x86_64<span class="token operator">/</span>Packages<span class="token operator">/</span>yum<span class="token operator">-</span>plugin<span class="token operator">-</span>fastestmirror<span class="token operator">-</span><span class="token number">1.1</span>.<span class="token number">31</span><span class="token operator">-</span><span class="token number">54</span>.el7_8.noarch.rpm<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="3-下载所需安装包"><a href="#3-下载所需安装包" class="headerlink" title="3.下载所需安装包"></a>3.下载所需安装包</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget http://tel.mirrors.<span class="number">163</span>.<span class="keyword">com</span>/centos/<span class="number">7</span>/os/x86_64/Packages/<span class="keyword">python</span>-<span class="number">2.7</span>.<span class="number">5</span>-<span class="number">89</span>.el7.x86_64.rpm </span><br><span class="line">wget http://tel.mirrors.<span class="number">163</span>.<span class="keyword">com</span>/centos/<span class="number">7</span>/os/x86_64/Packages/<span class="keyword">python</span>-iniparse-<span class="number">0.4</span>-<span class="number">9</span>.el7.noarch.rpm </span><br><span class="line">wget http://tel.mirrors.<span class="number">163</span>.<span class="keyword">com</span>/centos/<span class="number">7</span>/os/x86_64/Packages/yum-<span class="number">3.4</span>.<span class="number">3</span>-<span class="number">168</span>.el7.centos.noarch.rpm</span><br><span class="line">wget http://tel.mirrors.<span class="number">163</span>.<span class="keyword">com</span>/centos/<span class="number">7</span>/os/x86_64/Packages/yum-metadata-parser-<span class="number">1.1</span>.<span class="number">4</span>-<span class="number">10</span>.el7.x86_64.rpm</span><br><span class="line">wget http://tel.mirrors.<span class="number">163</span>.<span class="keyword">com</span>/centos/<span class="number">7</span>/os/x86_64/Packages/yum-plugin-fastestmirror-<span class="number">1.1</span>.<span class="number">31</span>-<span class="number">54</span>.el7_8.noarch.rpm</span><br></pre></td></tr></table></figure>
 
 <p>如果找不到以上版本，可以到 <a target="_blank" rel="noopener" href="http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/?login=from_csdn">http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/</a> 下载最新版本</p>
 <p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/20210505211959838.png" alt="下载最新版本"></p>
-<h2 id="4-安装"><a href="#4-安装" class="headerlink" title="4.安装"></a>4.安装</h2><pre class="line-numbers language-stylus" data-language="stylus"><code class="language-stylus"><span class="token property-declaration"><span class="token property">rpm</span> -ivh python-2.7.5-89.el7.x86_64.rpm python-iniparse-0.4-9.el7.noarch.rpm <span class="token operator">-</span>-nodeps <span class="token operator">-</span>-force</span>
-<span class="token property-declaration"><span class="token property">rpm</span> -ivh yum-metadata-parser-1.1.4-10.el7.x86_64.rpm <span class="token operator">-</span>-nodeps <span class="token operator">-</span>-force</span>
-<span class="token property-declaration"><span class="token property">rpm</span> -ivh yum-3.4.3-168.el7.centos.noarch.rpm yum-plugin-fastestmirror-1.1.31-54.el7_8.noarch.rpm <span class="token operator">-</span>-nodeps <span class="token operator">-</span>-force</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="4-安装"><a href="#4-安装" class="headerlink" title="4.安装"></a>4.安装</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh <span class="keyword">python</span>-<span class="number">2.7</span>.<span class="number">5</span>-<span class="number">89</span>.el7.x86_64.rpm <span class="keyword">python</span>-iniparse-<span class="number">0.4</span>-<span class="number">9</span>.el7.noarch.rpm --nodeps --force</span><br><span class="line">rpm -ivh yum-metadata-parser-<span class="number">1.1</span>.<span class="number">4</span>-<span class="number">10</span>.el7.x86_64.rpm --nodeps --force</span><br><span class="line">rpm -ivh yum-<span class="number">3.4</span>.<span class="number">3</span>-<span class="number">168</span>.el7.centos.noarch.rpm yum-plugin-fastestmirror-<span class="number">1.1</span>.<span class="number">31</span>-<span class="number">54</span>.el7_8.noarch.rpm --nodeps --force</span><br></pre></td></tr></table></figure>
 
 <h2 id="5-更改-yum源"><a href="#5-更改-yum源" class="headerlink" title="5.更改 yum源"></a>5.更改 yum源</h2><ul>
 <li><p>到该网站 <a target="_blank" rel="noopener" href="http://mirrors.163.com/.help/centos.html?login=from_csdn">http://mirrors.163.com/.help/centos.html</a> 下载配置文件，重命名为CentOS-Base.repo</p>
 <ul>
 <li><p>首先备份/etc/yum.repos.d/CentOS-Base.repo</p>
-<pre class="line-numbers language-awk" data-language="awk"><code class="language-awk">mv <span class="token operator">/</span>etc<span class="token operator">/</span>yum.repos.d<span class="token operator">/</span>CentOS<span class="token operator">-</span>Base.repo <span class="token operator">/</span>etc<span class="token operator">/</span>yum.repos.d<span class="token operator">/</span>CentOS<span class="token operator">-</span>Base.repo.backup<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br></pre></td></tr></table></figure></li>
 <li><p>下载对应版本repo文件， 放入/etc/yum.repos.d/（操作前请做好相应备份）</p>
 <p><a target="_blank" rel="noopener" href="http://mirrors.163.com/.help/CentOS7-Base-163.repo?login=from_csdn">CentOS7</a></p>
 <p><a target="_blank" rel="noopener" href="http://mirrors.163.com/.help/CentOS6-Base-163.repo?login=from_csdn">CentOS6</a></p>
@@ -520,15 +516,12 @@ wget http<span class="token operator">:</span><span class="token regex">//</span
 <li><p>运行以下命令生成缓存</p>
 </li>
 </ul>
-<pre class="line-numbers language-ada" data-language="ada"><code class="language-ada"><span class="token variable">yum</span> <span class="token variable">clean</span> <span class="token keyword">all</span>
-<span class="token variable">yum</span> <span class="token variable">makecache</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum clean <span class="keyword">all</span></span><br><span class="line">yum makecache</span><br></pre></td></tr></table></figure></li>
 <li><p>修改配置文件</p>
 <ul>
 <li>运行一下命令打开CentOS-Base.repo文件</li>
 </ul>
-<pre class="line-numbers language-stylus" data-language="stylus"><code class="language-stylus"><span class="token property-declaration"><span class="token property">cd</span> <span class="token operator">/</span>etc<span class="token operator">/</span>yum.repos.d </span>
-
-<span class="token property-declaration"><span class="token property">vim</span> CentOS-Base.repo</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> /etc/yum.repos.d </span><br><span class="line"></span><br><span class="line"><span class="keyword">vim</span> CentOS-Base.repo</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>也可以通过Xftp7软件编辑，更加方便快捷</p>
@@ -536,55 +529,12 @@ wget http<span class="token operator">:</span><span class="token regex">//</span
 <ul>
 <li>将以下配置更换Centos-Base.repo里的内容</li>
 </ul>
-<pre class="line-numbers language-awk" data-language="awk"><code class="language-awk"><span class="token comment"># CentOS-Base.repo</span>
-<span class="token comment">#</span>
-<span class="token comment"># The mirror system uses the connecting IP address of the client and the</span>
-<span class="token comment"># update status of each mirror to pick mirrors that are updated to and</span>
-<span class="token comment"># geographically close to the client.  You should use this for CentOS updates</span>
-<span class="token comment"># unless you are manually picking other mirrors.</span>
-<span class="token comment">#</span>
-<span class="token comment"># If the mirrorlist= does not work for you, as a fall back you can try the</span>
-<span class="token comment"># remarked out baseurl= line instead.</span>
-<span class="token comment">#</span>
-<span class="token comment">#</span>
- 
-<span class="token punctuation">[</span>base<span class="token punctuation">]</span>
-name<span class="token operator">=</span>CentOS<span class="token operator">-</span><span class="token variable">$releasever</span> <span class="token operator">-</span> Base
-<span class="token comment">#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=os</span>
-baseurl<span class="token operator">=</span>https<span class="token operator">:</span><span class="token regex">//</span>mirrors.ustc.edu.cn<span class="token operator">/</span>centos<span class="token operator">/</span><span class="token variable">$releasever</span><span class="token operator">/</span>os<span class="token operator">/</span><span class="token variable">$basearch</span><span class="token operator">/</span>
-gpgcheck<span class="token operator">=</span><span class="token number">1</span>
-gpgkey<span class="token operator">=</span>file<span class="token operator">:</span><span class="token regex">//</span><span class="token operator">/</span>etc<span class="token operator">/</span>pki<span class="token operator">/</span>rpm<span class="token operator">-</span>gpg<span class="token operator">/</span>RPM<span class="token operator">-</span>GPG<span class="token operator">-</span>KEY<span class="token operator">-</span>CentOS<span class="token operator">-</span><span class="token number">7</span>
- 
-<span class="token comment">#released updates</span>
-<span class="token punctuation">[</span>updates<span class="token punctuation">]</span>
-name<span class="token operator">=</span>CentOS<span class="token operator">-</span><span class="token variable">$releasever</span> <span class="token operator">-</span> Updates
-<span class="token comment"># mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=updates</span>
-baseurl<span class="token operator">=</span>https<span class="token operator">:</span><span class="token regex">//</span>mirrors.ustc.edu.cn<span class="token operator">/</span>centos<span class="token operator">/</span><span class="token variable">$releasever</span><span class="token operator">/</span>updates<span class="token operator">/</span><span class="token variable">$basearch</span><span class="token operator">/</span>
-gpgcheck<span class="token operator">=</span><span class="token number">1</span>
-gpgkey<span class="token operator">=</span>file<span class="token operator">:</span><span class="token regex">//</span><span class="token operator">/</span>etc<span class="token operator">/</span>pki<span class="token operator">/</span>rpm<span class="token operator">-</span>gpg<span class="token operator">/</span>RPM<span class="token operator">-</span>GPG<span class="token operator">-</span>KEY<span class="token operator">-</span>CentOS<span class="token operator">-</span><span class="token number">7</span>
- 
-<span class="token comment">#additional packages that may be useful</span>
-<span class="token punctuation">[</span>extras<span class="token punctuation">]</span>
-name<span class="token operator">=</span>CentOS<span class="token operator">-</span><span class="token variable">$releasever</span> <span class="token operator">-</span> Extras
-<span class="token comment"># mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=extras</span>
-baseurl<span class="token operator">=</span>https<span class="token operator">:</span><span class="token regex">//</span>mirrors.ustc.edu.cn<span class="token operator">/</span>centos<span class="token operator">/</span><span class="token variable">$releasever</span><span class="token operator">/</span>extras<span class="token operator">/</span><span class="token variable">$basearch</span><span class="token operator">/</span>
-gpgcheck<span class="token operator">=</span><span class="token number">1</span>
-gpgkey<span class="token operator">=</span>file<span class="token operator">:</span><span class="token regex">//</span><span class="token operator">/</span>etc<span class="token operator">/</span>pki<span class="token operator">/</span>rpm<span class="token operator">-</span>gpg<span class="token operator">/</span>RPM<span class="token operator">-</span>GPG<span class="token operator">-</span>KEY<span class="token operator">-</span>CentOS<span class="token operator">-</span><span class="token number">7</span>
- 
-<span class="token comment">#additional packages that extend functionality of existing packages</span>
-<span class="token punctuation">[</span>centosplus<span class="token punctuation">]</span>
-name<span class="token operator">=</span>CentOS<span class="token operator">-</span><span class="token variable">$releasever</span> <span class="token operator">-</span> Plus
-<span class="token comment"># mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=centosplus</span>
-baseurl<span class="token operator">=</span>https<span class="token operator">:</span><span class="token regex">//</span>mirrors.ustc.edu.cn<span class="token operator">/</span>centos<span class="token operator">/</span><span class="token variable">$releasever</span><span class="token operator">/</span>centosplus<span class="token operator">/</span><span class="token variable">$basearch</span><span class="token operator">/</span>
-gpgcheck<span class="token operator">=</span><span class="token number">1</span>
-enabled<span class="token operator">=</span><span class="token number">0</span>
-gpgkey<span class="token operator">=</span>file<span class="token operator">:</span><span class="token regex">//</span><span class="token operator">/</span>etc<span class="token operator">/</span>pki<span class="token operator">/</span>rpm<span class="token operator">-</span>gpg<span class="token operator">/</span>RPM<span class="token operator">-</span>GPG<span class="token operator">-</span>KEY<span class="token operator">-</span>CentOS<span class="token operator">-</span><span class="token number">7</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"># CentOS-Base.repo</span><br><span class="line">#</span><br><span class="line"># The mirror <span class="built_in">system</span> uses the connecting IP address of the client <span class="built_in">and</span> the</span><br><span class="line"># <span class="keyword">update</span> status of each mirror <span class="keyword">to</span> pick mirrors that are updated <span class="keyword">to</span> <span class="built_in">and</span></span><br><span class="line"># geographically <span class="keyword">close</span> <span class="keyword">to</span> the client.  You should use this <span class="keyword">for</span> CentOS updates</span><br><span class="line"># unless you are manually picking other mirrors.</span><br><span class="line">#</span><br><span class="line"># If the mirrorlist= does not work <span class="keyword">for</span> you, <span class="keyword">as</span> <span class="keyword">a</span> fall back you can <span class="keyword">try</span> the</span><br><span class="line"># remarked out baseurl= <span class="built_in">line</span> instead.</span><br><span class="line">#</span><br><span class="line">#</span><br><span class="line"> </span><br><span class="line">[base]</span><br><span class="line">name=CentOS-$releasever - Base</span><br><span class="line">#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=os</span><br><span class="line">baseurl=https://mirrors.ustc.edu.<span class="keyword">cn</span>/centos/$releasever/os/$basearch/</span><br><span class="line">gpgcheck=<span class="number">1</span></span><br><span class="line">gpgkey=<span class="keyword">file</span>:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<span class="number">7</span></span><br><span class="line"> </span><br><span class="line">#released updates</span><br><span class="line">[updates]</span><br><span class="line">name=CentOS-$releasever - Updates</span><br><span class="line"># mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=updates</span><br><span class="line">baseurl=https://mirrors.ustc.edu.<span class="keyword">cn</span>/centos/$releasever/updates/$basearch/</span><br><span class="line">gpgcheck=<span class="number">1</span></span><br><span class="line">gpgkey=<span class="keyword">file</span>:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<span class="number">7</span></span><br><span class="line"> </span><br><span class="line">#additional packages that may <span class="keyword">be</span> useful</span><br><span class="line">[extras]</span><br><span class="line">name=CentOS-$releasever - Extras</span><br><span class="line"># mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=extras</span><br><span class="line">baseurl=https://mirrors.ustc.edu.<span class="keyword">cn</span>/centos/$releasever/extras/$basearch/</span><br><span class="line">gpgcheck=<span class="number">1</span></span><br><span class="line">gpgkey=<span class="keyword">file</span>:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<span class="number">7</span></span><br><span class="line"> </span><br><span class="line">#additional packages that <span class="built_in">extend</span> functionality of existing packages</span><br><span class="line">[centosplus]</span><br><span class="line">name=CentOS-$releasever - Plus</span><br><span class="line"># mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=centosplus</span><br><span class="line">baseurl=https://mirrors.ustc.edu.<span class="keyword">cn</span>/centos/$releasever/centosplus/$basearch/</span><br><span class="line">gpgcheck=<span class="number">1</span></span><br><span class="line">enabled=<span class="number">0</span></span><br><span class="line">gpgkey=<span class="keyword">file</span>:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<span class="number">7</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>配置完成后更新缓存</li>
 </ul>
-<pre class="line-numbers language-ada" data-language="ada"><code class="language-ada"><span class="token variable">yum</span> <span class="token variable">clean</span> <span class="token keyword">all</span>
-<span class="token variable">yum</span> <span class="token variable">makecache</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum clean <span class="keyword">all</span></span><br><span class="line">yum makecache</span><br></pre></td></tr></table></figure></li>
 </ul>
 <p>完成以上步骤就可以成功在Linux安装上yum</p>
 
@@ -812,6 +762,33 @@ gpgkey<span class="token operator">=</span>file<span class="token operator">:</s
     </div>
 
     
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: null,
+        id: '2023-02-09T00-00-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
 
     
 
@@ -903,15 +880,15 @@ gpgkey<span class="token operator">=</span>file<span class="token operator">:</s
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="picgo-config">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="picgo图床设置与typora配置">
                         
-                        <span class="card-title">picgo-config</span>
+                        <span class="card-title">picgo图床设置与typora配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            picgo图床设置与typora配置
                         
                     </div>
                     <div class="publish-info">
@@ -920,11 +897,27 @@ gpgkey<span class="token operator">=</span>file<span class="token operator">:</s
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            sin
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="post-category">
+                                    环境配置
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/picGo/">
+                        <span class="chip bg-color">picGo</span>
+                    </a>
+                    
+                    <a href="/tags/typora/">
+                        <span class="chip bg-color">typora</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1124,6 +1117,9 @@ gpgkey<span class="token operator">=</span>file<span class="token operator">:</s
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">32.7k</span>&nbsp;字
+            
             
             
             
@@ -1161,6 +1157,8 @@ gpgkey<span class="token operator">=</span>file<span class="token operator">:</s
     <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1127301986@qq.com" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1127301986@qq.com" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
+
+
 
 
 

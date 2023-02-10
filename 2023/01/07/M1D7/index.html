@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -469,15 +469,17 @@
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    4 分
+                </div>
+                
 
                 
             </div>
         </div>
         <hr class="clearfix">
 
-        
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
         
 
         
@@ -493,16 +495,14 @@
 <p>​    主轴的开始位置（与边框的交叉点）叫==main start==，结束位置叫做==main end==；</p>
 <p>​    交叉轴的开始位置叫==cross start==，结束位置叫==cross end==。</p>
 <p>​    单个项目占据的主轴空间叫做<code>main size</code>，占据的交叉轴空间叫做<code>cross size</code>。</p>
-<h2 id="二、容器的属性"><a href="#二、容器的属性" class="headerlink" title="二、容器的属性"></a>二、容器的属性</h2><blockquote>
-<ul>
+<h2 id="二、容器的属性"><a href="#二、容器的属性" class="headerlink" title="二、容器的属性"></a>二、容器的属性</h2><ul>
 <li><strong>flex-direction:row | row-reverse | column | column-reverse;</strong></li>
 <li><strong>flex-wrap:nowrap | wrap | wrap-reverse;</strong></li>
-<li><strong>flex-flow:<flex-direction> || <flex-wrap>;</strong></li>
+<li><strong>flex-flow: flex-direction || flex-wrap;</strong></li>
 <li><strong>justify-content:flex-start | flex-end | center | space-between | space-around;</strong></li>
 <li><strong>align-items:flex-start | flex-end | center | baseline | stretch;</strong></li>
 <li><strong>align-content:flex-start | flex-end | center | space-between | space-around | stretch;</strong></li>
 </ul>
-</blockquote>
 <p><strong>2.1flex-direction主轴的方向（即项目的排列方向）</strong></p>
 <ul>
 <li><code>row</code>（默认值）：主轴为水平方向，起点在左端。</li>
@@ -555,7 +555,6 @@
 <img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230108155228637.png" alt="align-content在多根轴线上的对齐方式" style="zoom:50%;" />
 
 <h2 id="三、项目的属性"><a href="#三、项目的属性" class="headerlink" title="三、项目的属性"></a>三、项目的属性</h2><p>以下6个属性设置在项目上</p>
-<blockquote>
 <ul>
 <li><code>order:&lt;integer&gt;;/* default 0 */</code></li>
 <li><code>flex-grow</code>:<number>;/* default 0 */</li>
@@ -564,7 +563,6 @@
 <li><code>flex</code>:none | [ &lt;’flex-grow’&gt; &lt;’flex-shrink’&gt;? || &lt;’flex-basis’&gt; ]</li>
 <li><code>align-self</code>:auto | flex-start | flex-end | center | baseline | stretch;</li>
 </ul>
-</blockquote>
 <p><strong>3.1order项目的排列顺序</strong></p>
 <p>​    数值越小，排列越靠前，默认为0。</p>
 <p><strong>3.2flex-grow项目的放大比例</strong></p>
@@ -806,6 +804,33 @@
             
         </div>
     </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: null,
+        id: '2023-01-07T00-00-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
 
     
 
@@ -1121,6 +1146,9 @@
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">32.7k</span>&nbsp;字
+            
             
             
             
@@ -1158,6 +1186,8 @@
     <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1127301986@qq.com" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1127301986@qq.com" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
+
+
 
 
 
