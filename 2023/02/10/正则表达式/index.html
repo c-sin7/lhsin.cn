@@ -29,7 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="sin" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -494,32 +495,32 @@
 <tbody><tr>
 <td align="left"><strong>[ABC]</strong></td>
 <td align="left">匹配 <strong>[…]</strong> 中的所有字符<img src="https://www.runoob.com/wp-content/uploads/2014/03/E691DDE1-E5CB-4EA8-8D16-759BD0D2B09D.jpg" alt="img"></td>
-<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjsref_regexp5">尝试一下 »</a></td>
+<td align="left"><a href="https://www.runoob.com/try/try.php?filename=tryjsref_regexp5" target="_blank" rel="noopener">尝试一下 »</a></td>
 </tr>
 <tr>
 <td align="left"><strong>[^ABC]</strong></td>
 <td align="left">匹配除了 <strong>[…]</strong> 中字符的所有字符，<img src="https://www.runoob.com/wp-content/uploads/2014/03/ED971D92-30F4-4768-A2C7-02A84A3A9DEB.jpg" alt="img"></td>
-<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjsref_regexp6">尝试一下 »</a></td>
+<td align="left"><a href="https://www.runoob.com/try/try.php?filename=tryjsref_regexp6" target="_blank" rel="noopener">尝试一下 »</a></td>
 </tr>
 <tr>
 <td align="left"><strong>[A-Z]</strong></td>
 <td align="left">[A-Z] 表示一个区间，匹配所有大写字母，[a-z] 表示所有小写字母。<img src="https://www.runoob.com/wp-content/uploads/2014/03/C5E357BD-65E3-4EB3-9D80-10D096F19287.jpg" alt="img"></td>
-<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjsref_regexp7">尝试一下 »</a></td>
+<td align="left"><a href="https://www.runoob.com/try/try.php?filename=tryjsref_regexp7" target="_blank" rel="noopener">尝试一下 »</a></td>
 </tr>
 <tr>
 <td align="left"><strong>.</strong></td>
 <td align="left">匹配除换行符（\n、\r）之外的任何单个字符，相等于 [^\n\r]。<img src="https://www.runoob.com/wp-content/uploads/2014/03/0FD7E77D-38A7-43BC-B51A-7DBA23A77756.jpg" alt="img"></td>
-<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjsref_regexp8">尝试一下 »</a></td>
+<td align="left"><a href="https://www.runoob.com/try/try.php?filename=tryjsref_regexp8" target="_blank" rel="noopener">尝试一下 »</a></td>
 </tr>
 <tr>
 <td align="left"><strong>[\s\S]</strong></td>
 <td align="left">匹配所有。\s 是匹配所有空白符，包括换行，\S 非空白符，不包括换行。<img src="https://www.runoob.com/wp-content/uploads/2014/03/47CA6C59-64CF-433A-909E-1E342349A4E0.jpg" alt="img"></td>
-<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjsref_regexp9">尝试一下 »</a></td>
+<td align="left"><a href="https://www.runoob.com/try/try.php?filename=tryjsref_regexp9" target="_blank" rel="noopener">尝试一下 »</a></td>
 </tr>
 <tr>
 <td align="left"><strong>\w</strong></td>
 <td align="left">匹配字母、数字、下划线。等价于 [A-Za-z0-9_]<img src="https://www.runoob.com/wp-content/uploads/2014/03/F35A5971-3519-4CAE-8BEC-9DE8F4A55257.jpg" alt="img"  /></td>
-<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=tryjsref_regexp10">尝试一下 »</a></td>
+<td align="left"><a href="https://www.runoob.com/try/try.php?filename=tryjsref_regexp10" target="_blank" rel="noopener">尝试一下 »</a></td>
 </tr>
 </tbody></table>
 <h2 id="非打印字符"><a href="#非打印字符" class="headerlink" title="非打印字符"></a>非打印字符</h2><p>非打印字符也可以是正则表达式的组成部分。下表列出了表示非打印字符的转义序列：</p>
@@ -1298,7 +1299,7 @@
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
     
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
@@ -1321,35 +1322,71 @@
             
             <br>
             
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 60;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2022";
+                    var startMonth = "1";
+                    var startDate = "20";
+                    var startHour = "10";
+                    var startMinute = "55";
+                    var startSecond = "12";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
             <br>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <!-- <a href="https://github.com/c-sin7" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a> -->
-    <a href="https://github.com/c-sin7" class="tooltipped" target="_blank" data-tooltip="访问sin的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/c-sin7" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
 
-    <!-- <a href="mailto:1127301986@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a> -->
-    <a href="mailto:112710986@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1127301986@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
 
 
-    <!-- <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1127301986" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1127301986" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a> -->
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1127301986@qq.com" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1127301986@qq.com" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1127301986" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1127301986" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
+
 
 
 
