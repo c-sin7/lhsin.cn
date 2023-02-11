@@ -511,8 +511,8 @@
 <p>其实TCP/IP协议族已经帮我们解决了这个问题，网络层的“<strong>ip地址</strong>”可以唯一标识网络中的主机，而传输层的“<strong>协议+端口</strong>”可以唯一标识主机中的应用程序（进程）。</p>
 <p>利用三元组（ip地址，协议，端口）就可以标识网络的进程了。</p>
 <h1 id="2、socket的基本操作"><a href="#2、socket的基本操作" class="headerlink" title="2、socket的基本操作"></a>2、socket的基本操作</h1><p>socket是“open—write/read—close”模式的一种实现，socket提供了这些操作对应的函数接口。下面以TCP为例，介绍几个基本的socket接口函数。</p>
-<h2 id="2-1、socket-函数"><a href="#2-1、socket-函数" class="headerlink" title="2.1、socket()函数"></a>2.1、socket()函数</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> socket(<span class="keyword">int</span> domain, <span class="keyword">int</span> <span class="built_in">type</span>, <span class="keyword">int</span> protocol);</span><br></pre></td></tr></table></figure>
-
+<h2 id="2-1、socket-函数"><a href="#2-1、socket-函数" class="headerlink" title="2.1、socket()函数"></a>2.1、socket()函数</h2><pre class=" language-vim"><code class="language-vim">int <span class="token function">socket</span><span class="token punctuation">(</span>int domain<span class="token punctuation">,</span> int type<span class="token punctuation">,</span> int protocol<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p>socket函数对应于普通文件的打开操作。普通文件的打开操作返回一个文件描述字</p>
 <p>而<strong>socket()<strong>用于创建一个socket描述符（</strong>socket descriptor</strong>），它唯一标识一个socket。</p>
 <p>这个socket描述字跟文件描述字一样，后续的操作都有用到它，把它作为参数，通过它来进行一些读写操作。</p>
@@ -533,20 +533,46 @@
 <p>当我们调用<strong>socket</strong>创建一个socket时，返回的socket描述字它存在于协议族（address family，AF_XXX）空间中，但没有一个具体的地址。如果想要给它赋值一个地址，就必须调用bind()函数，否则就当调用connect()、listen()时系统会自动随机分配一个端口。</p>
 <h2 id="2-2、bind-函数"><a href="#2-2、bind-函数" class="headerlink" title="2.2、bind()函数"></a>2.2、bind()函数</h2><p>正如上面所说bind()函数把一个地址族中的特定地址赋给socket。</p>
 <p>例如对应AF_INET、AF_INET6就是把一个ipv4或ipv6地址和端口号组合赋给socket。</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> bind(<span class="keyword">int</span> sockfd, const struct sockaddr *addr, socklen_t addrlen);</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-vim"><code class="language-vim">int <span class="token function">bind</span><span class="token punctuation">(</span>int sockfd<span class="token punctuation">,</span> const struct sockaddr <span class="token operator">*</span>addr<span class="token punctuation">,</span> socklen_t addrlen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p>函数的三个参数分别为：</p>
 <ul>
 <li><p>sockfd：即socket描述字，它是通过socket()函数创建，唯一标识一个socket。<strong>bind()函数就是将给这个描述字绑定一个名字</strong></p>
 </li>
 <li><p>addr：一个const struct sockaddr *指针，指向要绑定给sockfd的协议地址。这个地址结构根据地址创建socket时的地址协议族的不同而不同，如ipv4对应的是：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">sockaddr_in</span> &#123;</span><br><span class="line">    <span class="type">sa_family_t</span>    sin_family; </span><br><span class="line">    <span class="type">in_port_t</span>      sin_port;   </span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">in_addr</span> sin_addr;   </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">in_addr</span> &#123;</span><br><span class="line">    <span class="type">uint32_t</span>       s_addr;     </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<pre class=" language-c++"><code class="language-c++">struct sockaddr_in &#123;
+    sa_family_t    sin_family; 
+    in_port_t      sin_port;   
+    struct in_addr sin_addr;   
+&#125;;
 
+
+struct in_addr &#123;
+    uint32_t       s_addr;     
+&#125;;
+</code></pre>
 <p>ipv6对应的是：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">sockaddr_in6</span> &#123; </span><br><span class="line">    <span class="type">sa_family_t</span>     sin6_family;    </span><br><span class="line">    <span class="type">in_port_t</span>       sin6_port;      </span><br><span class="line">    <span class="type">uint32_t</span>        sin6_flowinfo;  </span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">in6_addr</span> sin6_addr;      </span><br><span class="line">    <span class="type">uint32_t</span>        sin6_scope_id;  </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">in6_addr</span> &#123; </span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span>   s6_addr[<span class="number">16</span>];    </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<pre class=" language-c++"><code class="language-c++">struct sockaddr_in6 &#123; 
+    sa_family_t     sin6_family;    
+    in_port_t       sin6_port;      
+    uint32_t        sin6_flowinfo;  
+    struct in6_addr sin6_addr;      
+    uint32_t        sin6_scope_id;  
+&#125;;
 
+struct in6_addr &#123; 
+    unsigned char   s6_addr[16];    
+&#125;;
+</code></pre>
 <p>Unix域对应的是：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> UNIX_PATH_MAX    108</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">sockaddr_un</span> &#123; </span><br><span class="line">    <span class="type">sa_family_t</span> sun_family;                </span><br><span class="line">    <span class="type">char</span>        sun_path[UNIX_PATH_MAX];   </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+<pre class=" language-c++"><code class="language-c++">#define UNIX_PATH_MAX    108
+
+struct sockaddr_un &#123; 
+    sa_family_t sun_family;                
+    char        sun_path[UNIX_PATH_MAX];   
+&#125;;
+</code></pre>
+</li>
 </ul>
 <p>通常服务器在启动的时候都会绑定一个众所周知的地址（如ip地址+端口号），用于提供服务，客户就可以通过它来接连服务器；</p>
 <p>而客户端就不用指定，有系统自动分配一个端口号和自身的ip地址组合。</p>
@@ -562,16 +588,17 @@
 <p>所以： 在将一个地址绑定到socket的时候，请<strong>先将主机字节序转换成为网络字节序</strong>，将其转化为网络字节序再赋给socket。</p>
 <h2 id="2-3、listen-、connect-函数"><a href="#2-3、listen-、connect-函数" class="headerlink" title="2.3、listen()、connect()函数"></a>2.3、listen()、connect()函数</h2><p>如果作为一个服务器，在调用socket()、bind()之后就会调用listen()来监听这个socket</p>
 <p>如果客户端这时调用connect()发出连接请求，服务器端就会接收到这个请求。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">listen</span><span class="params">(<span class="type">int</span> sockfd, <span class="type">int</span> backlog)</span></span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">connect</span><span class="params">(<span class="type">int</span> sockfd, <span class="type">const</span> <span class="keyword">struct</span> sockaddr *addr, <span class="type">socklen_t</span> addrlen)</span></span>;</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-c++"><code class="language-c++">int listen(int sockfd, int backlog);
+int connect(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
+</code></pre>
 <p>listen函数的第一个参数即为要监听的socket描述字，第二个参数为相应socket可以排队的<strong>最大连接个数</strong>。socket()函数创建的socket默认是一个主动类型的，listen函数将socket变为<strong>被动类型的，等待客户的连接请求</strong>。</p>
 <p>connect函数的第一个参数即为客户端的socket描述字，第二参数为服务器的socket地址，第三个参数为socket地址的长度。客户端通过调用connect函数来建立与TCP服务器的连接。</p>
 <h2 id="2-4、accept-函数"><a href="#2-4、accept-函数" class="headerlink" title="2.4、accept()函数"></a>2.4、accept()函数</h2><p>TCP服务器端依次调用socket()、bind()、listen()之后，就会监听指定的socket地址了。</p>
 <p>TCP客户端依次调用socket()、connect()之后就想TCP服务器发送了一个连接请求。</p>
 <p>TCP服务器监听到这个请求之后，就会调用accept()函数取接收请求，这样连接就建立好了。</p>
 <p>之后就可以开始网络I/O操作了，即类同于普通文件的读写I/O操作。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">accept</span><span class="params">(<span class="type">int</span> sockfd, <span class="keyword">struct</span> sockaddr *addr, <span class="type">socklen_t</span> *addrlen)</span></span>;</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-c++"><code class="language-c++">int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
+</code></pre>
 <p>accept函数的第一个参数为服务器的socket描述字，第二个参数为指向struct sockaddr *的指针，用于返回客户端的协议地址，第三个参数为协议地址的长度。</p>
 <p>如果accpet成功，那么其返回值是<strong>由内核自动生成的一个全新的描述字</strong>，代表与返回客户的TCP连接。</p>
 <p>注意：accept的第一个参数为服务器的socket描述字，是服务器开始调用socket()函数生成的，称为<strong>监听socket描述字</strong>；而accept函数返回的是已连接的socket描述字。一个服务器通常通常仅仅只创建一个监听socket描述字，<strong>它在该服务器的生命周期内一直存在</strong>。内核为每个由服务器进程接受的客户连接创建了一个已连接socket描述字，当服务器完成了对某个客户的服务，相应的已连接socket描述字就被关闭。</p>
@@ -586,8 +613,25 @@
 </ul>
 <p>推荐使用recvmsg()/sendmsg()函数，这两个函数是最通用的I/O函数</p>
 <p>实际上可以把上面的其它函数都替换成这两个函数。它们的声明如下：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> </span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">ssize_t</span> <span class="title">read</span><span class="params">(<span class="type">int</span> fd, <span class="type">void</span> *buf, <span class="type">size_t</span> count)</span></span>;</span><br><span class="line"><span class="function"><span class="type">ssize_t</span> <span class="title">write</span><span class="params">(<span class="type">int</span> fd, <span class="type">const</span> <span class="type">void</span> *buf, <span class="type">size_t</span> count)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> </span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">ssize_t</span> <span class="title">send</span><span class="params">(<span class="type">int</span> sockfd, <span class="type">const</span> <span class="type">void</span> *buf, <span class="type">size_t</span> len, <span class="type">int</span> flags)</span></span>;</span><br><span class="line"><span class="function"><span class="type">ssize_t</span> <span class="title">recv</span><span class="params">(<span class="type">int</span> sockfd, <span class="type">void</span> *buf, <span class="type">size_t</span> len, <span class="type">int</span> flags)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">ssize_t</span> <span class="title">sendto</span><span class="params">(<span class="type">int</span> sockfd, <span class="type">const</span> <span class="type">void</span> *buf, <span class="type">size_t</span> len, <span class="type">int</span> flags,</span></span></span><br><span class="line"><span class="params"><span class="function">                      <span class="type">const</span> <span class="keyword">struct</span> sockaddr *dest_addr, <span class="type">socklen_t</span> addrlen)</span></span>;</span><br><span class="line"><span class="function"><span class="type">ssize_t</span> <span class="title">recvfrom</span><span class="params">(<span class="type">int</span> sockfd, <span class="type">void</span> *buf, <span class="type">size_t</span> len, <span class="type">int</span> flags,</span></span></span><br><span class="line"><span class="params"><span class="function">                        <span class="keyword">struct</span> sockaddr *src_addr, <span class="type">socklen_t</span> *addrlen)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">ssize_t</span> <span class="title">sendmsg</span><span class="params">(<span class="type">int</span> sockfd, <span class="type">const</span> <span class="keyword">struct</span> msghdr *msg, <span class="type">int</span> flags)</span></span>;</span><br><span class="line"><span class="function"><span class="type">ssize_t</span> <span class="title">recvmsg</span><span class="params">(<span class="type">int</span> sockfd, <span class="keyword">struct</span> msghdr *msg, <span class="type">int</span> flags)</span></span>;</span><br></pre></td></tr></table></figure>
+<pre class=" language-c++"><code class="language-c++">#include 
 
+ssize_t read(int fd, void *buf, size_t count);
+ssize_t write(int fd, const void *buf, size_t count);
+
+#include 
+#include 
+
+ssize_t send(int sockfd, const void *buf, size_t len, int flags);
+ssize_t recv(int sockfd, void *buf, size_t len, int flags);
+
+ssize_t sendto(int sockfd, const void *buf, size_t len, int flags,
+                      const struct sockaddr *dest_addr, socklen_t addrlen);
+ssize_t recvfrom(int sockfd, void *buf, size_t len, int flags,
+                        struct sockaddr *src_addr, socklen_t *addrlen);
+
+ssize_t sendmsg(int sockfd, const struct msghdr *msg, int flags);
+ssize_t recvmsg(int sockfd, struct msghdr *msg, int flags);
+</code></pre>
 <p>read函数是负责从fd中读取内容。</p>
 <p>​    当读成功时，read返回实际所读的字节数，如果返回的值是0表示已经读到文件的结束了，小于0表示出现了错误。</p>
 <p>​    如果错误为EINTR说明读是由中断引起的，如果是ECONNREST表示网络连接出了问题。</p>
@@ -598,8 +642,9 @@
 <p>​    2)返回的值小于0，此时出现了错误。</p>
 <p>​    如果错误为EINTR表示在写的时候出现了中断错误。如果为EPIPE表示 网络连接出现了问题(对方已经关闭了连接)。</p>
 <h2 id="2-6、close-函数"><a href="#2-6、close-函数" class="headerlink" title="2.6、close()函数"></a>2.6、close()函数</h2><p>完成了读写操作就要关闭相应的socket描述字，好比操作完打开的文件要调用fclose关闭打开的文件。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> </span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">close</span><span class="params">(<span class="type">int</span> fd)</span></span>;</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-c++"><code class="language-c++">#include 
+int close(int fd);
+</code></pre>
 <p>close一个TCP socket的缺省行为时把该socket标记为已关闭，然后立即返回到调用进程。该描述字不能再由调用进程使用，也就是说不能再作为read或write的第一个参数。</p>
 <p>注意：close操作只是使相应socket描述字的引用计数-1，只有当引用计数为0的时候，才会触发TCP客户端向服务器发送终止连接请求。</p>
 <h1 id="3、socket中TCP的三次握手建立连接详解"><a href="#3、socket中TCP的三次握手建立连接详解" class="headerlink" title="3、socket中TCP的三次握手建立连接详解"></a>3、socket中TCP的三次握手建立连接详解</h1><p>tcp建立连接要进行“三次握手”，即交换三个分组。大致流程如下：</p>
@@ -1190,7 +1235,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">32.7k</span>&nbsp;字
+                class="white-color">32.4k</span>&nbsp;字
             
             
             
