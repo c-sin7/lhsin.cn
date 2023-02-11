@@ -283,7 +283,7 @@
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/blinkfox/hexo-theme-matery&quot; target=&quot;_blank&quot;</summary>
+    <summary type="html">&lt;p&gt;&lt;a</summary>
         
       
     
@@ -309,7 +309,8 @@
         
         
     <summary type="html">&lt;p&gt;2023.1.7&lt;/p&gt;
-&lt;p&gt;[HTML学习](&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;HTML：超文本标记语言|多核</summary>
+&lt;p&gt;[HTML学习](&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML&quot;&gt;HTML：超文本标记语言|多核 (mozilla.org)&lt;/a&gt;)&lt;/p&gt;
+&lt;h1</summary>
         
       
     

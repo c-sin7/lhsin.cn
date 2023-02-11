@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="sin" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="sin" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -541,37 +541,37 @@
 <li><p>sockfd：即socket描述字，它是通过socket()函数创建，唯一标识一个socket。<strong>bind()函数就是将给这个描述字绑定一个名字</strong></p>
 </li>
 <li><p>addr：一个const struct sockaddr *指针，指向要绑定给sockfd的协议地址。这个地址结构根据地址创建socket时的地址协议族的不同而不同，如ipv4对应的是：</p>
-<pre class=" language-c++"><code class="language-c++">struct sockaddr_in {
+<pre class=" language-c++"><code class="language-c++">struct sockaddr_in &#123;
     sa_family_t    sin_family; 
     in_port_t      sin_port;   
     struct in_addr sin_addr;   
-};
+&#125;;
 
 
-struct in_addr {
+struct in_addr &#123;
     uint32_t       s_addr;     
-};
+&#125;;
 </code></pre>
 <p>ipv6对应的是：</p>
-<pre class=" language-c++"><code class="language-c++">struct sockaddr_in6 { 
+<pre class=" language-c++"><code class="language-c++">struct sockaddr_in6 &#123; 
     sa_family_t     sin6_family;    
     in_port_t       sin6_port;      
     uint32_t        sin6_flowinfo;  
     struct in6_addr sin6_addr;      
     uint32_t        sin6_scope_id;  
-};
+&#125;;
 
-struct in6_addr { 
+struct in6_addr &#123; 
     unsigned char   s6_addr[16];    
-};
+&#125;;
 </code></pre>
 <p>Unix域对应的是：</p>
 <pre class=" language-c++"><code class="language-c++">#define UNIX_PATH_MAX    108
 
-struct sockaddr_un { 
+struct sockaddr_un &#123; 
     sa_family_t sun_family;                
     char        sun_path[UNIX_PATH_MAX];   
-};
+&#125;;
 </code></pre>
 </li>
 </ul>
@@ -655,7 +655,7 @@ int close(int fd);
 <li>客户端再想服务器发一个确认ACK K+1</li>
 </ul>
 <p>只有就完了三次握手，但是这个三次握手发生在socket的那几个函数中呢？请看下图：</p>
-<p><a href="http://images.cnblogs.com/cnblogs_com/skynet/201012/201012122157467258.png" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/aHR0cHM6Ly9pbWFnZXMuY25ibG9ncy5jb20vY25ibG9nc19jb20vc2t5bmV0LzIwMTAxMi8yMDEwMTIxMjIxNTc0NzYyODYucG5n" alt="image"></a></p>
+<p><a target="_blank" rel="noopener" href="http://images.cnblogs.com/cnblogs_com/skynet/201012/201012122157467258.png"><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/aHR0cHM6Ly9pbWFnZXMuY25ibG9ncy5jb20vY25ibG9nc19jb20vc2t5bmV0LzIwMTAxMi8yMDEwMTIxMjIxNTc0NzYyODYucG5n" alt="image"></a></p>
 <p>socket中发送的TCP三次握手</p>
 <ul>
 <li>当客户端调用connect时，触发了连接请求，向服务器发送了SYN J包，这时connect进入阻塞状态；</li>
@@ -665,7 +665,7 @@ int close(int fd);
 </ul>
 <h1 id="4、socket中TCP的四次握手释放连接详解"><a href="#4、socket中TCP的四次握手释放连接详解" class="headerlink" title="4、socket中TCP的四次握手释放连接详解"></a>4、socket中TCP的四次握手释放连接详解</h1><p>上面介绍了socket中TCP的三次握手建立过程，及其涉及的socket函数。</p>
 <p>现在介绍socket中的四次握手释放连接的过程</p>
-<p><a href="http://images.cnblogs.com/cnblogs_com/skynet/201012/201012122157487616.png" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/aHR0cHM6Ly9pbWFnZXMuY25ibG9ncy5jb20vY25ibG9nc19jb20vc2t5bmV0LzIwMTAxMi8yMDEwMTIxMjIxNTc0OTQ2OTMucG5n" alt="image"></a></p>
+<p><a target="_blank" rel="noopener" href="http://images.cnblogs.com/cnblogs_com/skynet/201012/201012122157487616.png"><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/aHR0cHM6Ly9pbWFnZXMuY25ibG9ncy5jb20vY25ibG9nc19jb20vc2t5bmV0LzIwMTAxMi8yMDEwMTIxMjIxNTc0OTQ2OTMucG5n" alt="image"></a></p>
 <p>socket中发送的TCP四次握手</p>
 <ul>
 <li><p>某个应用进程首先调用close主动关闭连接，这时TCP发送一个FIN M；</p>
@@ -1249,7 +1249,7 @@ int close(int fd);
             <span id="sitetime">载入运行时间...</span>
             <script>
                 function siteTime() {
-                    var seconds = 60;
+                    var seconds = 1000;
                     var minutes = seconds * 60;
                     var hours = minutes * 60;
                     var days = hours * 24;
@@ -1294,14 +1294,14 @@ int close(int fd);
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/c-sin7" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/c-sin7" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub: c-sin7" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
 
-    <a href="mailto:1127301986@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1127301986@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我: 1127301986@qq.com" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1312,6 +1312,10 @@ int close(int fd);
     </a>
 
 
+
+    <a href="weixin://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=lh-sin" class="tooltipped" target="_blank" data-tooltip="微信联系我: lh-sin" data-position="top" data-delay="50">
+        <i class="fab fa-weixin"></i>
+    </a>
 
 
 

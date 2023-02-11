@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="sin" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="sin" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -493,7 +493,7 @@
             <div id="articleContent">
                 <h1 id="CentOS下安装yum"><a href="#CentOS下安装yum" class="headerlink" title="CentOS下安装yum"></a>CentOS下安装yum</h1><p>查看已安装的yumrpm -qa|grep yum</p>
 <p>删除已有的yumrpm -aq|grep yum|xargs rpm -e –nodeps</p>
-<p>下载以下安装包wget <a href="http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/pyth" target="_blank" rel="noopener">http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/pyth</a></p>
+<p>下载以下安装包wget <a target="_blank" rel="noopener" href="http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/pyth">http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/pyth</a></p>
 <h2 id="1-查看已安装的yum"><a href="#1-查看已安装的yum" class="headerlink" title="1.查看已安装的yum"></a>1.查看已安装的yum</h2><pre class=" language-vim"><code class="language-vim">rpm <span class="token operator">-</span><span class="token keyword">qa</span>|<span class="token keyword">grep</span> yum
 </code></pre>
 <h2 id="2-删除已有的yum"><a href="#2-删除已有的yum" class="headerlink" title="2.删除已有的yum"></a>2.删除已有的yum</h2><pre class=" language-vim"><code class="language-vim">rpm <span class="token operator">-</span>aq|<span class="token keyword">grep</span> yum|xargs rpm <span class="token operator">-</span><span class="token keyword">e</span> <span class="token operator">-</span><span class="token operator">-</span>nodeps 
@@ -504,23 +504,23 @@ wget http<span class="token punctuation">:</span><span class="token operator">/<
 wget http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>tel<span class="token operator">.</span>mirrors<span class="token operator">.</span><span class="token number">163</span><span class="token operator">.</span><span class="token builtin">com</span><span class="token operator">/</span>centos<span class="token operator">/</span><span class="token number">7</span><span class="token operator">/</span>os<span class="token operator">/</span>x86_64<span class="token operator">/</span>Packages<span class="token operator">/</span>yum<span class="token operator">-</span>metadata<span class="token operator">-</span>parser<span class="token operator">-</span><span class="token number">1.1</span><span class="token operator">.</span><span class="token number">4</span><span class="token operator">-</span><span class="token number">10</span><span class="token operator">.</span>el7<span class="token operator">.</span>x86_64<span class="token operator">.</span>rpm
 wget http<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>tel<span class="token operator">.</span>mirrors<span class="token operator">.</span><span class="token number">163</span><span class="token operator">.</span><span class="token builtin">com</span><span class="token operator">/</span>centos<span class="token operator">/</span><span class="token number">7</span><span class="token operator">/</span>os<span class="token operator">/</span>x86_64<span class="token operator">/</span>Packages<span class="token operator">/</span>yum<span class="token operator">-</span>plugin<span class="token operator">-</span>fastestmirror<span class="token operator">-</span><span class="token number">1.1</span><span class="token operator">.</span><span class="token number">31</span><span class="token operator">-</span><span class="token number">54</span><span class="token operator">.</span>el7_8<span class="token operator">.</span>noarch<span class="token operator">.</span>rpm
 </code></pre>
-<p>如果找不到以上版本，可以到 <a href="http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/?login=from_csdn" target="_blank" rel="noopener">http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/</a> 下载最新版本</p>
+<p>如果找不到以上版本，可以到 <a target="_blank" rel="noopener" href="http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/?login=from_csdn">http://tel.mirrors.163.com/centos/7/os/x86_64/Packages/</a> 下载最新版本</p>
 <p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/20210505211959838.png" alt="下载最新版本"></p>
 <h2 id="4-安装"><a href="#4-安装" class="headerlink" title="4.安装"></a>4.安装</h2><pre class=" language-vim"><code class="language-vim">rpm <span class="token operator">-</span>ivh <span class="token keyword">python</span><span class="token operator">-</span><span class="token number">2.7</span><span class="token operator">.</span><span class="token number">5</span><span class="token operator">-</span><span class="token number">89</span><span class="token operator">.</span>el7<span class="token operator">.</span>x86_64<span class="token operator">.</span>rpm <span class="token keyword">python</span><span class="token operator">-</span>iniparse<span class="token operator">-</span><span class="token number">0.4</span><span class="token operator">-</span><span class="token number">9</span><span class="token operator">.</span>el7<span class="token operator">.</span>noarch<span class="token operator">.</span>rpm <span class="token operator">-</span><span class="token operator">-</span>nodeps <span class="token operator">-</span><span class="token operator">-</span>force
 rpm <span class="token operator">-</span>ivh yum<span class="token operator">-</span>metadata<span class="token operator">-</span>parser<span class="token operator">-</span><span class="token number">1.1</span><span class="token operator">.</span><span class="token number">4</span><span class="token operator">-</span><span class="token number">10</span><span class="token operator">.</span>el7<span class="token operator">.</span>x86_64<span class="token operator">.</span>rpm <span class="token operator">-</span><span class="token operator">-</span>nodeps <span class="token operator">-</span><span class="token operator">-</span>force
 rpm <span class="token operator">-</span>ivh yum<span class="token operator">-</span><span class="token number">3.4</span><span class="token operator">.</span><span class="token number">3</span><span class="token operator">-</span><span class="token number">168</span><span class="token operator">.</span>el7<span class="token operator">.</span>centos<span class="token operator">.</span>noarch<span class="token operator">.</span>rpm yum<span class="token operator">-</span>plugin<span class="token operator">-</span>fastestmirror<span class="token operator">-</span><span class="token number">1.1</span><span class="token operator">.</span><span class="token number">31</span><span class="token operator">-</span><span class="token number">54</span><span class="token operator">.</span>el7_8<span class="token operator">.</span>noarch<span class="token operator">.</span>rpm <span class="token operator">-</span><span class="token operator">-</span>nodeps <span class="token operator">-</span><span class="token operator">-</span>force
 </code></pre>
 <h2 id="5-更改-yum源"><a href="#5-更改-yum源" class="headerlink" title="5.更改 yum源"></a>5.更改 yum源</h2><ul>
-<li><p>到该网站 <a href="http://mirrors.163.com/.help/centos.html?login=from_csdn" target="_blank" rel="noopener">http://mirrors.163.com/.help/centos.html</a> 下载配置文件，重命名为CentOS-Base.repo</p>
+<li><p>到该网站 <a target="_blank" rel="noopener" href="http://mirrors.163.com/.help/centos.html?login=from_csdn">http://mirrors.163.com/.help/centos.html</a> 下载配置文件，重命名为CentOS-Base.repo</p>
 <ul>
 <li><p>首先备份/etc/yum.repos.d/CentOS-Base.repo</p>
 <pre class=" language-vim"><code class="language-vim">mv <span class="token operator">/</span>etc<span class="token operator">/</span>yum<span class="token operator">.</span>repos<span class="token operator">.</span><span class="token keyword">d</span><span class="token operator">/</span>CentOS<span class="token operator">-</span>Base<span class="token operator">.</span>repo <span class="token operator">/</span>etc<span class="token operator">/</span>yum<span class="token operator">.</span>repos<span class="token operator">.</span><span class="token keyword">d</span><span class="token operator">/</span>CentOS<span class="token operator">-</span>Base<span class="token operator">.</span>repo<span class="token operator">.</span><span class="token builtin">backup</span>
 </code></pre>
 </li>
 <li><p>下载对应版本repo文件， 放入/etc/yum.repos.d/（操作前请做好相应备份）</p>
-<p><a href="http://mirrors.163.com/.help/CentOS7-Base-163.repo?login=from_csdn" target="_blank" rel="noopener">CentOS7</a></p>
-<p><a href="http://mirrors.163.com/.help/CentOS6-Base-163.repo?login=from_csdn" target="_blank" rel="noopener">CentOS6</a></p>
-<p><a href="http://mirrors.163.com/.help/CentOS5-Base-163.repo?login=from_csdn" target="_blank" rel="noopener">CentOS5</a></p>
+<p><a target="_blank" rel="noopener" href="http://mirrors.163.com/.help/CentOS7-Base-163.repo?login=from_csdn">CentOS7</a></p>
+<p><a target="_blank" rel="noopener" href="http://mirrors.163.com/.help/CentOS6-Base-163.repo?login=from_csdn">CentOS6</a></p>
+<p><a target="_blank" rel="noopener" href="http://mirrors.163.com/.help/CentOS5-Base-163.repo?login=from_csdn">CentOS5</a></p>
 </li>
 <li><p>运行以下命令生成缓存</p>
 </li>
@@ -1190,7 +1190,7 @@ yum makecache
             <span id="sitetime">载入运行时间...</span>
             <script>
                 function siteTime() {
-                    var seconds = 60;
+                    var seconds = 1000;
                     var minutes = seconds * 60;
                     var hours = minutes * 60;
                     var days = hours * 24;
@@ -1235,14 +1235,14 @@ yum makecache
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/c-sin7" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/c-sin7" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub: c-sin7" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
 
-    <a href="mailto:1127301986@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1127301986@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我: 1127301986@qq.com" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1253,6 +1253,10 @@ yum makecache
     </a>
 
 
+
+    <a href="weixin://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=lh-sin" class="tooltipped" target="_blank" data-tooltip="微信联系我: lh-sin" data-position="top" data-delay="50">
+        <i class="fab fa-weixin"></i>
+    </a>
 
 
 
