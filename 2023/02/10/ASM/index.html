@@ -1,0 +1,3185 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="ASM, sin">
+    <meta name="description" content="呆头鹅的随手记录">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>ASM | sin</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="sin" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">sin</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">sin</div>
+        <div class="logo-desc">
+            
+            呆头鹅的随手记录
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/c-sin7" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/c-sin7" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">ASM</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ASM/">
+                                <span class="chip bg-color">ASM</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/ASM/" class="post-category">
+                                ASM
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-02-10
+                </div>
+                
+
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    36 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="2-2-INT-21H的1号功能，输入一个字符串”Hello-world”-存放在内存，然后倒序输出"><a href="#2-2-INT-21H的1号功能，输入一个字符串”Hello-world”-存放在内存，然后倒序输出" class="headerlink" title="2.2 INT 21H的1号功能，输入一个字符串”Hello,world”,存放在内存，然后倒序输出"></a>2.2 INT 21H的1号功能，输入一个字符串”Hello,world”,存放在内存，然后倒序输出</h3><pre class=" language-ASM"><code class="language-ASM">;2.2 INT 21H的1号功能，输入一个字符串"Hello,world",存放在内存，然后倒序输出
+S1 SEGMENT
+
+S1 ENDS
+
+S2 SEGMENT
+    DW 30H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+
+    ;输入 cx作计数器
+    SUB CX,CX
+L1: 
+    MOV AH,1
+    INT 21H
+    CMP AL,0DH
+    JE  L2
+    XOR AH,AH
+    PUSH AX
+    INC CX
+    JMP L1
+    
+    ;输出
+L2: 
+    POP DX
+    MOV AH,2
+    INT 21H
+    LOOP L2
+    
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="2-3-INT-21H的A号功能，输入一个字符串”Hello-world”-存放在内存，然后倒序输出"><a href="#2-3-INT-21H的A号功能，输入一个字符串”Hello-world”-存放在内存，然后倒序输出" class="headerlink" title="2.3 INT 21H的A号功能，输入一个字符串”Hello,world”,存放在内存，然后倒序输出"></a>2.3 INT 21H的A号功能，输入一个字符串”Hello,world”,存放在内存，然后倒序输出</h3><pre class=" language-ASM"><code class="language-ASM">;2.3 INT 21H的A号功能，输入一个字符串"Hello,world",存放在内存，然后倒序输出
+S1 SEGMENT
+    BUFF DB 250,?,250 DUP(?)
+    SHOW DB 0DH,0AH,'THE REVERSE STRING IS:$'
+S1 ENDS
+
+S2 SEGMENT STACK
+    DW 30H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+
+    ;输入
+    MOV AH,0AH
+    INT 21H
+    
+    MOV SI,DX
+    INC SI
+    MOV AL,DS:[SI]    ;真实数据总个数
+    CBW 
+    MOV CX,AX        ;计数器
+    ADD SI,AX        ;串尾 不包括ODH    
+
+    ;输出
+    LEA DX,SHOW
+    MOV AH,09H
+    INT 21H
+L0:    
+    MOV DL,DS:[SI]
+    MOV AH,2
+    INT 21H
+    DEC SI
+    LOOP L0
+
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="3-1-将-BX-中的无符号数以二进制的形式输出"><a href="#3-1-将-BX-中的无符号数以二进制的形式输出" class="headerlink" title="3.1 将 BX 中的无符号数以二进制的形式输出"></a>3.1 将 BX 中的无符号数以二进制的形式输出</h3><pre class=" language-ASM"><code class="language-ASM">;3.1将 BX 中的无符号数以二进制的形式输出
+S1 SEGMENT
+    A DW 6C3BH  
+S1 ENDS
+
+S2 SEGMENT
+    DB 30 DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+    
+    MOV CX,10H
+    MOV BX,A
+L0: 
+    ROL BX,1
+    MOV DL,30H
+    ADC DL,0
+    MOV AH,2
+    INT 21H
+    LOOP L0
+
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="3-4-将BX的无符号数以十进制数形式输出"><a href="#3-4-将BX的无符号数以十进制数形式输出" class="headerlink" title="3.4 将BX的无符号数以十进制数形式输出"></a>3.4 将BX的无符号数以十进制数形式输出</h3><pre class=" language-ASM"><code class="language-ASM">;3.4 将 BX 中的无符号数以十进制的形式输出
+S1 SEGMENT
+    A DW 2A3BH
+    CNT DW 0
+S1 ENDS
+
+S2 SEGMENT
+    DW 30H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+    
+    MOV BX,A
+    MOV AX,BX
+    MOV CX,0AH
+    
+    ;转化并入栈
+    ;DX余数 AX商
+L0:
+    XOR DX,DX
+    DIV CX
+    PUSH DX        ;余数进栈
+    INC CNT
+    CMP AX,0
+    JNE L0
+    
+    ;输出
+    MOV CX,CNT
+L1:    
+    POP DX
+    ADD DX,30H
+    MOV AH,2
+    INT 21H
+    LOOP L1
+
+EXIT:   
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="3-5-将BX的有符号数以十进制数形式输出"><a href="#3-5-将BX的有符号数以十进制数形式输出" class="headerlink" title="3.5 将BX的有符号数以十进制数形式输出"></a>3.5 将BX的有符号数以十进制数形式输出</h3><pre class=" language-ASM"><code class="language-ASM">;3.5 将BX的有符号数以十进制数形式输出
+S1 SEGMENT
+    A DW 8000H
+S1 ENDS
+S2 SEGMENT
+    DW 30H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+    
+    MOV BX,A
+    MOV AX,BX
+    MOV DI,10
+    MOV CX,0
+    
+    ;判断正负数
+    CMP AX,0
+    JGE L1
+    
+    NEG AX
+    PUSH AX
+    MOV DL,'-'
+    MOV AH,2
+    INT 21H
+    POP AX
+    
+L0:
+    XOR DX,DX
+    IDIV DI    ;/10
+    PUSH DX    ;压余数
+    INC CX     ;记录除了几次
+    CMP AX,0   ;比较除完了没
+    JNE L0
+    
+L1:
+    POP DX
+    ADD DX,30H
+    MOV AH,2
+    INT 21H
+    LOOP L1
+
+EXIT:
+    MOV AH,4CH
+    INT 21H
+    
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="4-2-输入两个字X-Y，计算Z-X-Y-并把Z的结果显示出来，X-Y的输入可以是任何进制"><a href="#4-2-输入两个字X-Y，计算Z-X-Y-并把Z的结果显示出来，X-Y的输入可以是任何进制" class="headerlink" title="4.2 输入两个字X,Y，计算Z=X+Y,并把Z的结果显示出来，X,Y的输入可以是任何进制"></a>4.2 输入两个字X,Y，计算Z=X+Y,并把Z的结果显示出来，X,Y的输入可以是任何进制</h3><pre class=" language-ASM"><code class="language-ASM">;4.2 输入两个字X,Y，计算Z=X+Y,并把Z的结果显示出来，X,Y的输入可以是任何进制
+S1 SEGMENT
+    X DW 0
+    Y DW 0
+    Z DW 0
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+    
+    MOV CX,16
+    XOR BX,BX
+    
+    ;输入并放置在bx
+L0: 
+    MOV AH,1
+    INT 21H
+    CMP AL,0DH
+    JE  L1
+    CMP AL,30H
+    JB L0
+    CMP AL,31H
+    JA L0
+    SHR AL,1
+    RCL BX,1
+    LOOP L0
+L1:
+    MOV X,BX
+
+    ;吸收回车
+    MOV AH,1
+    INT 21H  
+    
+    ;输入并放置在bx
+L2: 
+    MOV AH,1
+    INT 21H
+    CMP AL,0DH
+    JE  L3
+    CMP AL,30H
+    JB L2
+    CMP AL,31H
+    JA L2
+    SHR AL,1
+    RCL BX,1
+    LOOP L2
+L3:
+    MOV Y,BX
+    
+    
+    ;两数相加
+    MOV DX,X
+    MOV BX,Y
+    ADD BX,DX
+    MOV CX,16
+L4:
+    ROL BX,1
+    MOV DX,30H
+    ADC DX,0
+    MOV AH,2
+    INT 21H
+    LOOP L4
+    
+EXIT:
+    MOV AH,4CH
+    INT 21H
+    
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="4-3-输入一个有符号的十进制数，并以十六进制输出"><a href="#4-3-输入一个有符号的十进制数，并以十六进制输出" class="headerlink" title="4.3 输入一个有符号的十进制数，并以十六进制输出"></a>4.3 输入一个有符号的十进制数，并以十六进制输出</h3><pre class=" language-ASM"><code class="language-ASM">;4.3 输入一个有符号的十进制数，并以十六进制输出
+S1 SEGMENT
+    NUM DW 8000
+    F    DW 0
+S1 ENDS
+
+S2 SEGMENT
+    DW 30H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+    XOR BX,BX
+
+    CALL READIN
+    CMP F,0
+    JNE    L3
+L3:
+    NEG BX
+    CALL CHANGE
+    
+EXIT:    
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+
+READIN PROC NEAR
+    ;输入 判断正负
+L0:
+    MOV AH,1
+    INT 21H
+    CMP AL,0DH
+    JE  EXIT1
+    CMP AL,'-'
+    JNE L1
+    INC F
+    
+L1:
+    SUB AL,30H
+    JL  L0
+    CMP AL,9D
+    JG    L0
+
+    ;->10
+    CBW
+    XCHG AX,BX
+    MOV CX,10D
+    MUL CX
+    XCHG BX,AX
+    ADD BX,AX
+    JMP L0
+    
+EXIT1:
+    RET
+    
+READIN ENDP
+
+CHANGE PROC NEAR
+    ;10->16
+    MOV CX,4
+L2:
+    PUSH CX
+    MOV CL,4
+    ROL BX,CL
+    MOV DL,BL
+    AND DL,0FH
+    ADD DL,30H
+    CMP DL,39H
+    JBE DISP
+    ADD DL,7
+DISP:
+    MOV AH,2
+    INT 21H
+    POP CX
+    LOOP L2
+    
+    RET
+CHANGE ENDP
+
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-1-试编写一个汇编语言程序，要求对键盘输入的小写字母用大写字母显示出来"><a href="#5-1-试编写一个汇编语言程序，要求对键盘输入的小写字母用大写字母显示出来" class="headerlink" title="5.1 试编写一个汇编语言程序，要求对键盘输入的小写字母用大写字母显示出来"></a>5.1 试编写一个汇编语言程序，要求对键盘输入的小写字母用大写字母显示出来</h3><pre class=" language-ASM"><code class="language-ASM">;5.1对键盘输入的小写字母用大写字母显示出来
+S1 SEGMENT
+S1 ENDS
+
+S2 SEGMENT
+    DW 30H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+ 
+    ;输入小写
+L1:
+    MOV AH,1
+    INT 21H
+    CMP AL,'a'
+    JB L1
+    CMP AL,'z'
+    JA L1
+    MOV BL,AL
+    
+    MOV DL,0DH
+    MOV AH,2
+    INT 21H
+    MOV DL,0AH
+    MOV AH,2
+    INT 21H
+    
+    ;变大写输出
+    MOV DL,BL
+    SUB DL,20H
+    MOV AH,2
+    INT 21H
+
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-2编写程序，从键盘接收一个小写字母，然后找出它的前导字符和后续字符，再按顺序显示这三个字符"><a href="#5-2编写程序，从键盘接收一个小写字母，然后找出它的前导字符和后续字符，再按顺序显示这三个字符" class="headerlink" title="5.2编写程序，从键盘接收一个小写字母，然后找出它的前导字符和后续字符，再按顺序显示这三个字符"></a>5.2编写程序，从键盘接收一个小写字母，然后找出它的前导字符和后续字符，再按顺序显示这三个字符</h3><pre class=" language-ASM"><code class="language-ASM">;5.2接收一个小写字母，然后找出前导字符和后续字符，按顺序输出
+S1 SEGMENT
+S1 ENDS
+
+S2 SEGMENT
+    DW 30H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+ 
+    ;输入
+L0:
+    MOV AH,1
+    INT 21H
+    CMP AL,'a'
+    JB L0
+    CMP AL,'z'
+    JA L0
+    MOV BL,AL
+    DEC BL
+    
+    ;输出
+    MOV DL,0DH
+    MOV AH,2
+    INT 21H
+    MOV DL,0AH
+    MOV AH,2
+    INT 21H    
+    
+    MOV CX,2
+    MOV DL,BL
+L1:
+    MOV AH,2
+    INT 21H
+    ADD DL,2
+    LOOP L1
+
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-3将-AX-寄存器中的-16-位数分成-4-组，每组-4-位，然后把这四组数分别放在-AL、BL、CL-和-DL-中"><a href="#5-3将-AX-寄存器中的-16-位数分成-4-组，每组-4-位，然后把这四组数分别放在-AL、BL、CL-和-DL-中" class="headerlink" title="5.3将 AX 寄存器中的 16 位数分成 4 组，每组 4 位，然后把这四组数分别放在 AL、BL、CL 和 DL 中"></a>5.3将 AX 寄存器中的 16 位数分成 4 组，每组 4 位，然后把这四组数分别放在 AL、BL、CL 和 DL 中</h3><pre class=" language-ASM"><code class="language-ASM">;5.3将AX寄存器的16位数分为四组，每组四位，分别放在AL，BL，CL，DL中
+S1 SEGMENT
+    A1    DW    0
+    B1    DW    0
+    C1    DW    0
+    D1    DW    0
+S1 ENDS
+
+S2 SEGMENT
+    DW 30H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+    
+    MOV AX,0ABCDH
+    MOV CL,4    
+
+    ROL AX,CL
+    MOV BX,AX
+    AND BX,000FH
+    MOV SI,BX
+
+    ROL AX,CL
+    MOV BX,AX
+    AND BX,000FH
+    MOV DI,BX
+
+    ROL AX,CL
+    MOV BX,AX
+    AND BX,000FH
+    MOV BP,BX
+
+    ROL AX,CL
+    MOV BX,AX
+    AND BX,000FH
+    MOV DX,BX
+    
+    MOV AX,SI
+    MOV BX,DI
+    MOV CX,BP
+        
+
+EXIT:
+    MOV AH,4CH
+    INT 21H
+
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<pre class=" language-ASM"><code class="language-ASM">;5.3将AX寄存器的16位数分为四组，每组四位，分别放在AL，BL，CL，DL中
+S1 SEGMENT
+S1 ENDS
+
+S2 SEGMENT
+    DW 30H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+    
+    MOV AX,0ABCDH
+    PUSH AX
+    
+    MOV CL,4
+    ROL AX,CL
+    PUSH AX
+    AND AX,000FH
+
+    POP BX
+    ROL BX,CL
+    PUSH BX
+    AND BX,000FH
+
+    POP CX
+    SHR CX,1
+    SHR CX,1
+    SHR CX,1
+    SHR CX,1
+
+    SHR CX,1
+    SHR CX,1
+    SHR CX,1
+    SHR CX,1
+    PUSH CX
+    AND CX,00F0H
+
+    POP DX
+    AND DX,000FH
+    SHR CX,1
+    SHR CX,1
+    SHR CX,1
+    SHR CX,1
+
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-4比较string1和string2所含字符是否相同，相同’MATCH’-不同’NOTMATCH’"><a href="#5-4比较string1和string2所含字符是否相同，相同’MATCH’-不同’NOTMATCH’" class="headerlink" title="5.4比较string1和string2所含字符是否相同，相同’MATCH’,不同’NOTMATCH’"></a>5.4比较string1和string2所含字符是否相同，相同’MATCH’,不同’NOTMATCH’</h3><pre class=" language-ASM"><code class="language-ASM">;5.4比较string1和string2所含字符是否相同，相同'MATCH',不同'NOTMATCH'
+S1 SEGMENT
+    STRING1 DB 'ABCDEFGH$'
+    STRING2 DB 'QQQQQQQQ$'
+    MATCH    DB 'MATCH$'
+    NOTMATCH    DB 'NOTMATCH$'
+S1 ENDS
+
+S2 SEGMENT
+    DW 30H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S2
+    MOV SS,AX
+    MOV AX,S1
+    MOV DS,AX
+    MOV ES,AX
+    
+    LEA SI,STRING1
+    LEA DI,STRING2
+    MOV CX,8
+    
+    CLD
+    
+    REPNE CMPSB
+    JNE NO
+    
+YES:
+    LEA DX,MATCH
+    MOV AH,09H
+    INT 21H
+    JMP EXIT
+NO:
+    LEA DX,NOTMATCH
+    MOV AH,09H
+    INT 21H
+    
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-6将一个含有20个数据的数组M分成两个数组，"><a href="#5-6将一个含有20个数据的数组M分成两个数组，" class="headerlink" title="5.6将一个含有20个数据的数组M分成两个数组，"></a>5.6将一个含有20个数据的数组M分成两个数组，</h3><p>正数组P和负数组N,并分别把两个数组的数据的个数显示出来</p>
+<pre class=" language-ASM"><code class="language-ASM">;5.6 将一个含有20个数据的数组M分成两个数组，
+;正数组P和负数组N,并分别把两个数组的数据的个数显示出来
+S1 SEGMENT
+    COUNT DB 20
+    M DW 1,-2,3,-4,5,-6,7,-8,9,-10,11,-12,13,-14,15,-16,17,-18,19,20
+    CNTP DW 0
+    P DW 20 DUP(?)
+    CNTN DW 0
+    N DW 20 DUP(?)
+    POST DB 0DH,0AH,'Positive:$'
+    NEGE DB 0DH,0AH,'Negative:$'
+    ENT DB 0DH,0AH,'$'
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+    
+    MOV SI,0
+    MOV DI,0
+    MOV BP,0
+    MOV CX,20
+L0: 
+    MOV BX,M[SI]
+    ADD SI,2
+    CMP BX,0
+    JS    L2
+    
+    ;正数
+L1: 
+    MOV P[DI],BX
+    INC CNTP
+    ADD DI,2
+    JMP L3
+    
+    ;负数
+L2: 
+    MOV N[BP],BX
+    INC CNTN
+    ADD BP,2
+    JMP L3
+L3: 
+    LOOP L0
+    
+    
+    ;AH余数 AL商
+    MOV AX,CNTP
+    MOV BL,10
+    DIV BL
+    MOV BX,AX
+    LEA DX,POST
+    MOV AH,9
+    INT 21H
+
+    ADD BL,30H
+    MOV DL,BL
+    MOV AH,2
+    INT 21H
+    ADD BH,30H
+    MOV DL,BH
+    MOV AH,2
+    INT 21H
+    
+    LEA DX,ENT
+    MOV AH,9
+    INT 21H
+    
+    MOV AX,CNTN
+    MOV BL,10
+    DIV BL
+    MOV BX,AX
+    LEA DX,NEGE
+    MOV AH,9
+    INT 21H
+    
+    ADD BL,30H
+    MOV DL,BL
+    MOV AH,2
+    INT 21H
+    ADD BH,30H
+    MOV DL,BH
+    MOV AH,2
+    INT 21H
+    
+EXIT:    
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-7-求出首地址为-DATA-的-100D-字数组中的最小偶数，并存放在-AX-中"><a href="#5-7-求出首地址为-DATA-的-100D-字数组中的最小偶数，并存放在-AX-中" class="headerlink" title="5.7 求出首地址为 DATA 的 100D 字数组中的最小偶数，并存放在 AX 中"></a>5.7 求出首地址为 DATA 的 100D 字数组中的最小偶数，并存放在 AX 中</h3><p>两次循环 前指针找出偶数放在ax 后指针找出偶数放在dx，假设ax是最小偶数，ax和dx进行比较</p>
+<pre class=" language-ASM"><code class="language-ASM">;5.7 求出首地址为 DATA 的 100D 字数组中的最小偶数，并存放在 AX 中
+S1 SEGMENT
+    DATA DW 100D DUP(?)
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME DS:S1,SS:S2,CS:S3
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+
+    MOV BX,0
+    MOV CX,100
+    
+L0:
+    MOV AX,DATA[BX]
+    TEST AX,1
+    ADD BX,2
+    LOOPNZ L0    ;ZF=0和CF>0，继续循环
+    JNZ EXIT    ;循环结束且没有偶数
+    JCXZ EXIT    ;循环结束且最后一个是偶数，在BX
+    JZ    L1        ;循环未结束，找到偶数 进行比较
+L1:
+    MOV DX,DATA[BX]
+    TEST DX,1
+    ADD BX,2
+    JNZ    L0
+    CMP DX,AX    
+    JGE    L2        ;继续向下找更小的偶数
+    MOV AX,DX    ;更新最小偶数值
+    LOOP L0
+L2:
+    LOOP L1
+
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-8-把-AX-中存放的-16-位二进制数-K-看作是-8-个二进制的“四分之一字节”"><a href="#5-8-把-AX-中存放的-16-位二进制数-K-看作是-8-个二进制的“四分之一字节”" class="headerlink" title="5.8 把 AX 中存放的 16 位二进制数 K 看作是 8 个二进制的“四分之一字节”"></a>5.8 把 AX 中存放的 16 位二进制数 K 看作是 8 个二进制的“四分之一字节”</h3><h3 id="数一下值为-3-即-11B-的四分之一的字节数，并将该数在终端上显示出来。"><a href="#数一下值为-3-即-11B-的四分之一的字节数，并将该数在终端上显示出来。" class="headerlink" title="数一下值为 3(即 11B)的四分之一的字节数，并将该数在终端上显示出来。"></a>数一下值为 3(即 11B)的四分之一的字节数，并将该数在终端上显示出来。</h3><pre class=" language-ASM"><code class="language-ASM">;5.8 把 AX 中存放的 16 位二进制数 K 看作是 8 个二进制的“四分之一字节”。
+;数一下值为 3(即 11B)的四分之一字节数，并将该数在终端上显示出来。
+S1 SEGMENT
+    K DW 6C3BH
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+    
+    MOV AX,K
+    MOV BP,8        ;循环次数
+    MOV CL,2        ;循环位数
+    XOR DX,DX        ;11B的个数
+    
+L0:
+    CMP BP,0
+    JE    EXIT
+    DEC BP
+    
+    ROL AX,CL
+    MOV BX,AX
+    AND BX,3
+    CMP BX,3
+    
+    JE    L1
+    JNE L0
+    
+L1:
+    INC DX
+    JMP L0
+    
+EXIT:
+    ADD DL,30H
+    MOV AH,2
+    INT 21H
+    
+    MOV AH,4CH
+    INT 21H
+    
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-9输入一个四位的-16-进制数，并在终端上显示等值的二进制数"><a href="#5-9输入一个四位的-16-进制数，并在终端上显示等值的二进制数" class="headerlink" title="5.9输入一个四位的 16 进制数，并在终端上显示等值的二进制数"></a>5.9输入一个四位的 16 进制数，并在终端上显示等值的二进制数</h3><pre class=" language-ASM"><code class="language-ASM">;5.9 输入一个四位的 16 进制数，并在终端上显示等值的二进制数。
+S1 SEGMENT
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME DS:S1,SS:S2,CS:S3
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+    
+    ;输入
+    MOV BX,0
+    MOV CX,4
+L0:
+    PUSH CX
+    MOV CL,4
+    ROL BX,CL
+    MOV AH,1
+    INT 21H
+    
+    ;NUMBER
+    CMP AL,30H
+    JB    L0
+    CMP AL,39H
+    JA    L1
+    SUB AL,30H
+    JMP L3
+    
+L1:    ;APHAL
+    CMP AL,41H
+    JB    L0
+    CMP AL,46H
+    JA    L2
+    SUB AL,37H
+    JMP L3
+    
+L2:    ;SMALL A
+    CMP AL,61H
+    JB    L0
+    CMP AL,66H
+    JA    L0
+    SUB AL,57H
+    JMP L3
+
+L3:
+    ADD BL,AL
+    POP CX
+    LOOP L0
+    
+    MOV DL,0DH
+    MOV AH,2
+    INT 21H
+    MOV DL,0AH
+    MOV AH,2
+    INT 21H
+    
+    MOV CX,16
+L4:
+    MOV DL,30H
+    ROL BX,1
+    ADC DL,0
+    MOV AH,2
+    INT 21H
+    LOOP L4
+    
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-10设有一段英文，其字符变量名为-ENG，并以-字符结束。试编写一程序，查对单词-SUN在该文中的出现次数，并以格式“SUN：xxxx”显示出次数。"><a href="#5-10设有一段英文，其字符变量名为-ENG，并以-字符结束。试编写一程序，查对单词-SUN在该文中的出现次数，并以格式“SUN：xxxx”显示出次数。" class="headerlink" title="5.10设有一段英文，其字符变量名为 ENG，并以$字符结束。试编写一程序，查对单词 SUN在该文中的出现次数，并以格式“SUN：xxxx”显示出次数。"></a>5.10设有一段英文，其字符变量名为 ENG，并以$字符结束。试编写一程序，查对单词 SUN在该文中的出现次数，并以格式“SUN：xxxx”显示出次数。</h3><pre class=" language-ASM"><code class="language-ASM">;5.10 一段英文 名ENG，以$结束,计算SUN在该文中出现的字数，格式SUNXXXX显示出次数
+S1 SEGMENT
+    ENG DB 'SUNSSUN;;SUN S,,,SUN$'
+    PUT DB 'SUN'
+
+    COUNT DB '0000',0DH,0AH,'$'
+    SUN DB 'SUN'
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV ES,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+    
+    XOR AX,AX
+    MOV DX,PUT-ENG-2
+    CALL CMPSTR
+    CALL CHANGE
+    
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+
+CMPSTR PROC NEAR
+L1:
+    MOV DI,BX
+    LEA SI,SUN
+    
+    MOV CX,3
+    REPE CMPSB
+    JNZ L2
+    INC AX
+    ADD BX,2 ;匹配成功
+    SUB DX,2
+L2:
+    INC BX ;匹配下一个
+    DEC DX
+    CMP DX,0
+    JG L1
+
+CMPSTR ENDP
+
+CHANGE PROC NEAR
+L3:
+    MOV CH,4 
+    MOV CL,4
+    LEA BX,COUNT 
+L4: 
+    ROL AX,CL
+    MOV DX,AX
+    AND DL,0FH ;取一位16进制数
+    ADD DL,30H
+    CMP DL,39H
+    JLE L5
+    ADD DL,07H
+L5: 
+    MOV [BX],DL
+    INC BX
+    DEC CH
+    JNZ L4
+    
+     LEA DX,PUT
+     MOV AH,09H
+    INT 21H
+CHANGE ENDP
+
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-11从键盘输入一系列以-为结束符的字符串，对其中非数字字符计数，并显示计数结果。"><a href="#5-11从键盘输入一系列以-为结束符的字符串，对其中非数字字符计数，并显示计数结果。" class="headerlink" title="5.11从键盘输入一系列以$为结束符的字符串，对其中非数字字符计数，并显示计数结果。"></a>5.11从键盘输入一系列以$为结束符的字符串，对其中<u>非数字字符</u>计数，并显示计数结果。</h3><pre class=" language-ASM"><code class="language-ASM">;从键盘输入一系列以$为结束符的字符串，
+;对其中的非数字字符计数，并显示出计数结果。
+S1 SEGMENT
+    STRING DB 100 DUP(?)
+    CNT DW 0
+    DISPLAY DB 0DH,0AH,'THE COUNT:$'
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME DS:S1,SS:S2,CS:S3
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+   
+    LEA BX,STRING
+L1:
+    MOV AH,1        ;输入
+    INT 21H
+    MOV [BX],AL
+    INC BX
+    CMP AL,'$'        ;结束?
+    JE    L3            
+    CMP AL,30H        ;0-9
+    JB    L2
+    CMP AL,39H
+    JA    L2
+    JMP L1
+    
+L2:
+    INC CNT
+    JMP L1
+    
+L3:
+    ;转成十进制
+    MOV AX,CNT
+    MOV BL,10
+    DIV BL
+    MOV BX,AX
+    
+    LEA DX,DISPLAY
+    MOV AH,9
+    INT 21H
+    
+    ;BX放到DX
+    MOV DL,30H
+    ADD DL,BL
+    MOV AH,2
+    INT 21H
+    
+    MOV DL,30H
+    ADD DL,BH
+    MOV AH,2
+    INT 21H
+    
+    MOV DL,0DH
+    MOV AH,2
+    INT 21H
+    MOV DL,0AH
+    MOV AH,2
+    INT 21H
+    
+EXIT:   
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-12-首地址为-MEM-的-100D-字数组，删除数组中所有为-0-的项，并将后续项向前压缩，最后将数组的剩余部分补上-0"><a href="#5-12-首地址为-MEM-的-100D-字数组，删除数组中所有为-0-的项，并将后续项向前压缩，最后将数组的剩余部分补上-0" class="headerlink" title="5.12 首地址为 MEM 的 100D 字数组，删除数组中所有为 0 的项，并将后续项向前压缩，最后将数组的剩余部分补上 0"></a>5.12 首地址为 MEM 的 100D 字数组，删除数组中所有为 0 的项，并将后续项向前压缩，最后将数组的剩余部分补上 0</h3><pre class=" language-ASM"><code class="language-ASM">;5.12 首地址为 MEM 的 100D 字数组，删除数组中所有为 0 的项，
+;并将后续项向前压缩，最后将数组的剩余部分补上 0。
+S1 SEGMENT
+    MEM DW 1,0,0,0,0,0,0,0,0,0
+        DW 2,1,0,3,4,5,6,7,8,9
+        DW 3,0,0,0,0,0,0,0,0,0
+        DW 4,1,2,0,4,5,6,7,8,9
+        DW 5,0,0,0,0,0,0,0,0,0
+        DW 6,1,2,3,4,5,0,7,8,9
+        DW 7,0,0,0,0,0,0,0,0,0
+        DW 8,1,2,3,4,5,6,7,0,9
+        DW 9,0,0,0,0,0,0,0,0,0
+        DW 0,1,2,3,4,5,6,7,8,0
+    CNT DW 0
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME DS:S1,SS:S2,CS:S3
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+    
+    MOV CX,100
+    MOV SI,0
+L0:
+    CMP CX,0
+    JE    L3
+    
+    MOV AX,MEM[SI]
+    MOV DI,SI
+    ADD SI,2
+    DEC CX
+    CMP AX,0
+    JNE    L0
+    
+    ;把后面的前移
+L1:
+    INC CNT            ;记录数组中0的个数
+    MOV DX,MEM[SI]
+    MOV MEM[DI],DX    ;DX是中间量
+    JMP L0
+    
+    ;剩余部分补零
+    MOV CX,CNT
+L3:
+    MOV SI,198
+    MOV MEM[SI],0
+    SUB SI,2
+    LOOP L3
+    
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-13在-STRING-到-STRING-99-单元中存放着一个字符串"><a href="#5-13在-STRING-到-STRING-99-单元中存放着一个字符串" class="headerlink" title="5.13在 STRING 到 STRING+99 单元中存放着一个字符串"></a>5.13在 STRING 到 STRING+99 单元中存放着一个字符串</h3><p>测试该字符串中是否存在数字，如有则把 CL 的第 5 位置 1，否则将该位置 0。</p>
+<pre class=" language-ASM"><code class="language-ASM">;在 STRING 到 STRING+99 单元中存放着一个字符串
+;测试该字符串中是否存在数字，如有则把 CL 的第 5 位置 1，否则将该位置 0。
+S1 SEGMENT
+    STRING DB 'HELLOABCDE1',90 DUP('A') 
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+   
+    MOV CX,100
+    LEA BX,STRING 
+L0:
+    MOV AL,[BX]
+    INC BX
+    CMP AL,30H
+    JB    L1
+    CMP AL,39H
+    JNA    L2
+L1:
+    LOOP L0
+    
+    ;存在数字
+L2:
+    MOV CL,00010000b
+    JMP EXIT
+  
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-14"><a href="#5-14" class="headerlink" title="5.14"></a>5.14</h3><pre class=" language-ASM"><code class="language-ASM">;5.14 在首地址为 TABLE 的数组中按递增次序存放着 100H 个 16 位补码数
+;把出现次数最多的数及其出现次数分别存放于 AX 和 CX 中
+S1 SEGMENT
+    TABEL    DW    6 DUP(-1),10 DUP(1),25 DUP(2),15 DUP(3),200 DUP(4)
+    TEMP    DW    ?
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME CS:S3,DS:S1,SS:S2
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+    
+    MOV CX,128
+    MOV SI,0    ;第二组的个数
+    MOV DI,0    ;第一组的个数
+    MOV DX,0    ;出现次数最大的值
+    LEA BX,TABEL
+    MOV DX,[BX]
+    
+;一段一段记录个数，相等增加个数，大于则记录下一组，比较存储两组个数，再进行下一轮
+L1:
+    CMP CX,0
+    JE    EXIT
+    DEC CX
+    
+    ;后边组的个数是DI   后指针
+    MOV AX,[BX]
+    ADD BX,2
+    INC DI
+    CMP    AX,[BX]
+    JNE L2
+    
+    CMP CX,0
+    JNE    L1
+    
+L2:
+    CMP DI,SI
+    JB    L3        ;不用变动
+    ;后边组的次数更多，需要更新
+    MOV DX,AX    ;DX保存数值较大值
+    MOV SI,DI    ;SI保存次数较大值
+
+L3:
+    XOR    DI,DI
+    JMP L1        
+    
+EXIT:
+    MOV CX,SI
+    
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-15-数据段中已定义了一个有-n-个字数据的数组-M-求出-M-中绝对值最大的数，放在数据段的-M-2n-单元中-最后一个单元-并将该数的偏移地址存放在-M-2-n-1-单元中"><a href="#5-15-数据段中已定义了一个有-n-个字数据的数组-M-求出-M-中绝对值最大的数，放在数据段的-M-2n-单元中-最后一个单元-并将该数的偏移地址存放在-M-2-n-1-单元中" class="headerlink" title="5.15 数据段中已定义了一个有 n 个字数据的数组 M,求出 M 中绝对值最大的数，放在数据段的 M+2n 单元中(最后一个单元),并将该数的偏移地址存放在 M+2(n+1)单元中"></a>5.15 数据段中已定义了一个有 n 个<u>字</u>数据的数组 M,求出 M 中绝对值最大的数，放在数据段的 M+2n 单元中(最后一个单元),并将该数的偏移地址存放在 M+2(n+1)单元中</h3><pre class=" language-ASM"><code class="language-ASM">;5.15 数据段中已定义了一个有 n 个字数据的数组 M，
+;求出 M 中绝对值最大的数，放在数据段的 M+2n 单元中
+;并将该数的偏移地址存放在 M+2(n+1)单元中
+S1 SEGMENT
+    M DW 10 DUP(5),10 DUP(2),5 DUP(-10)
+    CNT    DW    ($-M)/2
+    MAX    DW    ?
+    ADDRESS DW ?
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME DS:S1,SS:S2,CS:S3
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+    
+    ;第一次
+    MOV SI,0
+    MOV AX,M[SI]
+    ADD SI,2
+    CMP AX,0
+    JGE    L0
+    NEG AX
+L0:    
+    MOV MAX,AX
+    MOV BX,SI
+    
+    ;N-1次循环比较
+    MOV CX,CNT
+    DEC CX 
+L1:
+    CMP CX,0
+    JE    L3
+    MOV AX,M[SI]
+    ADD SI,2
+    DEC CX
+    CMP AX,0
+    JGE    L2
+    NEG AX
+    
+L2:
+    CMP MAX,AX
+    JAE L1
+    ;出现绝对值更大的数，需更新
+    MOV MAX,AX
+    MOV BX,SI
+    JMP L1
+    
+    ;存放数据
+L3:
+    ADD SI,2
+    MOV DX,M[BX]
+    MOV M[SI],DX
+    ADD SI,2
+    MOV M[SI],BX
+    
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-16在首地址为-DATA-的字数组中存放着-100H-个-16-位补码数"><a href="#5-16在首地址为-DATA-的字数组中存放着-100H-个-16-位补码数" class="headerlink" title="5.16在首地址为 DATA 的字数组中存放着 100H 个 16 位补码数"></a>5.16在首地址为 DATA 的字数组中存放着 100H 个 16 位补码数</h3><p>求出它们的平均值放在 AX 寄存器中,并求出数组中有多少个数小于此平均值，将结果放在 BX 寄存 器中。 </p>
+<pre class=" language-ASM"><code class="language-ASM">;5.16 在首地址为 DATA 的字数组中存放着 100H 个 16 位补码数
+;求出它们的平均值放在 AX 寄存器中；
+;并求出数组中有多少个数小于此平均值，将结果放在 BX 寄存 器中。 
+S1 SEGMENT
+    DATA DW    3 DUP(-1),4 DUP(1),25 DUP(2),15 DUP(3),200 DUP(4)
+    AVER DW ?
+    CNT    DW    0
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME DS:S1,SS:S2,CS:S3
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+
+    MOV CX,128
+    MOV AX,0
+    MOV SI,0
+L0:
+    MOV DX,DATA[SI]
+    ADD SI,2
+    ADD AX,DX    ;AX作SUM
+    LOOP L0
+    
+    MOV BP,100H
+    DIV BP
+    MOV AH,0
+    MOV AVER,AX
+
+    ;遍历比较
+    MOV SI,0
+    MOV CX,128
+L1: 
+    MOV DX,DATA[SI]
+    ADD SI,2
+    CMP DX,AVER
+    JAE L2
+    INC CNT
+L2:
+    LOOP L1
+    
+    MOV BX,CNT
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-17把-AX-中的-16-进制数转换为-ASCII-码-并将对应的-ASCII-码依次存放到-MEM-数组中的四个字节中"><a href="#5-17把-AX-中的-16-进制数转换为-ASCII-码-并将对应的-ASCII-码依次存放到-MEM-数组中的四个字节中" class="headerlink" title="5.17把 AX 中的 16 进制数转换为 ASCII 码,并将对应的 ASCII 码依次存放到 MEM 数组中的四个字节中"></a>5.17把 AX 中的 16 进制数转换为 ASCII 码,并将对应的 ASCII 码依次存放到 MEM 数组中的四个字节中</h3><p>例如，当(AX)=2A49H 时，MEM 中的 4 个字节为39H，34H，41H，32H</p>
+<pre class=" language-asm"><code class="language-asm">;5.17 试编制一个程序把 AX 中的 16 进制数转换为 ASCII 码
+;并将对应的 ASCII 码依次存放到 MEM 数组中的四个字节中
+;例如，当(AX)=2A49H 时，MEM 中的 4 个字节为39H，34H，41H，32H
+S1 SEGMENT
+    MEM DB 4 DUP(?)
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME DS:S1,SS:S2,CS:S3
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+
+    MOV AX,2A49H
+    MOV CX,4
+    MOV SI,3
+L0:
+    PUSH CX
+    MOV CL,4
+    ROL AX,CL
+    MOV DX,AX
+    AND DX,0FH
+    ADD DX,30H
+    CMP DX,3AH
+    JB    L1
+    ADD DX,7
+    
+    ;存放数据    
+L1:
+    MOV MEM[SI],DL
+    DEC SI
+    POP CX
+    LOOP L0    
+    
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+
+</code></pre>
+<h3 id="5-18把-0-100D-之间的-30-个数存入以-GRADE-为首地址的-30-字数组中"><a href="#5-18把-0-100D-之间的-30-个数存入以-GRADE-为首地址的-30-字数组中" class="headerlink" title="5.18把 0~100D 之间的 30 个数存入以 GRADE 为首地址的 30 字数组中"></a>5.18把 0~100D 之间的 30 个数存入以 GRADE 为首地址的 30 字数组中</h3><p>GRADE+i 表示学号为 i+1 的学生的成绩<br>数组 RANK 为 30 个学生的名次表<br>RANK+i 的内容是学号为 i+1 的学生的名次<br>根据 GRADE 中的学生成绩，将学生名次填入 RANK数组中<br>(提示：一个学生的名次等于成绩高于这个学生的人数加 1)</p>
+<pre class=" language-asm"><code class="language-asm">;5.18 把 0~100D 之间的 30 个数存入以 GRADE 为首地址的 30 字数组中
+;GRADE+i 表示学号为 i+1 的学生的成绩
+;数组 RANK 为 30 个学生的名次表
+;RANK+i 的内容是学号为 i+1 的学生的名次
+;根据 GRADE 中的学生成绩，将学生名次填入 RANK数组中
+;(提示：一个学生的名次等于成绩高于这个学生的人数加 1。
+S1 SEGMENT
+    GRADE DW 13 DUP(90),4 DUP(80),5 DUP(70),2 DUP(60),0064H,6 DUP(95)
+    NUM DW 0
+    RANK DW 30 DUP(?)
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME DS:S1,SS:S2,CS:S3
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+
+    MOV SI,0
+    MOV DI,0
+    MOV CX,30
+L0:
+    MOV AX,GRADE[SI]
+    ADD SI,2
+    MOV DI,0
+    MOV NUM,0
+    
+L1:
+    CMP DI,30
+    JE    L3
+    MOV BX,GRADE[DI]
+    ADD DI,2
+    CMP AX,BX
+    JA    L2
+    JMP L1    
+L2:
+    INC NUM
+    JMP L1
+    
+L3:
+    MOV DX,NUM
+    MOV RANK[SI],DX
+    LOOP L0
+    
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-19-已知数组-A-包含-15-个互不相等的整数，数组-B-包含-20-个互不相等的整数"><a href="#5-19-已知数组-A-包含-15-个互不相等的整数，数组-B-包含-20-个互不相等的整数" class="headerlink" title="5.19 已知数组 A 包含 15 个互不相等的整数，数组 B 包含 20 个互不相等的整数"></a>5.19 已知数组 A 包含 15 个互不相等的整数，数组 B 包含 20 个互不相等的整数</h3><h3 id="把既在-A-中又在-B-中出现的整数存放于数组-C-中"><a href="#把既在-A-中又在-B-中出现的整数存放于数组-C-中" class="headerlink" title="把既在 A 中又在 B 中出现的整数存放于数组 C 中"></a>把既在 A 中又在 B 中出现的整数存放于数组 C 中</h3><pre class=" language-asm"><code class="language-asm">;5.19 已知数组 A 包含 15 个互不相等的整数，数组 B 包含 20 个互不相等的整数
+;把既在 A 中又在 B 中出现的整数存放于数组 C 中
+S1 SEGMENT
+    ARRYA    DB    0,1,2,3,4,5,6,7,8,9,10,11,12,13,14
+    ARRYB    DB    5,6,7,8,9,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29
+    ARRYC    DB    15 DUP(?)
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME DS:S1,SS:S2,CS:S3
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+
+    MOV SI,0
+    MOV BX,0
+    MOV CX,15
+    ;外循环
+L0:
+    PUSH CX
+    MOV CX,20
+    
+    MOV AL,ARRYA[SI]
+    INC SI
+    
+    ;内循环
+    MOV DI,0
+L1:
+    CMP ARRYB[DI],AL
+    INC DI
+    JE L2        
+    LOOP L1        ;接着比较
+    
+L2:
+    MOV ARRYC[BX],AL
+    INC BX
+    
+    POP CX    
+    LOOP L0    
+    
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-20-设在-A、B-和-C-单元中分别存放着三个数。"><a href="#5-20-设在-A、B-和-C-单元中分别存放着三个数。" class="headerlink" title="5.20 设在 A、B 和 C 单元中分别存放着三个数。"></a>5.20 设在 A、B 和 C 单元中分别存放着三个数。</h3><h3 id="若三个数都不是-0，则求出三数之和存放在D-单元中"><a href="#若三个数都不是-0，则求出三数之和存放在D-单元中" class="headerlink" title="若三个数都不是 0，则求出三数之和存放在D 单元中"></a>若三个数都不是 0，则求出三数之和存放在D 单元中</h3><h3 id="若其中有一个数为-0，则把其它两单元也清-0"><a href="#若其中有一个数为-0，则把其它两单元也清-0" class="headerlink" title="若其中有一个数为 0，则把其它两单元也清 0"></a>若其中有一个数为 0，则把其它两单元也清 0</h3><pre class=" language-asm"><code class="language-asm">;5.20 设在 A、B 和 C 单元中分别存放着三个数。
+;若三个数都不是 0，则求出三数之和存放在D 单元中
+;若其中有一个数为 0，则把其它两单元也清 0
+
+S1 SEGMENT
+    NUMA    DW    10
+    NUMB    DW    0
+    NUMC    DW    0
+    NUMD    DW    0
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME DS:S1,SS:S2,CS:S3
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+
+    XOR DX,DX
+    MOV AX,NUMA
+    CMP AX,0
+    JE  L1
+    ADD DX,AX
+    
+    MOV AX,NUMB
+    CMP AX,0
+    JE  L1
+    ADD DX,AX
+    
+    MOV AX,NUMC
+    CMP AX,0
+    JE  L1
+    ADD DX,AX
+    JMP L2
+    
+    ;清零
+L1:
+    MOV BX,0
+    LEA SI,NUMA
+    MOV [SI],BX
+    LEA SI,NUMB
+    MOV [SI],BX
+    LEA SI,NUMC
+    MOV [SI],BX
+    JMP EXIT
+    
+L2:
+    LEA DI,NUMD
+    MOV DX,[DI]
+
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-21比较数组-ARRAY-中的三个-16-位补码数，并根据比较结果在终端上显示如下信息："><a href="#5-21比较数组-ARRAY-中的三个-16-位补码数，并根据比较结果在终端上显示如下信息：" class="headerlink" title="5.21比较数组 ARRAY 中的三个 16 位补码数，并根据比较结果在终端上显示如下信息："></a>5.21比较数组 ARRAY 中的三个 16 位补码数，并根据比较结果在终端上显示如下信息：</h3><h3 id="1-如果三个数都不相等则显示-0；"><a href="#1-如果三个数都不相等则显示-0；" class="headerlink" title="(1) 如果三个数都不相等则显示 0；"></a>(1) 如果三个数都不相等则显示 0；</h3><h3 id="2-如果三个数有二个数相等则显示-1；"><a href="#2-如果三个数有二个数相等则显示-1；" class="headerlink" title="(2) 如果三个数有二个数相等则显示 1；"></a>(2) 如果三个数有二个数相等则显示 1；</h3><h3 id="3-如果三个数都相等则显示-2"><a href="#3-如果三个数都相等则显示-2" class="headerlink" title="(3) 如果三个数都相等则显示 2"></a>(3) 如果三个数都相等则显示 2</h3><pre class=" language-ASM"><code class="language-ASM">;5.21比较数组 ARRAY 中的三个 16 位补码数，并根据比较结果在终端上显示如下信息：
+;(1) 如果三个数都不相等则显示 0；
+;(2) 如果三个数有二个数相等则显示 1；
+;(3) 如果三个数都相等则显示 2
+
+S1 SEGMENT
+    ARRAY    DW    1,2,1
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME DS:S1,SS:S2,CS:S3
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+
+    LEA SI,ARRAY
+    MOV AX,[SI]
+    ADD SI,2
+    MOV BX,[SI]
+    ADD SI,2
+    MOV DX,[SI]
+    CMP AX,BX
+    JE  L1
+    JNE L2
+    
+    ;A=B
+L1:
+    CMP BX,DX
+    JE    L3
+    JNE L4
+    
+    ;A≠B
+L2:
+    CMP BX,DX
+    JE    L4
+    CMP AX,DX
+    JE    L4
+    JNE L5
+    
+    ;ALL OK
+L3:
+    MOV DL,32H
+    MOV AH,2
+    INT 21H
+    JMP EXIT
+    
+    ;JUST ONE
+L4:
+    MOV DL,31H
+    MOV AH,2
+    INT 21H
+    JMP EXIT
+    
+    ;ALL NOT
+L5:
+    MOV DL,30H
+    MOV AH,2
+    INT 21H
+    JMP EXIT
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-22-从键盘输入一系列字符-以回车符结束-，并按字母、数字、及其它字符分类计数，最后显示出这三类的计数结果-OK"><a href="#5-22-从键盘输入一系列字符-以回车符结束-，并按字母、数字、及其它字符分类计数，最后显示出这三类的计数结果-OK" class="headerlink" title="5.22 从键盘输入一系列字符(以回车符结束)，并按字母、数字、及其它字符分类计数，最后显示出这三类的计数结果 OK"></a>5.22 从键盘输入一系列字符(以回车符结束)，并按字母、数字、及其它字符分类计数，最后显示出这三类的计数结果 OK</h3><pre class=" language-ASM"><code class="language-ASM">;从键盘输入一系列字符(以回车符结束)，并按字母、数字、及其它字符分类计数，
+;最后显示出这三类的计数结果
+S1 SEGMENT
+    BUFF    DB 250,?,250 DUP(?)
+    CNTA    DW    0
+    CNTN    DW    0
+    CNTO    DW    0
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME DS:S1,SS:S2,CS:S3
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+
+    LEA DX,BUFF
+    MOV    AH,0AH
+    INT 21H
+    
+    MOV    SI,1
+    XOR CH,CH
+    MOV CL,BUFF[SI]
+L0:
+    INC SI
+    MOV AL,BUFF[SI]
+    CMP AL,30H
+    JB    L3
+    CMP AL,3AH
+    JB    L2
+    CMP AL,41H
+    JB    L3
+    CMP AL,5AH
+    JB    L1
+    CMP AL,61H
+    JB    L3
+    CMP AL,7AH
+    JB    L1
+
+L1:
+    INC CNTA
+    MOV BX,CNTA
+    LOOP L0
+L2:
+    INC CNTN
+    MOV DX,CNTN
+    LOOP L0
+L3:
+    INC CNTO
+    MOV DI,CNTO
+    LOOP L0
+    
+    MOV DX,0DH
+    MOV AH,2
+    INT 21H
+    MOV DX,0AH
+    MOV AH,2
+    INT 21H
+    MOV DX,CNTA
+    MOV AH,2
+    ADD DX,30H
+    INT 21H
+    
+    MOV DX,CNTN
+    ADD DX,30H
+    MOV AH,2
+    INT 21H
+    MOV DX,0DH
+    MOV AH,2
+    INT 21H
+    MOV DX,0AH
+    MOV AH,2
+    INT 21H
+    
+    MOV DX,CNTO
+    ADD DX,30H
+    MOV AH,2
+    INT 21H
+    MOV DX,0DH
+    MOV AH,2
+    INT 21H
+    MOV DX,0AH
+    MOV AH,2
+    INT 21H
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+<h3 id="5-23-已定义了两个整数变量-A-和-B，试编写程序完成下列功能："><a href="#5-23-已定义了两个整数变量-A-和-B，试编写程序完成下列功能：" class="headerlink" title="5.23 已定义了两个整数变量 A 和 B，试编写程序完成下列功能："></a>5.23 已定义了两个整数变量 A 和 B，试编写程序完成下列功能：</h3><p>(1) 若两个数中有一个是奇数，则将奇数存入 A 中，偶数存入 B 中；</p>
+<p>(2) 若两个数中均为奇数，则将两数加 1 后存回原变量；</p>
+<p>(3) 若两个数中均为偶数，则两个变量均不改变。</p>
+<pre class=" language-ASM"><code class="language-ASM">;5.23 已定义了两个整数变量 A 和 B
+;(1) 若两个数中有一个是奇数，则将奇数存入 A 中，偶数存入 B 中；
+;(2) 若两个数中均为奇数，则将两数加 1 后存回原变量；
+;(3) 若两个数中均为偶数，则两个变量均不改变。
+S1 SEGMENT
+    NUMA    DW    2A32H
+    NUMB    DW    2A31H
+S1 ENDS
+
+S2 SEGMENT
+    DW 100H DUP(?)
+TOP LABEL WORD
+S2 ENDS
+
+S3 SEGMENT
+    ASSUME DS:S1,SS:S2,CS:S3
+MAIN PROC FAR
+    MOV AX,S1
+    MOV DS,AX
+    MOV AX,S2
+    MOV SS,AX
+    LEA SP,TOP
+
+L0:
+    MOV AX,NUMA
+    TEST AX,1
+    JE    L2
+    
+    ;奇数
+L1:
+    MOV BX,NUMB
+    TEST BX,1
+    JNE    L4
+    JMP EXIT
+    
+    
+    ;偶数
+L2:    
+    MOV BX,NUMB
+    TEST BX,1
+    JNE    L3
+    JMP EXIT
+    
+    ;A奇B偶
+L3:
+    XCHG AX,BX
+    JMP EXIT
+    ;都是奇数，都+1
+L4:
+    INC AX
+    LEA SI,NUMA
+    MOV [SI],AX
+    INC BX
+    LEA SI,NUMB
+    MOV [SI],BX
+    
+EXIT:
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+S3 ENDS
+    END MAIN
+</code></pre>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">sin</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2023/02/10/ASM/">http://example.com/2023/02/10/ASM/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">sin</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/ASM/">
+                                    <span class="chip bg-color">ASM</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">v我50请你吃疯狂星期四</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '=',
+        repo: '',
+        owner: '',
+        admin: null,
+        id: '2023-02-10T21-27-36',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/02/10/ASM/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="ASM">
+                        
+                        <span class="card-title">ASM</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            ASM知识
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/ASM/" class="post-category">
+                                    ASM
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ASM/">
+                        <span class="chip bg-color">ASM</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/02/10/MySQL%E7%AC%94%E8%AE%B0/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="MySQL">
+                        
+                        <span class="card-title">MySQL</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MySQL/" class="post-category">
+                                    MySQL
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MySQL/">
+                        <span class="chip bg-color">MySQL</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2023</span>
+            
+            <span id="year">2022</span>
+            <a href="/about" target="_blank">sin</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">32.4k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2022";
+                    var startMonth = "1";
+                    var startDate = "20";
+                    var startHour = "10";
+                    var startMinute = "55";
+                    var startSecond = "12";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/c-sin7" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub: c-sin7" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+
+    <a href="mailto:1127301986@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我: 1127301986@qq.com" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1127301986" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1127301986" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="weixin://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=lh-sin" class="tooltipped" target="_blank" data-tooltip="微信联系我: lh-sin" data-position="top" data-delay="50">
+        <i class="fab fa-weixin"></i>
+    </a>
+
+
+
+
+
+<!-- 不需要 -->
+
+ -->
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
