@@ -335,9 +335,9 @@
     
     <category term="CentOS" scheme="http://example.com/tags/CentOS/"/>
     
-    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
-    
     <category term="git" scheme="http://example.com/tags/git/"/>
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
     
     <category term="nginx" scheme="http://example.com/tags/nginx/"/>
     
