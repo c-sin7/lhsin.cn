@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-15T04:51:54.250Z</updated>
+  <updated>2023-02-24T03:13:05.408Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,30 +17,24 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>git</title>
-    <link href="http://example.com/2023/02/14/git/"/>
-    <id>http://example.com/2023/02/14/git/</id>
-    <published>2023-02-13T16:00:00.000Z</published>
-    <updated>2023-02-15T04:51:54.250Z</updated>
+    <title></title>
+    <link href="http://example.com/2023/02/24/CentOS%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"/>
+    <id>http://example.com/2023/02/24/CentOS%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</id>
+    <published>2023-02-24T02:34:41.656Z</published>
+    <updated>2023-02-24T03:13:05.408Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;git语句：&lt;/p&gt;
-&lt;pre class=&quot; language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;//操作分支语句：
-//初始化
-&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt;</summary>
+    <summary type="html">&lt;p&gt;一、下载安装包&lt;/p&gt;
+&lt;p&gt;  cd /usr/local/software  (software可能没有，用&lt;a</summary>
         
       
     
     
     
-    <category term="git" scheme="http://example.com/categories/git/"/>
-    
-    
-    <category term="git" scheme="http://example.com/tags/git/"/>
     
   </entry>
   
@@ -57,6 +51,34 @@
         
         
     <summary type="html">&lt;h2 id=&quot;1-Git基本概念&quot;&gt;&lt;a href=&quot;#1-Git基本概念&quot; class=&quot;headerlink&quot; title=&quot;1. Git基本概念&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="http://example.com/categories/git/"/>
+    
+    
+    <category term="git" scheme="http://example.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git</title>
+    <link href="http://example.com/2023/02/14/git/"/>
+    <id>http://example.com/2023/02/14/git/</id>
+    <published>2023-02-13T16:00:00.000Z</published>
+    <updated>2023-02-15T07:58:10.692Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;git语句：&lt;/p&gt;
+&lt;pre class=&quot; language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;//操作分支语句：
+//初始化
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt;</summary>
         
       
     
@@ -292,7 +314,7 @@
     <link href="http://example.com/2023/02/09/%E5%B0%86Hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     <id>http://example.com/2023/02/09/%E5%B0%86Hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
     <published>2023-02-09T12:23:52.059Z</published>
-    <updated>2023-02-11T03:19:26.795Z</updated>
+    <updated>2023-02-24T05:46:34.796Z</updated>
     
     
       
@@ -466,6 +488,35 @@
     
     
     <category term="SpringBoot" scheme="http://example.com/tags/SpringBoot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nginx卸载和安装</title>
+    <link href="http://example.com/2022/02/21/%E5%8D%B8%E8%BD%BDnginx/"/>
+    <id>http://example.com/2022/02/21/%E5%8D%B8%E8%BD%BDnginx/</id>
+    <published>2022-02-20T16:00:00.000Z</published>
+    <updated>2023-02-21T11:11:38.317Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;nginx卸载和安装&quot;&gt;&lt;a href=&quot;#nginx卸载和安装&quot; class=&quot;headerlink&quot; title=&quot;nginx卸载和安装&quot;&gt;&lt;/a&gt;nginx卸载和安装&lt;/h2&gt;&lt;p&gt;本机环境：CentOS 7.6</summary>
+        
+      
+    
+    
+    
+    <category term="环境配置" scheme="http://example.com/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="环境配置" scheme="http://example.com/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    <category term="CentOS" scheme="http://example.com/tags/CentOS/"/>
+    
+    <category term="nginx" scheme="http://example.com/tags/nginx/"/>
     
   </entry>
   
