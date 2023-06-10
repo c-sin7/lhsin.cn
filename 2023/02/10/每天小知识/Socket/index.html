@@ -1,0 +1,1479 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Socket, sin">
+    <meta name="description" content="呆头鹅的随手记录">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Socket | sin</title>
+    <link rel="icon" type="image/png" href="/c-sin7/lhsin.lo/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/c-sin7/lhsin.lo/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/c-sin7/lhsin.lo/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/c-sin7/lhsin.lo/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/c-sin7/lhsin.lo/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/c-sin7/lhsin.lo/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/c-sin7/lhsin.lo/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/c-sin7/lhsin.lo/css/my.css">
+
+    <script src="/c-sin7/lhsin.lo/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/c-sin7/lhsin.lo/atom.xml" title="sin" type="application/atom+xml">
+<link rel="stylesheet" href="/c-sin7/lhsin.lo/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Socket, sin">
+    <meta name="description" content="呆头鹅的随手记录">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Socket | sin</title>
+    <link rel="icon" type="image/png" href="/c-sin7/lhsin.lo/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/c-sin7/lhsin.lo/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/c-sin7/lhsin.lo/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/c-sin7/lhsin.lo/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/c-sin7/lhsin.lo/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/c-sin7/lhsin.lo/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/c-sin7/lhsin.lo/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/c-sin7/lhsin.lo/css/my.css">
+
+    <script src="/c-sin7/lhsin.lo/libs/jquery/jquery.min.js"></script>
+
+</head>
+
+
+ 
+<body>
+    
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/c-sin7/lhsin.lo/" class="waves-effect waves-light">
+                    
+                    <img src="/c-sin7/lhsin.lo/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">sin</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/c-sin7/lhsin.lo/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/c-sin7/lhsin.lo/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/c-sin7/lhsin.lo/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/c-sin7/lhsin.lo/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/c-sin7/lhsin.lo/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/c-sin7/lhsin.lo/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/c-sin7/lhsin.lo/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/c-sin7/lhsin.lo/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">sin</div>
+        <div class="logo-desc">
+            
+            呆头鹅的随手记录
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/c-sin7/lhsin.lo/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/c-sin7/lhsin.lo/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/c-sin7/lhsin.lo/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/c-sin7/lhsin.lo/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/c-sin7/lhsin.lo/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/c-sin7/lhsin.lo/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/c-sin7/lhsin.lo/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/c-sin7" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/c-sin7" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/c-sin7/lhsin.lo/medias/featureimages/5.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Socket</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/c-sin7/lhsin.lo/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/c-sin7/lhsin.lo/tags/Socket/">
+                                <span class="chip bg-color">Socket</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/c-sin7/lhsin.lo/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="post-category">
+                                小知识
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-02-10
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    14 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h1><p><strong>TCP/IP、UDP</strong></p>
+<ol>
+<li><p>TCP/IP（Transmission Control Protocol/Internet Protocol）即传输控制协议/网间协议，是一个工业标准的协议集，它是为广域网（WANs）设计的。</p>
+</li>
+<li><p>UDP（User Data Protocol，用户数据报协议）是与TCP相对应的协议。它是属于TCP/IP协议族中的一种。</p>
+<img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/20190718154523875.png" style="zoom:80%;" />
+
+<p><strong>Socket是什么呢？</strong></p>
+<pre><code>Socket是应用层与TCP/IP协议族通信的中间软件抽象层，它是一组接口。
+</code></pre>
+<p>在设计模式中，Socket其实就是一个门面模式，它把复杂的TCP/IP协议族隐藏在Socket接口后面，对用户来说，一组简单的接口就是全部，让Socket去组织数据，以符合指定的协议。</p>
+<img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/20190718154556909.png" alt="img"  />
+
+<p>先从服务器端说起。</p>
+<p>服务器端先初始化Socket，然后与端口绑定(bind)，对端口进行监听(listen)，调用accept阻塞，等待客户端连接。</p>
+<p>在这时如果有个客户端初始化一个Socket，然后连接服务器(connect)</p>
+<p>如果连接成功，这时客户端与服务器端的连接就建立了。</p>
+<p>客户端发送数据请求，服务器端接收请求并处理请求，然后把回应数据发送给客户端，客户端读取数据，最后关闭连接，一次交互结束。</p>
+<h1 id="1、网络中进程之间如何通信？"><a href="#1、网络中进程之间如何通信？" class="headerlink" title="1、网络中进程之间如何通信？"></a>1、网络中进程之间如何通信？</h1><p>本地的进程间通信（IPC）有很多种方式，但可以总结为下面4类：</p>
+<ul>
+<li>消息传递（管道、FIFO、消息队列）</li>
+<li>同步（互斥量、条件变量、读写锁、文件和写记录锁、信号量）</li>
+<li>共享内存（匿名的和具名的）</li>
+<li>远程过程调用（Solaris门和Sun RPC）</li>
+</ul>
+<p>本地可以通过进程PID来唯一标识一个进程，但是在网络中这是行不通的。</p>
+<p>其实TCP/IP协议族已经帮我们解决了这个问题，网络层的“<strong>ip地址</strong>”可以唯一标识网络中的主机，而传输层的“<strong>协议+端口</strong>”可以唯一标识主机中的应用程序（进程）。</p>
+<p>利用三元组（ip地址，协议，端口）就可以标识网络的进程了。</p>
+<h1 id="2、socket的基本操作"><a href="#2、socket的基本操作" class="headerlink" title="2、socket的基本操作"></a>2、socket的基本操作</h1><p>socket是“open—write/read—close”模式的一种实现，socket提供了这些操作对应的函数接口。下面以TCP为例，介绍几个基本的socket接口函数。</p>
+<h2 id="2-1、socket-函数"><a href="#2-1、socket-函数" class="headerlink" title="2.1、socket()函数"></a>2.1、socket()函数</h2><pre class=" language-vim"><code class="language-vim">int <span class="token function">socket</span><span class="token punctuation">(</span>int domain<span class="token punctuation">,</span> int type<span class="token punctuation">,</span> int protocol<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>socket函数对应于普通文件的打开操作。普通文件的打开操作返回一个文件描述字</p>
+<p>而<strong>socket()<strong>用于创建一个socket描述符（</strong>socket descriptor</strong>），它唯一标识一个socket。</p>
+<p>这个socket描述字跟文件描述字一样，后续的操作都有用到它，把它作为参数，通过它来进行一些读写操作。</p>
+<p>正如可以给fopen的传入不同参数值，以打开不同的文件。创建socket的时候，也可以指定不同的参数创建不同的socket描述符，socket函数的三个参数分别为：</p>
+<ul>
+<li><p><strong>domain</strong>：即<strong>协议域</strong>，又称为协议族（family）。</p>
+<p>常用的协议族有，AF_INET、AF_INET6、AF_LOCAL（或称AF_UNIX，Unix域socket）、AF_ROUTE等等。</p>
+<p>协议族决定了socket的地址类型，在通信中必须采用对应的地址，如AF_INET决定了要用ipv4地址（32位的）与端口号（16位的）的组合、AF_UNIX决定了要用一个绝对路径名作为地址。</p>
+</li>
+<li><p><strong>type</strong>：指定socket<strong>类型</strong>。</p>
+<p>常用的socket类型有，SOCK_STREAM、SOCK_DGRAM、SOCK_RAW、SOCK_PACKET、SOCK_SEQPACKET等等。</p>
+</li>
+<li><p><strong>protocol</strong>：故名思意，就是<strong>指定协议</strong>。</p>
+<p>常用的协议有，IPPROTO_TCP、IPPTOTO_UDP、IPPROTO_SCTP、IPPROTO_TIPC等，它们分别对应TCP传输协议、UDP传输协议、STCP传输协议、TIPC传输协议</p>
+</li>
+</ul>
+<p>注意：并不是上面的type和protocol可以随意组合的，如SOCK_STREAM不可以跟IPPROTO_UDP组合。当protocol为0时，会自动选择type类型对应的默认协议。</p>
+<p>当我们调用<strong>socket</strong>创建一个socket时，返回的socket描述字它存在于协议族（address family，AF_XXX）空间中，但没有一个具体的地址。如果想要给它赋值一个地址，就必须调用bind()函数，否则就当调用connect()、listen()时系统会自动随机分配一个端口。</p>
+<h2 id="2-2、bind-函数"><a href="#2-2、bind-函数" class="headerlink" title="2.2、bind()函数"></a>2.2、bind()函数</h2><p>正如上面所说bind()函数把一个地址族中的特定地址赋给socket。</p>
+<p>例如对应AF_INET、AF_INET6就是把一个ipv4或ipv6地址和端口号组合赋给socket。</p>
+<pre class=" language-vim"><code class="language-vim">int <span class="token function">bind</span><span class="token punctuation">(</span>int sockfd<span class="token punctuation">,</span> const struct sockaddr <span class="token operator">*</span>addr<span class="token punctuation">,</span> socklen_t addrlen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>函数的三个参数分别为：</p>
+<ul>
+<li><p>sockfd：即socket描述字，它是通过socket()函数创建，唯一标识一个socket。<strong>bind()函数就是将给这个描述字绑定一个名字</strong></p>
+</li>
+<li><p>addr：一个const struct sockaddr *指针，指向要绑定给sockfd的协议地址。这个地址结构根据地址创建socket时的地址协议族的不同而不同，如ipv4对应的是：</p>
+<pre class=" language-c++"><code class="language-c++">struct sockaddr_in &#123;
+    sa_family_t    sin_family; 
+    in_port_t      sin_port;   
+    struct in_addr sin_addr;   
+&#125;;
+
+
+struct in_addr &#123;
+    uint32_t       s_addr;     
+&#125;;
+</code></pre>
+<p>ipv6对应的是：</p>
+<pre class=" language-c++"><code class="language-c++">struct sockaddr_in6 &#123; 
+    sa_family_t     sin6_family;    
+    in_port_t       sin6_port;      
+    uint32_t        sin6_flowinfo;  
+    struct in6_addr sin6_addr;      
+    uint32_t        sin6_scope_id;  
+&#125;;
+
+struct in6_addr &#123; 
+    unsigned char   s6_addr[16];    
+&#125;;
+</code></pre>
+<p>Unix域对应的是：</p>
+<pre class=" language-c++"><code class="language-c++">#define UNIX_PATH_MAX    108
+
+struct sockaddr_un &#123; 
+    sa_family_t sun_family;                
+    char        sun_path[UNIX_PATH_MAX];   
+&#125;;
+</code></pre>
+</li>
+</ul>
+<p>通常服务器在启动的时候都会绑定一个众所周知的地址（如ip地址+端口号），用于提供服务，客户就可以通过它来接连服务器；</p>
+<p>而客户端就不用指定，有系统自动分配一个端口号和自身的ip地址组合。</p>
+<p>这就是为什么通常服务器端在listen之前会调用bind()，而客户端就不会调用，而是在connect()时由系统随机生成一个。</p>
+<h3 id="网络字节序与主机字节序"><a href="#网络字节序与主机字节序" class="headerlink" title="网络字节序与主机字节序"></a>网络字节序与主机字节序</h3><p><strong>主机字节序</strong></p>
+<p>就是我们平常说的大端和小端模式：不同的CPU有不同的字节序类型，这些字节序是指整数在内存中保存的顺序，这个叫做主机序。</p>
+<p>　　a) Little-Endian就是低位字节排放在内存的低地址端，高位字节排放在内存的高地址端。高高低低——小端</p>
+<p>　　b) Big-Endian就是高位字节排放在内存的低地址端，低位字节排放在内存的高地址端。</p>
+<p><strong>网络字节序</strong>：</p>
+<p>4个字节的32 bit值以下面的次序传输：首先是0～7bit，其次8～15bit，然后16～23bit，最后是24~31bit。</p>
+<p>即大端字节序。<strong>由于TCP/IP首部中所有的二进制整数在网络中传输时都要求以这种次序，因此它又称作网络字节序。</strong></p>
+<p>字节序，顾名思义字节的顺序，就是大于一个字节类型的数据在内存中的存放顺序，一个字节的数据没有顺序的问题了。</p>
+<p>所以： 在将一个地址绑定到socket的时候，请<strong>先将主机字节序转换成为网络字节序</strong>，将其转化为网络字节序再赋给socket。</p>
+<h2 id="2-3、listen-、connect-函数"><a href="#2-3、listen-、connect-函数" class="headerlink" title="2.3、listen()、connect()函数"></a>2.3、listen()、connect()函数</h2><p>如果作为一个服务器，在调用socket()、bind()之后就会调用listen()来监听这个socket</p>
+<p>如果客户端这时调用connect()发出连接请求，服务器端就会接收到这个请求。</p>
+<pre class=" language-c++"><code class="language-c++">int listen(int sockfd, int backlog);
+int connect(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
+</code></pre>
+<p>listen函数的第一个参数即为要监听的socket描述字，第二个参数为相应socket可以排队的<strong>最大连接个数</strong>。socket()函数创建的socket默认是一个主动类型的，listen函数将socket变为<strong>被动类型的，等待客户的连接请求</strong>。</p>
+<p>connect函数的第一个参数即为客户端的socket描述字，第二参数为服务器的socket地址，第三个参数为socket地址的长度。客户端通过调用connect函数来建立与TCP服务器的连接。</p>
+<h2 id="2-4、accept-函数"><a href="#2-4、accept-函数" class="headerlink" title="2.4、accept()函数"></a>2.4、accept()函数</h2><p>TCP服务器端依次调用socket()、bind()、listen()之后，就会监听指定的socket地址了。</p>
+<p>TCP客户端依次调用socket()、connect()之后就想TCP服务器发送了一个连接请求。</p>
+<p>TCP服务器监听到这个请求之后，就会调用accept()函数取接收请求，这样连接就建立好了。</p>
+<p>之后就可以开始网络I/O操作了，即类同于普通文件的读写I/O操作。</p>
+<pre class=" language-c++"><code class="language-c++">int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
+</code></pre>
+<p>accept函数的第一个参数为服务器的socket描述字，第二个参数为指向struct sockaddr *的指针，用于返回客户端的协议地址，第三个参数为协议地址的长度。</p>
+<p>如果accpet成功，那么其返回值是<strong>由内核自动生成的一个全新的描述字</strong>，代表与返回客户的TCP连接。</p>
+<p>注意：accept的第一个参数为服务器的socket描述字，是服务器开始调用socket()函数生成的，称为<strong>监听socket描述字</strong>；而accept函数返回的是已连接的socket描述字。一个服务器通常通常仅仅只创建一个监听socket描述字，<strong>它在该服务器的生命周期内一直存在</strong>。内核为每个由服务器进程接受的客户连接创建了一个已连接socket描述字，当服务器完成了对某个客户的服务，相应的已连接socket描述字就被关闭。</p>
+<h2 id="2-5、read-、write-等函数"><a href="#2-5、read-、write-等函数" class="headerlink" title="2.5、read()、write()等函数"></a>2.5、read()、write()等函数</h2><p>至此服务器与客户已经建立好连接了。可以调用网络I/O进行读写操作了，即实现了网咯中不同进程之间的通信。</p>
+<p>网络I/O操作有下面几组：</p>
+<ul>
+<li>read()/write()</li>
+<li>recv()/send()</li>
+<li>readv()/writev()</li>
+<li>recvmsg()/sendmsg()</li>
+<li>recvfrom()/sendto()</li>
+</ul>
+<p>推荐使用recvmsg()/sendmsg()函数，这两个函数是最通用的I/O函数</p>
+<p>实际上可以把上面的其它函数都替换成这两个函数。它们的声明如下：</p>
+<pre class=" language-c++"><code class="language-c++">#include 
+
+ssize_t read(int fd, void *buf, size_t count);
+ssize_t write(int fd, const void *buf, size_t count);
+
+#include 
+#include 
+
+ssize_t send(int sockfd, const void *buf, size_t len, int flags);
+ssize_t recv(int sockfd, void *buf, size_t len, int flags);
+
+ssize_t sendto(int sockfd, const void *buf, size_t len, int flags,
+                      const struct sockaddr *dest_addr, socklen_t addrlen);
+ssize_t recvfrom(int sockfd, void *buf, size_t len, int flags,
+                        struct sockaddr *src_addr, socklen_t *addrlen);
+
+ssize_t sendmsg(int sockfd, const struct msghdr *msg, int flags);
+ssize_t recvmsg(int sockfd, struct msghdr *msg, int flags);
+</code></pre>
+<p>read函数是负责从fd中读取内容。</p>
+<p>​    当读成功时，read返回实际所读的字节数，如果返回的值是0表示已经读到文件的结束了，小于0表示出现了错误。</p>
+<p>​    如果错误为EINTR说明读是由中断引起的，如果是ECONNREST表示网络连接出了问题。</p>
+<p>write函数将buf中的nbytes字节内容写入文件描述符fd。</p>
+<p>​    成功时返回写的字节数。失败时返回-1，并设置errno变量。</p>
+<p>在网络程序中，当我们向套接字文件描述符写时有俩种可能。</p>
+<p>​    1)write的返回值大于0，表示写了部分或者是 全部的数据。</p>
+<p>​    2)返回的值小于0，此时出现了错误。</p>
+<p>​    如果错误为EINTR表示在写的时候出现了中断错误。如果为EPIPE表示 网络连接出现了问题(对方已经关闭了连接)。</p>
+<h2 id="2-6、close-函数"><a href="#2-6、close-函数" class="headerlink" title="2.6、close()函数"></a>2.6、close()函数</h2><p>完成了读写操作就要关闭相应的socket描述字，好比操作完打开的文件要调用fclose关闭打开的文件。</p>
+<pre class=" language-c++"><code class="language-c++">#include 
+int close(int fd);
+</code></pre>
+<p>close一个TCP socket的缺省行为时把该socket标记为已关闭，然后立即返回到调用进程。该描述字不能再由调用进程使用，也就是说不能再作为read或write的第一个参数。</p>
+<p>注意：close操作只是使相应socket描述字的引用计数-1，只有当引用计数为0的时候，才会触发TCP客户端向服务器发送终止连接请求。</p>
+<h1 id="3、socket中TCP的三次握手建立连接详解"><a href="#3、socket中TCP的三次握手建立连接详解" class="headerlink" title="3、socket中TCP的三次握手建立连接详解"></a>3、socket中TCP的三次握手建立连接详解</h1><p>tcp建立连接要进行“三次握手”，即交换三个分组。大致流程如下：</p>
+<ul>
+<li>客户端向服务器发送一个SYN J</li>
+<li>服务器向客户端响应一个SYN K，并对SYN J进行确认ACK J+1</li>
+<li>客户端再想服务器发一个确认ACK K+1</li>
+</ul>
+<p>只有就完了三次握手，但是这个三次握手发生在socket的那几个函数中呢？请看下图：</p>
+<p><a target="_blank" rel="noopener" href="http://images.cnblogs.com/cnblogs_com/skynet/201012/201012122157467258.png"><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/aHR0cHM6Ly9pbWFnZXMuY25ibG9ncy5jb20vY25ibG9nc19jb20vc2t5bmV0LzIwMTAxMi8yMDEwMTIxMjIxNTc0NzYyODYucG5n" alt="image"></a></p>
+<p>socket中发送的TCP三次握手</p>
+<ul>
+<li>当客户端调用connect时，触发了连接请求，向服务器发送了SYN J包，这时connect进入阻塞状态；</li>
+<li>服务器监听到连接请求，即收到SYN J包，调用accept函数接收请求向客户端发送SYN K ，ACK J+1，这时accept进入阻塞状态；</li>
+<li>客户端收到服务器的SYN K ，ACK J+1之后，这时connect返回，并对SYN K进行确认；</li>
+<li>服务器收到ACK K+1时，accept返回，至此三次握手完毕，连接建立。</li>
+</ul>
+<h1 id="4、socket中TCP的四次握手释放连接详解"><a href="#4、socket中TCP的四次握手释放连接详解" class="headerlink" title="4、socket中TCP的四次握手释放连接详解"></a>4、socket中TCP的四次握手释放连接详解</h1><p>上面介绍了socket中TCP的三次握手建立过程，及其涉及的socket函数。</p>
+<p>现在介绍socket中的四次握手释放连接的过程</p>
+<p><a target="_blank" rel="noopener" href="http://images.cnblogs.com/cnblogs_com/skynet/201012/201012122157487616.png"><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/aHR0cHM6Ly9pbWFnZXMuY25ibG9ncy5jb20vY25ibG9nc19jb20vc2t5bmV0LzIwMTAxMi8yMDEwMTIxMjIxNTc0OTQ2OTMucG5n" alt="image"></a></p>
+<p>socket中发送的TCP四次握手</p>
+<ul>
+<li><p>某个应用进程首先调用close主动关闭连接，这时TCP发送一个FIN M；</p>
+</li>
+<li><p>另一端接收到FIN M之后，执行被动关闭，对这个FIN进行确认。它的接收也作为文件结束符传递给应用进程，因为FIN的接收意味着应用进程在相应的连接上再也接收不到额外数据；</p>
+</li>
+<li><p>一段时间之后，接收到文件结束符的应用进程调用close关闭它的socket。这导致它的TCP也发送一个FIN N；</p>
+</li>
+<li><p>接收到这个FIN的源发送端TCP对它进行确认。</p>
+<p>这样每个方向上都有一个FIN和ACK。</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/20190718155008892.png" alt="img"></p>
+</li>
+</ol>
+<p>小明住在上海市长江路幸福小区5#666，现在小明在京东上面买了一部小米10Pro。京东在接到小米的订单后，工作人员从仓库中找到一部小米10Pro（应用层）。工作人员将手机打包好， 交给了京东物流（传输层）。接下来手机就到了转运中心（路由器），转运中心根据时间，成本等一系列因素决定下一步该发往哪一个转运中心(网络层)。决定好接下来发往哪一个转运中心后就开始用货车运输了，那么运输的过程就是数据链路层了，链路层负责将数据从一个端点送到另一个端点。那么货车行驶的道路就是物理层。几经周转，手机安全地送到了小明手上。</p>
+<p>我们将一个小区比作一台计算机，一台计算机里面跑了很多程序，怎么区分程序呢，用的是端口，就好像小区用门牌号区分每一户人家一样。手机送到小明家了，怎么进去呢？从大门进啊，怎么找到大门呢？门牌号呀。不就相当于从互联网来的数据找到接收端计算机后再根据端口判断应该给哪一个程序一样吗。小明家的入口就可以用小区地址+门牌号进行唯一表示，那么同样的道理，程序也可以用IP+端口号进行唯一标识。那么这个程序的入口就被称作Socket。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/c-sin7/lhsin.lo/about" rel="external nofollow noreferrer">sin</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/c-sin7/lhsin.lo/c-sin7/lhsin.lo/2023/02/10/%E6%AF%8F%E5%A4%A9%E5%B0%8F%E7%9F%A5%E8%AF%86/Socket/">https://github.com/c-sin7/lhsin.lo/c-sin7/lhsin.lo/2023/02/10/%E6%AF%8F%E5%A4%A9%E5%B0%8F%E7%9F%A5%E8%AF%86/Socket/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/c-sin7/lhsin.lo/about" target="_blank">sin</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/c-sin7/lhsin.lo/tags/Socket/">
+                                    <span class="chip bg-color">Socket</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/c-sin7/lhsin.lo/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/c-sin7/lhsin.lo/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">v我50吃疯狂星期四</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/c-sin7/lhsin.lo/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/c-sin7/lhsin.lo/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/c-sin7/lhsin.lo/2023/02/10/%E6%AF%8F%E5%A4%A9%E5%B0%8F%E7%9F%A5%E8%AF%86/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/c-sin7/lhsin.lo/medias/featureimages/3.jpg" class="responsive-img" alt="正则表达式">
+                        
+                        <span class="card-title">正则表达式</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            正则表达式
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/c-sin7/lhsin.lo/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="post-category">
+                                    小知识
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/c-sin7/lhsin.lo/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                        <span class="chip bg-color">正则表达式</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/c-sin7/lhsin.lo/2023/02/10/%E6%AF%8F%E5%A4%A9%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%BC%93%E5%AD%98/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/c-sin7/lhsin.lo/medias/featureimages/13.jpg" class="responsive-img" alt="缓存">
+                        
+                        <span class="card-title">缓存</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            缓存是将请求结果存储在与原始存储位置或临时存储位置不同位置的过程，可以避免重复执行相同操作。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/c-sin7/lhsin.lo/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="post-category">
+                                    小知识
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/c-sin7/lhsin.lo/tags/%E7%BC%93%E5%AD%98/">
+                        <span class="chip bg-color">缓存</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/c-sin7/lhsin.lo/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/c-sin7/lhsin.lo/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/c-sin7/lhsin.lo/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/c-sin7/lhsin.lo/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/c-sin7/lhsin.lo/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2023</span>
+            
+            <span id="year">2022</span>
+            <a href="/c-sin7/lhsin.lo/about" target="_blank">sin</a>
+            <!-- | -->
+            &nbsp;
+            
+            <!-- Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a> 
+            <br>-->
+
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">130.7k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2022";
+                    var startMonth = "1";
+                    var startDate = "20";
+                    var startHour = "10";
+                    var startMinute = "55";
+                    var startSecond = "12";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+            <span id="icp"><img src="/c-sin7/lhsin.lo/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备2023011692号</a>
+            </span>
+            <!-- <span id="icp"><img src="/c-sin7/lhsin.lo/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/icp.png" target="_blank">粤ICP备2023011692号</a>
+            </span> -->
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/c-sin7" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub: c-sin7" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1127301986@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我: 1127301986@qq.com" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1127301986" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1127301986" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="weixin://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=lh-sin" class="tooltipped" target="_blank" data-tooltip="微信联系我: lh-sin" data-position="top" data-delay="50">
+        <i class="fab fa-weixin"></i>
+    </a>
+
+
+
+    <a href="https://space.bilibili.com/194078944" class="tooltipped" target="_blank" data-tooltip="访问我的bilibili" data-position="top" data-delay="50">
+        <i class="fas fa-play-circle"></i>
+    </a>
+
+
+
+
+<!-- 不需要 -->
+
+
+
+
+
+
+<!--  -->
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/c-sin7/lhsin.lo/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/c-sin7/lhsin.lo/libs/materialize/materialize.min.js"></script>
+    <script src="/c-sin7/lhsin.lo/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/c-sin7/lhsin.lo/libs/aos/aos.js"></script>
+    <script src="/c-sin7/lhsin.lo/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/c-sin7/lhsin.lo/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/c-sin7/lhsin.lo/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/c-sin7/lhsin.lo/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/c-sin7/lhsin.lo/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+    
+
+</body>
+
+</html>
