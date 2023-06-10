@@ -5,6 +5,144 @@
     
     <entry>
       <title></title>
+      <link href="/2023/06/10/%E7%AE%97%E6%B3%95/code_0610/"/>
+      <url>/2023/06/10/%E7%AE%97%E6%B3%95/code_0610/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>code_0609</title>
+      <link href="/2023/06/09/%E7%AE%97%E6%B3%95/code_0609/"/>
+      <url>/2023/06/09/%E7%AE%97%E6%B3%95/code_0609/</url>
+      
+        <content type="html"><![CDATA[<h1 id="code-0609"><a href="#code-0609" class="headerlink" title="code_0609"></a>code_0609</h1><h2 id="修改图中的边权"><a href="#修改图中的边权" class="headerlink" title="修改图中的边权"></a>修改图中的边权</h2><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230609183408344.png" alt="image-20230609183408344" style="zoom:80%;" /><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230609183525281.png" alt="image-20230609183525281" style="zoom:80%;" /><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230609183639004.png" alt="image-20230609183639004" style="zoom:80%;" /><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230609183745050.png" alt="image-20230609183745050" style="zoom:80%;" /><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230609183814640.png" alt="image-20230609183814640" style="zoom:80%;" /><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230609184043421.png" alt="image-20230609184043421" style="zoom:80%;" /><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230609184117495.png" alt="image-20230609184117495" style="zoom:80%;" /><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230609184132359.png" alt="image-20230609184132259" style="zoom:80%;" /><h3 id="图结构的表达"><a href="#图结构的表达" class="headerlink" title="图结构的表达"></a>图结构的表达</h3><p>1）邻接表法</p><p>2）邻接矩阵法</p><p>3）除此之外还有其他众多的方式</p><h3 id="图的宽度优先-amp-深度优先遍历"><a href="#图的宽度优先-amp-深度优先遍历" class="headerlink" title="图的宽度优先&amp;深度优先遍历"></a>图的宽度优先&amp;深度优先遍历</h3><h4 id="宽度优先遍历"><a href="#宽度优先遍历" class="headerlink" title="宽度优先遍历"></a>宽度优先遍历</h4><p>1，利用队列实现</p><p>2，从源节点开始依次按照宽度进队列，然后弹出</p><p>3，每弹出一个点，把该节点所有没有进过队列的邻接点放入队列</p><p>4，直到队列变空</p><h4 id="深度优先遍历"><a href="#深度优先遍历" class="headerlink" title="深度优先遍历"></a>深度优先遍历</h4><p>1，利用栈实现</p><p>2，从源节点开始把节点按照深度放入栈，然后弹出</p><p>3，每弹出一个点，把该节点下一个没有进过栈的邻接点放入栈</p><p>4，直到栈变空 </p><h3 id="图的拓扑排序算法"><a href="#图的拓扑排序算法" class="headerlink" title="图的拓扑排序算法"></a>图的拓扑排序算法</h3><p>1）在图中找到所有入度为0的点输出</p><p>2）把所有入度为0的点在图中删掉，继续找入度为0的点输出，周而复始</p><p>3）图的所有点都被删除后，依次输出的顺序就是拓扑排序</p><p>要求：有向图且其中没有环应用：事件安排、编译顺序</p><h3 id="最小生成树算法之Kruskal"><a href="#最小生成树算法之Kruskal" class="headerlink" title="最小生成树算法之Kruskal"></a>最小生成树算法之Kruskal</h3><p>1）总是从权值最小的边开始考虑，依次考察权值依次变大的边</p><p>2）当前的边要么进入最小生成树的集合，要么丢弃</p><p>3）如果当前的边进入最小生成树的集合中不会形成环，就要当前边</p><p>4）如果当前的边进入最小生成树的集合中会形成环，就不要当前边</p><p>5）考察完所有边之后，最小生成树的集合也得到了</p><h3 id="最小生成树算法之Prim"><a href="#最小生成树算法之Prim" class="headerlink" title="最小生成树算法之Prim"></a>最小生成树算法之Prim</h3><p>1）可以从任意节点出发来寻找最小生成树</p><p>2）某个点加入到被选取的点中后，解锁这个点出发的所有新的边</p><p>3）在所有解锁的边中选最小的边，然后看看这个边会不会形成环</p><p>4）如果会，不要当前边，继续考察剩下解锁的边中最小的边，重复3）</p><p>5）如果不会，要当前边，将该边的指向点加入到被选取的点中，重复2）</p><p>6）当所有点都被选取，最小生成树就得到了</p><h3 id="Dijkstra算法"><a href="#Dijkstra算法" class="headerlink" title="Dijkstra算法"></a>Dijkstra算法</h3><p>1）Dijkstra算法必须指定一个源点</p><p>2）生成一个源点到各个点的最小距离表，一开始只有一条记录，即原点到自己最小距离为0，源点到其他所有点的最小距离都为正无穷大</p><p>3）从距离表中拿出没拿过记录里的最小记录，通过这个点发出的边，更新源点到各个点的最小距离表，不断重复这一步</p><p>4）源点到所有的点记录如果都被拿过一遍，过程停止，最小距离表得到了</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> java </tag>
+            
+            <tag> 力扣 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>code_0608</title>
+      <link href="/2023/06/08/%E7%AE%97%E6%B3%95/code_0608/"/>
+      <url>/2023/06/08/%E7%AE%97%E6%B3%95/code_0608/</url>
+      
+        <content type="html"><![CDATA[<h1 id="code-0608"><a href="#code-0608" class="headerlink" title="code_0608"></a>code_0608</h1><h4 id="一个int类型的数，提取出二进制中最右侧的1来"><a href="#一个int类型的数，提取出二进制中最右侧的1来" class="headerlink" title="一个int类型的数，提取出二进制中最右侧的1来"></a>一个int类型的数，提取出二进制中最右侧的1来</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> rightestOne <span class="token operator">=</span> eor <span class="token operator">&amp;</span> <span class="token punctuation">(</span><span class="token operator">-</span>eor<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><p><code>-eor</code> 表示对 <code>eor</code> 取反后再加上 1，即得到 <code>eor</code> 的补码表示中最右侧的 1 所对应的值</p><h4 id="将i位置值设置为1"><a href="#将i位置值设置为1" class="headerlink" title="将i位置值设置为1"></a>将i位置值设置为1</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> ans<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>ans <span class="token operator">|=</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><p>这段代码的作用是将 <code>ans</code> 的第 <code>i</code> 位设置为 1，其它位不变。</p><p>具体地，<code>1 &lt;&lt; i</code> 的值是二进制数 <code>0000...0001</code> 向左移动 <code>i</code> 位后得到的结果，即在第 <code>i</code> 位上是 1，其它位都是 0，</p><p>例如当 <code>i=3</code> 时，<code>1 &lt;&lt; i</code> 的值为 <code>0000...1000</code>。然后使用或运算符 <code>|</code>，将 <code>ans</code> 的第 <code>i</code> 位设置为 1，而其它位则根据 <code>ans</code> 原先的值来保持不变。例如：</p><pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> ans <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 假设原来的 ans 值为 1011</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">// 设置第 1 位为 1，即在第二位上设置为 1</span>ans <span class="token operator">|=</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Integer<span class="token punctuation">.</span><span class="token function">toBinaryString</span><span class="token punctuation">(</span>ans<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 打印输出 11011</span></code></pre><p>在上述代码中，原来的 <code>ans</code> 值为 1011（十进制的 11），我们希望将它的第 2 位（从右往左数，即二进制数的第 2 位）设置为 1，即得到二进制数 11011（十进制的 27）。使用上述代码即可实现该目的，输出结果为 <code>11011</code>，与预期相符。</p><h4 id="使用双端队列实现栈有两种方式："><a href="#使用双端队列实现栈有两种方式：" class="headerlink" title="使用双端队列实现栈有两种方式："></a>使用双端队列实现栈有两种方式：</h4><ol><li>在队列头部实现栈的 push 操作，即调用 <code>addFromHead</code> 方法插入元素，在队列头部调用 <code>popFromHead</code> 方法去除元素。</li><li>在队列尾部实现栈的 push 操作，即调用 <code>addFromBottom</code> 方法插入元素，在队列尾部调用 <code>popFromBottom</code> 方法去除元素。</li></ol><h4 id="“打表”"><a href="#“打表”" class="headerlink" title="“打表”"></a>“打表”</h4><p>可以理解为“预处理表格数据”，即将一些数据事先计算好并保存在数据结构中，以供程序运行时直接调用，而无需再进行计算。打表在某些场景下可以提高算法的效率和程序的运行速度，通常使用的数据结构有数组、哈希表、二维矩阵等。</p><p>例如，在计算斐波那契数列的时候，由于每个数的值都只跟前两个数的值有关，可以事先计算出数列中的所有数字并存在一个数组中，程序在需要时直接调用即可，这样可以避免重复计算，提高程序效率。这就是打表的一个常见应用。</p><p>另外，在算法竞赛中，打表也是一种常用的技巧，通过合理的打表可以大幅缩短算法的运行时间，从而在比赛中取得更好的成绩。</p><h4 id="NP-Complete问题"><a href="#NP-Complete问题" class="headerlink" title="NP-Complete问题"></a>NP-Complete问题</h4><p>是指一类非常重要的计算机科学问题，它表示了所有NP问题中最困难的一类问题之一，目前没有已知的有效算法可以在多项式时间内解决它们，即不存在可以在“多项式时间”内解决该问题的算法。</p><p>NP问题是指在多项式时间内可以验证一个解是否正确的问题，例如旅行商问题（TSP问题）和子集和问题（Subset Sum）就是NP问题，因为在多项式时间内可以验证某个解是否是正确的。而NP-Complete问题是一类特殊的NP问题，它具有这样的特性：如果有一种NP问题可以在多项式时间内转化成某个NP-Complete问题，那么这个NP问题就可以被认为是“和NP-Complete问题同样困难”的问题。</p><p>可视化数据网站：<a href="http://int-e.eu/~bf3/squares/view.html#13,11">http://int-e.eu/~bf3/squares/view.html#13,11</a></p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230608200322152.png" alt="image-20230608200322152" style="zoom:80%;" /><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230608200300117.png" alt="image-20230608200300117"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> java </tag>
+            
+            <tag> 力扣 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>code_0607</title>
+      <link href="/2023/06/07/%E7%AE%97%E6%B3%95/code_0607/"/>
+      <url>/2023/06/07/%E7%AE%97%E6%B3%95/code_0607/</url>
+      
+        <content type="html"><![CDATA[<h1 id="code-0607"><a href="#code-0607" class="headerlink" title="code_0607"></a>code_0607</h1><h2 id="回文数"><a href="#回文数" class="headerlink" title="回文数"></a>回文数</h2><p>方法一：int-&gt;String</p><p>需要额外的非常量空间来创建问题描述中所不允许的字符串。</p><p>方法二：将数字本身反转<br>问题：</p><p>反转后的数字可能大于 int.MAX，整数溢出。</p><p>为避免数字反转可能导致的溢出问题，考虑只反转数字的一半</p><p>例如，输入 1221，可以将数字 “1221” 的后半部分从 “21” 反转为 “12”，并将其与前半部分 “12” 进行比较，二者相同，是回文。</p><p>算法：</p><p>首先，处理一些临界情况。</p><ol><li>所有负数都不可能是回文</li><li>除了 0 以外，所有个位是 0 的数字不可能是回文</li></ol><p>对于数字 1221，如果执行 1221 % 10，我们将得到最后一位数字 1，要得到倒数第二位数字，我们可以先通过除以 10 把最后一位数字从 1221 中移除，1221 / 10 = 122，再求出上一步结果除以 10 的余数，122 % 10 = 2，就可以得到倒数第二位数字。</p><p>如果我们把最后一位数字乘以 10，再加上倒数第二位数字，1 * 10 + 2 = 12，就得到了我们想要的反转后的数字。如果继续这个过程，我们将得到更多位数的反转数字。</p><p>问题是，如何知道反转数字的位数已经达到原始数字位数的一半？</p><p>由于整个过程不断将原始数字除以 10，然后给反转后的数字乘上 10，所以，当原始数字<strong>小于或等于</strong>反转后的数字时，意味着已经处理了一半位数的数字了。</p><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token keyword">public</span><span class="token operator">:</span>    bool <span class="token function">isPalindrome</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">// 特殊情况：</span>        <span class="token comment" spellcheck="true">// 如上所述，当 x &lt; 0 时，x 不是回文数。</span>        <span class="token comment" spellcheck="true">// 同样地，如果数字的最后一位是 0，为了使该数字为回文，</span>        <span class="token comment" spellcheck="true">// 则其第一位数字也应该是 0</span>        <span class="token comment" spellcheck="true">// 只有 0 满足这一属性</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> <span class="token punctuation">(</span>x <span class="token operator">%</span> <span class="token number">10</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> x <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> revertedNumber <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">while</span> <span class="token punctuation">(</span>x <span class="token operator">></span> revertedNumber<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>            revertedNumber <span class="token operator">=</span> revertedNumber <span class="token operator">*</span> <span class="token number">10</span> <span class="token operator">+</span> x <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">;</span>            x <span class="token operator">/=</span> <span class="token number">10</span><span class="token punctuation">;</span>        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>            <span class="token comment" spellcheck="true">// 当数字长度为奇数时，我们可以通过 revertedNumber/10 去除处于中位的数字。</span>        <span class="token comment" spellcheck="true">// 例如，当输入为 12321 时，在 while 循环的末尾我们可以得到 x = 12，revertedNumber = 123，</span>        <span class="token comment" spellcheck="true">// 由于处于中位的数字不影响回文（它总是与自己相等），所以我们可以简单地将其去除。</span>        <span class="token keyword">return</span> x <span class="token operator">==</span> revertedNumber <span class="token operator">||</span> x <span class="token operator">==</span> revertedNumber <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">;</span>    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span></code></pre><p>复杂度分析</p><p>时间复杂度：O(logn)，对于每次迭代，我们会将输入除以 10，因此时间复杂度为 O(logn)。<br>空间复杂度：O(1)。我们只需要常数空间存放若干变量。</p><p>Java 中，可以使用 <code>Integer.toString(int i)</code> 方法将 <code>int</code> 类型的变量转换为 <code>String</code> 类型</p><p>Java中，可以使用 <code>String.valueOf(int i)</code> 方法将 <code>int</code> 类型的变量转换为 <code>String</code> 类型</p><p>Java 中，可以通过 <code>charAt(int index)</code> 方法获取字符串中某个位置上的字符</p><p> Java 中，<code>equal</code> 方法用于判断两个字符串的内容是否相同，而 <code>==</code> 运算符用于判断两个字符串对象的引用是否相同。</p><p> Java 中，可以使用 <code>StringBuilder</code> 和 <code>StringBuffer</code> 类的 <code>reverse()</code> 方法将字符串进行反转（即转置）。具体用法如下：</p><pre class=" language-java"><code class="language-java">String str <span class="token operator">=</span> <span class="token string">"hello world"</span><span class="token punctuation">;</span>StringBuilder sb <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>sb<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>String reversedStr <span class="token operator">=</span> sb<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><h2 id="罗马数字-gt-整数"><a href="#罗马数字-gt-整数" class="headerlink" title="罗马数字-&gt;整数"></a>罗马数字-&gt;整数</h2><p>方法一：从左往右，小数在大数左边，减法，否则加法</p><p>方法二：从右往左，记录当前遇到的最大的数字，遇到更大的就加，并且更新最大数，遇到小的就减</p><p><strong>复杂度分析</strong></p><ul><li>时间复杂度：O(n)，其中 n 是字符串 s的长度。</li><li>空间复杂度：O(1)</li></ul><h2 id="老鼠和奶酪"><a href="#老鼠和奶酪" class="headerlink" title="老鼠和奶酪"></a>老鼠和奶酪</h2><p><a href="https://leetcode.cn/problems/mice-and-cheese/">https://leetcode.cn/problems/mice-and-cheese/</a></p><p>方法一：贪心 + 排序</p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230608095852151.png" alt="image-20230608095852151" style="zoom:80%;" /><p>时间复杂度：O(nlog⁡n)，其中 n 是数组 reward1 和 reward2 的长度。创建数组 diffs 需要 O(n) 的时间，将数组 diffs 排序需要 O(nlog⁡n) 的时间，排序后计算 diffs 的 k 个最大值之和需要 O(k) 的时间，其中 k≤n，因此时间复杂度是 O(nlog⁡n)O(nlogn)。</p><p>空间复杂度：O(n)，其中 n 是数组 reward1 和 reward2 的长度。需要创建长度为 n 的数组 diffs 并排序，数组需要 O(n) 的空间，排序需要 O(log⁡n) 的递归调用栈空间，因此空间复杂度是 O(n)</p><p>：</p><p>数组排序Arrays.sort()需要时间为O(nlog⁡n) </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> java </tag>
+            
+            <tag> 力扣 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2023/03/23/%E6%AF%8F%E5%A4%A9%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%AE%9E%E9%AA%8C%E4%B8%80/"/>
+      <url>/2023/03/23/%E6%AF%8F%E5%A4%A9%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%AE%9E%E9%AA%8C%E4%B8%80/</url>
+      
+        <content type="html"><![CDATA[<img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E5%AE%9E%E9%AA%8C1_00.jpg" alt="实验一" style="zoom: 67%;" /><p>前言<br>当我们从Windows系统上传文件到Linux/Unix系统上时，有时候会由于文件格式导致可执行文件无法使用。</p><p>Windows系统的文件格式为DOS，而Linx/Unix系统的文件格式为UNIX。</p><p>而在CentOS系统上有个很方便的工具dos2unix/unix2dos可以解决这个问题。<br>Ubuntu上则可以使用tofrodos/fromdos</p><p>简介<br>dos2unix（tofrodos）指令可以将DOS格式文件转换为UNIX格式文件。</p><p>而unix2dos（fromdos）指令可以将UNIX格式文件转换为DOS格式文件。</p><p>安装<br>CentOS下可以直接使用yum安装：sudo yum -y install dos2unix（同时安装了dos2unix/unix2dos）<br>Ubuntu可以使用apt安装：sudo apt-get install tofrodos（同时安装了tofrodos/fromdos）<br>基本使用<br>dos2unix/unix2dos只需要直接执行：dos2unix file就可以将DOS格式的文件转成UNIX格式的文件<br>tofrodos/fromdos则可以执行：tofrodos file就可以将DOS格式的文件转成UNIX格式的文件</p><p><a href="https://blog.csdn.net/Nicolas12/article/details/80890811">CentOS7 复制、删除、移动、压缩、解压等常用命令整理_centos7命令行复制文件到移动硬盘_爱新觉罗1的博客-CSDN博客</a></p><pre class=" language-bash"><code class="language-bash">4. yum -y <span class="token function">install</span> lrzsz5. rz6. <span class="token function">mv</span> 实验一.txt /tmp/exam1.txt7. <span class="token function">sudo</span> yum -y <span class="token function">install</span> dos2unix8. dos2unix /tmp/exam1.txt9. <span class="token function">vi</span> /tmp/exam1.txt10. <span class="token function">tail</span> -5 /etc/passwd <span class="token operator">>></span> /tmp/exam1.txt11. <span class="token function">find</span> /usr -type f -name <span class="token string">"*.xml"</span>-path<span class="token string">"*mysql*"</span><span class="token operator">>></span>/tmp/exam1.txt12. <span class="token function">date</span> +<span class="token string">"%Y-%m-%d %H:%M:%S"</span><span class="token operator">>></span>/tmp/exam1.txt13. <span class="token function">tar</span> -zcvf log.tar.gz /var/log14. <span class="token function">ls</span> -alh log.tar.gz <span class="token operator">>></span> /tmp/exam1.txt15. <span class="token function">ls</span> -alh log.tar.gz <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'&amp;#123;print <span class="token variable">$1</span>, <span class="token variable">$9</span>&amp;#125;'</span> <span class="token operator">>></span> /tmp/exam1.txt16. dos2unix /tmp/exam1.txt</code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Nginx了解</title>
+      <link href="/2023/03/02/%E6%AF%8F%E5%A4%A9%E5%B0%8F%E7%9F%A5%E8%AF%86/Nginx%E4%BA%86%E8%A7%A3/"/>
+      <url>/2023/03/02/%E6%AF%8F%E5%A4%A9%E5%B0%8F%E7%9F%A5%E8%AF%86/Nginx%E4%BA%86%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Nginx了解"><a href="#Nginx了解" class="headerlink" title="Nginx了解"></a>Nginx了解</h1><h2 id="1-什么是Nginx"><a href="#1-什么是Nginx" class="headerlink" title="1. 什么是Nginx?"></a>1. 什么是Nginx?</h2><p>​        <em>Nginx</em> (engine x) 是一个高性能的<a href="https://baike.baidu.com/item/HTTP">HTTP</a>和<a href="https://baike.baidu.com/item/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/7793488">反向代理</a>web服务器，同时也提供了IMAP/POP3/SMTP服务。</p><p>​        Nginx的特点是占有内存少，<a href="https://baike.baidu.com/item/%E5%B9%B6%E5%8F%91/11024806">并发</a>能力强，能够支持高达 50,000 个并发连接数的响应，事实上nginx的并发能力在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、<a href="https://baike.baidu.com/item/%E4%BA%AC%E4%B8%9C/210931">京东</a>、<a href="https://baike.baidu.com/item/%E6%96%B0%E6%B5%AA/125692">新浪</a>、<a href="https://baike.baidu.com/item/%E7%BD%91%E6%98%93/185754">网易</a>、<a href="https://baike.baidu.com/item/%E8%85%BE%E8%AE%AF/112204">腾讯</a>、<a href="https://baike.baidu.com/item/%E6%B7%98%E5%AE%9D/145661">淘宝</a>等。</p><p>​        Nginx支持正向代理、反向代理、负载均衡和动静分离。接下来一一介绍。</p><h2 id="1-1-正向代理"><a href="#1-1-正向代理" class="headerlink" title="1.1 正向代理"></a>1.1 正向代理</h2><p>​        在如今的网络环境下，我们如果由于技术需要要去访问国外的某些网站，此时你会发现位于国外的某网站我们通过浏览器是没有办法访问的，此时大家可能都会用一个**代理(vpn)**进行访问，代理的方式主要是找到一个可以访问国外网站的代理服务器，我们将请求发送给代理服务器，代理服务器去访问国外的网站，然后将访问到的数据传递给我们！</p><p>​        Nginx支持正向代理，”它代理的是客户端”，是一个位于客户端和原始服务器(origin server)之间的服务器，为了从原始服务器取得内容，客户端向代理发送一个请求并指定目标(原始服务器)，然后代理向原始服务器转交请求并将获得的内容返回给客户端。客户端必须要进行一些特别的设置才能使用正向代理。</p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230302110036503.png" alt="image-20230302110036503"  /><p>客户端必须设置正向代理服务器，当然前提是要知道正向代理服务器的IP地址，还有代理程序的端口。如图。</p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/1614601035172-eea2a1ad-7f1b-4b53-8dd8-a6f8578d95b8.png" alt="img"></p><p><strong>正向代理的用途：</strong></p><p>（1）访问原来无法访问的资源，如Google</p><p>（2） 可以做缓存，加速访问资源</p><p>（3）对客户端访问授权，上网进行认证</p><p>（4）代理可以记录用户访问记录（上网行为管理），对外隐藏用户信息</p><h2 id="1-2-反向代理"><a href="#1-2-反向代理" class="headerlink" title="1.2 反向代理"></a>1.2 反向代理</h2><p>​        关于反向代理的处理方式，举例淘宝网站，每天同时连接到网站的访问人数已经爆表，单个服务器远远不能满足人民日益增长的购买欲望了，此时就出现了一个大家耳熟能详的名词：分布式部署；也就是通过部署多台服务器来解决访问人数限制的问题；淘宝网站中大部分功能也是直接使用Nginx进行反向代理实现的，并且通过封装Nginx和其他的组件之后起了个高大上的名字：Tengine，有兴趣的童鞋可以访问Tengine的官网查看具体的信息：<a href="http://tengine.taobao.org/%E3%80%82">http://tengine.taobao.org/。</a></p><blockquote><p>Tengine是一个由淘宝网发起的Web服务器开源项目，其核心成员来自于<a href="http://www.taobao.com/">淘宝</a> 、<a href="http://www.sogou.com/">搜狗</a> 等互联网企业。它在<a href="http://nginx.org/">Nginx</a> 的基础上，针对大访问量网站的需求，添加了很多高级功能和特性。Tengine的性能和稳定性已经在大型的网站如<a href="http://www.taobao.com/">淘宝网</a> ，<a href="http://www.tmall.com/">天猫商城</a> 等得到了很好的检验。它的最终目标是打造一个高效、稳定、安全、易用的Web平台。</p></blockquote><p>​        Nginx支持反向代理，”它代理的是服务端，代服务端接收请求”，主要用于服务器集群分布式部署的情况下，反向代理隐藏了服务器的信息。多个客户端给服务器发送的请求，<strong>Nginx服务器接收到之后，按照一定的规则分发给了后端的业务处理服务器进行处理</strong>了。请求的来源也就是客户端是明确的，但是请求具体由哪台服务器处理的并不明确了，Nginx扮演的就是一个反向代理角色。</p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/1614601035335-708a9d56-29ed-4ed8-9fa3-8604758f20e0.png" alt="img"></p><p><strong>反向代理的作用：</strong></p><p>（1）保证内网的安全，通常将反向代理作为公网访问地址，Web服务器是内网。</p><p>（2）负载均衡，通过反向代理服务器来优化网站的负载</p><h2 id="1-3-正向代理与反向代理的应用场景"><a href="#1-3-正向代理与反向代理的应用场景" class="headerlink" title="1.3 正向代理与反向代理的应用场景"></a>1.3 正向代理与反向代理的应用场景</h2><p>通常情况下，我们在实际项目操作时，正向代理和反向代理很有可能会存在在一个应用场景中，<strong>正向代理代理客户端的请求去访问目标服务器，目标服务器是一个反向代理服务器，反向代理了多台真实的业务处理服务器。</strong>具体的拓扑图如下：</p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/1614601035276-64a46660-e97c-4186-aba2-c9d533a28a87.png" alt="img"></p><h2 id="1-4-正向代理与反向代理的区别"><a href="#1-4-正向代理与反向代理的区别" class="headerlink" title="1.4 正向代理与反向代理的区别"></a>1.4 正向代理与反向代理的区别</h2><p>通过一张图来说明正向代理和反向代理二者之间的区别：</p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/1614601035284-7676d4e1-1895-4435-b3a2-3ab1c9195c7d.png" alt="img"></p><p><strong>图解：</strong></p><p>在正向代理中，Proxy和Client 同属于一个LAN（图中方框内），隐藏了客户端信息；</p><p>在反向代理中，Proxy和Server同属于一个LAN（图中方框内），隐藏了服务端信息；</p><p>实际上，Proxy在两种代理中做的事情都是替服务器代为收发请求和响应，不过从结构上看正好左右互换了一下，所以把后出现的那种代理方式称为反向代理了。</p><h2 id="1-5-负载均衡"><a href="#1-5-负载均衡" class="headerlink" title="1.5 负载均衡"></a>1.5 负载均衡</h2><p>当<strong>Nginx扮演了反向代理服务器的角色</strong>，它是以依据什么样的规则进行请求分发的呢？不用的项目应用场景，分发的规则是否可以控制呢？</p><p>我们把客户端发送的、Nginx反向代理服务器接收到的请求数量，就是我们说的负载量。</p><p>请求数量按照一定的规则进行分发到不同的服务器处理的规则，就是一种均衡规则。</p><p>将服务器接收到的请求按照规则分发的过程，称为负载均衡。</p><p>负载均衡在实际项目操作过程中，有<strong>硬件负载均衡和软件负载均衡</strong>两种，硬件负载均衡也称为硬负载，如F5负载均衡，相对造价昂贵成本较高，但是数据的稳定性安全性等等有非常好的保障，如中国移动中国联通这样的公司才会选择硬负载进行操作；更多的公司考虑到成本原因，会选择使用软件负载均衡，软件负载均衡是利用现有的技术结合主机硬件实现的一种消息队列分发机制。</p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/1614601035715-45ff166b-1cd0-497c-92f2-43fc237fed5f.png" alt="img"></p><p><strong>Nginx支持的负载均衡调度算法方式如下：</strong></p><ol><li><strong>weight轮询</strong>（默认，常用，具有HA功效！）：接收到的请求按照权重分配到不同的后端服务器，即使在使用过程中，某一台后端服务器宕机，Nginx会自动将该服务器剔除出队列，请求受理情况不会受到任何影响。 这种方式下，可以给不同的后端服务器设置一个权重值(weight)，用于调整不同的服务器上请求的分配率；权重数据越大，被分配到请求的几率越大；该权重值，主要是针对实际工作环境中不同的后端服务器硬件配置进行调整的。</li><li><strong>ip_hash</strong>（常用）：每个请求按访问ip的hash结果分配，这样每个访客固定访问一个后端服务器，这也在一定程度上解决了集群部署环境下<strong>session共享</strong>的问题。</li><li><strong>fair</strong>：智能调整调度算法，动态的根据后端服务器的请求处理到响应的时间进行均衡分配，响应时间短处理效率高的服务器分配到请求的概率高，响应时间长处理效率低的服务器分配到的请求少；结合了前两者的优点的一种调度算法。但是需要注意的是Nginx默认不支持fair算法，如果要使用这种调度算法，请安装upstream_fair模块。</li><li><strong>url_hash</strong>：按照访问的url的hash结果分配请求，每个请求的url会指向后端固定的某个服务器，可以在Nginx作为静态服务器的情况下提高缓存效率。同样要注意Nginx默认不支持这种调度算法，要使用的话需要安装Nginx的hash软件包。</li></ol><h2 id="1-6-动静分离"><a href="#1-6-动静分离" class="headerlink" title="1.6 动静分离"></a>1.6 动静分离</h2><p>​        为了提高网站的响应速度，减轻程序服务器（Tomcat，Jboss等）的负载，<strong>对于静态资源比如图片，js，css等文件，我们可以在Nginx反向代理服务器中进行缓存，这样浏览器在请求一个静态资源时，Nginx代理服务器就可以直接处理，而不用将请求转发给后端服务器。</strong>用户请求的动态文件比如servlet，jsp则转发给Tomcat，Jboss服务器处理，这就是动静分离。</p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/1614601035199-3b5a8b4d-d447-4de8-a9f8-5ad24efd64be.png" alt="img"></p><h2 id="1-7-几种常用web服务器对比"><a href="#1-7-几种常用web服务器对比" class="headerlink" title="1.7 几种常用web服务器对比"></a>1.7 几种常用web服务器对比</h2><table><thead><tr><th><strong>对比项\服务器</strong></th><th><strong>Apache</strong></th><th><strong>Nginx</strong></th><th><strong>Lighttpd</strong></th></tr></thead><tbody><tr><td>Proxy代理</td><td>非常好</td><td>非常好</td><td>一般</td></tr><tr><td>Rewriter</td><td>好</td><td>非常好</td><td>一般</td></tr><tr><td>Fcgi</td><td>不好</td><td>好</td><td>非常好</td></tr><tr><td>热部署</td><td>不支持</td><td>支持</td><td>不支持</td></tr><tr><td>系统压力</td><td>很大</td><td>很小</td><td>比较小</td></tr><tr><td>稳定性</td><td>好</td><td>非常好</td><td>不好</td></tr><tr><td>安全性</td><td>好</td><td>一般</td><td>一般</td></tr><tr><td>静态文件处理</td><td>一般</td><td>非常好</td><td>好</td></tr><tr><td>反向代理</td><td>一般</td><td>非常好</td><td>一般</td></tr></tbody></table><h2 id="2-Linux安装Nginx"><a href="#2-Linux安装Nginx" class="headerlink" title="2. Linux安装Nginx"></a>2. Linux安装Nginx</h2><blockquote><p>关于Nginx的依赖说明：<a href="https://www.jianshu.com/p/14c81fbcb401">https://www.jianshu.com/p/14c81fbcb401</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 小知识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/2023/02/24/CentOS%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"/>
       <url>/2023/02/24/CentOS%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</url>
       
@@ -302,9 +440,9 @@
             
             <tag> CentOS </tag>
             
-            <tag> git </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> git </tag>
             
             <tag> nginx </tag>
             
