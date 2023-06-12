@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="将Hexo部署到云服务器(CentOS), sin">
+    <meta name="keywords" content="code_0612, sin">
     <meta name="description" content="呆头鹅的随手记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>将Hexo部署到云服务器(CentOS) | sin</title>
+    <title>code_0612 | sin</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -41,7 +41,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="将Hexo部署到云服务器(CentOS), sin">
+    <meta name="keywords" content="code_0612, sin">
     <meta name="description" content="呆头鹅的随手记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -53,7 +53,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>将Hexo部署到云服务器(CentOS) | sin</title>
+    <title>code_0612 | sin</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -348,12 +348,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">将Hexo部署到云服务器(CentOS)</h1>
+                    <h1 class="description center-align post-title">code_0612</h1>
                 </div>
             </div>
         </div>
@@ -469,24 +469,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
-                                <span class="chip bg-color">环境配置</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">算法</span>
                             </a>
                         
-                            <a href="/tags/CentOS/">
-                                <span class="chip bg-color">CentOS</span>
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
                             </a>
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
-                            </a>
-                        
-                            <a href="/tags/git/">
-                                <span class="chip bg-color">git</span>
-                            </a>
-                        
-                            <a href="/tags/nginx/">
-                                <span class="chip bg-color">nginx</span>
+                            <a href="/tags/%E5%8A%9B%E6%89%A3/">
+                                <span class="chip bg-color">力扣</span>
                             </a>
                         
                     </div>
@@ -497,8 +489,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="post-category">
-                                环境配置
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -510,7 +502,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-02-09
+                    2023-06-12
                 </div>
                 
 
@@ -519,14 +511,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    1 分
                 </div>
                 
 
@@ -541,193 +533,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1. 安装git"></a>1. 安装git</h2><p>输入下面命令即可安装</p>
-<pre class=" language-bash"><code class="language-bash">//方法一：
-<span class="token function">sudo</span> apt <span class="token function">install</span> <span class="token function">git</span>
-//方法二：
-yum <span class="token function">install</span> curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-devel
-yum <span class="token function">install</span> -y <span class="token function">git</span>
-</code></pre>
-<p>查看git版本</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> --version 
-</code></pre>
-<h2 id="2-配置参数"><a href="#2-配置参数" class="headerlink" title="2. 配置参数"></a>2. 配置参数</h2><p>接下来在git中配置自己的名称和电子邮件地址，可以通过使用以下命令来完成此操作：</p>
-<pre class=" language-.vim"><code class="language-.vim">git config --global user.name "用户名" 
-git config --global user.email "用户邮箱"
-</code></pre>
-<p>可以通过下面命令查看是否正确配置。</p>
-<pre class=" language-.vim"><code class="language-.vim">git config --list
-</code></pre>
-<img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230209171308239.png" alt="git安装与配置" style="zoom: 80%;" />
-
-<h2 id="3-创建一个ssh-key"><a href="#3-创建一个ssh-key" class="headerlink" title="3.创建一个ssh key"></a>3.创建一个ssh key</h2><p>作用：将电脑和github账号联系在一起的密钥，可以十分方便的通过git上传代码。</p>
-<p>获取密钥的方法如下：</p>
-<p>首先在命令行输入cd ~/.ssh，第一次配置会显示没有那个文件或目录，这是正常现象。</p>
-<p>然后在命令行输入ssh-keygen -t rsa -C “邮箱地址”，接下来连按三次回车就可以了。</p>
-<p>命令行代码如下：</p>
-<img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230209171948768.png" alt="创建ssh key" style="zoom:80%;" />
-
-<p>密钥就创建成功了。</p>
-<p>打开/root/.ssh文件夹下id_rsa.pub文件，复制里面的内容</p>
-<h2 id="4-登录GitHub添加ssh-key"><a href="#4-登录GitHub添加ssh-key" class="headerlink" title="4.登录GitHub添加ssh key"></a>4.登录GitHub添加ssh key</h2><p>选择setting里面的SSH and GPG keys选项</p>
-<p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230209172417818.png" alt="SSH and GPG keys"></p>
-<p>点击New SSH keys后界面如下图所示，Title是给密钥起一个名字，随便起一个就行，之后把刚刚复制的密钥填写在下边的大框里，点击Add SSH keys即可。</p>
-<p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230209172508480.png" alt="New SSH keys"></p>
-<h2 id="5-创建用户并配置初始化仓库"><a href="#5-创建用户并配置初始化仓库" class="headerlink" title="5.创建用户并配置初始化仓库"></a>5.创建用户并配置初始化仓库</h2><p>创建一个 git 仓库</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">useradd</span> <span class="token function">git</span> 
-<span class="token function">passwd</span> <span class="token function">git</span> // 设置密码
-<span class="token function">su</span> <span class="token function">git</span> // 这步很重要，避免文件权限的各种问题
-<span class="token function">cd</span> /home/git/
-<span class="token function">mkdir</span> -p project/hexo-blog // 项目存在的真实目录,存放hexo静态文件
-<span class="token function">mkdir</span> repos <span class="token operator">&amp;&amp;</span> <span class="token function">cd</span> repos // 放置git仓库的文件夹
-<span class="token function">git</span> init --bare hexo-blog-repo.git// 创建一个裸露的仓库
-</code></pre>
-<p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230209175642145.png" alt="配置初始化仓库"></p>
-<h2 id="6-创建钩子函数"><a href="#6-创建钩子函数" class="headerlink" title="6.创建钩子函数"></a>6.创建钩子函数</h2><p> 新建文件夹hexo-blog-repo.git 在文件夹中创建钩子post-receive，把提交到 git 仓库的文件同步到 home/hexo文件夹中</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> hexo-blog-repo.git/hooks //进入hooks文件夹
-vim post-receive //创建hook钩子函数文件<span class="token punctuation">(</span>git提交时自动部署<span class="token punctuation">)</span>，
-</code></pre>
-<p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230209175759880.png" alt="钩子函数"></p>
-<p>编写内容如下：（i进入insert模式，编写完毕后按Esc，连按两次Z保存退出）</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> --work-tree<span class="token operator">=</span>/home/git/projects/hexo-blog --git-dir<span class="token operator">=</span>/home/git/repos/hexo-blog-repo checkout -f
-</code></pre>
-<h2 id="7-修改权限"><a href="#7-修改权限" class="headerlink" title="7.修改权限"></a>7.修改权限</h2><p>chmod用法： 用来修改某个目录或文件的访问权限</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">chmod</span> +x post-receive
-<span class="token keyword">exit</span> // 退出到 root 登录
-<span class="token function">chown</span> -R git:git /home/git/repos/hexo-blog-repo.git // 添加权限
-</code></pre>
-<h2 id="8-测试能否拉取"><a href="#8-测试能否拉取" class="headerlink" title="8.测试能否拉取"></a>8.测试能否拉取</h2><p>在本地打开一个终端，以 ssh 的方式登录云服务器</p>
-<p>server_ip：用户的服务器ip</p>
-<pre class=" language-shell"><code class="language-shell">ssh -v git@server_ip
-// 输入密码 即可成功登录云服务器
-</code></pre>
-<img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230210135945164.png" alt=" ssh 登录云服务器" style="zoom: 80%;" />
-
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> clone git@server_ip:/home/git/repos/hexo-blog-repo.git
-</code></pre>
-<img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230209180030554.png" alt="clone结果" style="zoom:80%;" />
-
-<h2 id="9-建立客户端与服务器的-SSH-免密连接"><a href="#9-建立客户端与服务器的-SSH-免密连接" class="headerlink" title="9.建立客户端与服务器的 SSH 免密连接"></a>9.建立客户端与服务器的 SSH 免密连接</h2><p>创建 authorized_keys 以及配置权限</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> /home/git/.ssh
-<span class="token function">touch</span> authorized_keys  //存放客户端的ssh公钥<span class="token punctuation">(</span>id_rsa.pub<span class="token punctuation">)</span>
-<span class="token function">chmod</span> 600 authorized_keys   //配置权限
-</code></pre>
-<h2 id="10-生成密钥对（已有的请忽略）"><a href="#10-生成密钥对（已有的请忽略）" class="headerlink" title="10.生成密钥对（已有的请忽略）"></a>10.生成密钥对（已有的请忽略）</h2><p>进入你本机的(windows) c:/Users/电脑名称/.ssh 文件夹下，查看是否有名为 <code>id_rsa.pub</code> 和 <code>id_rsa</code> 的文件：</p>
-<img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230209180411071.png" alt="本机密钥对" style="zoom:67%;" />
-
-<p>如果有，请跳过下面 <strong>生成密钥</strong> 这一步：</p>
-<pre class=" language-bash"><code class="language-bash">ssh-keygen -t rsa
-</code></pre>
-<blockquote>
-<p>中途不管你提示啥，一直Enter就是了，生成成功的话会在控制台打印出一个图案</p>
-</blockquote>
-<h2 id="11-建立-SSH-信任关系（免密登录）"><a href="#11-建立-SSH-信任关系（免密登录）" class="headerlink" title="11.建立 SSH 信任关系（免密登录）"></a>11.建立 SSH 信任关系（免密登录）</h2><pre class=" language-bash"><code class="language-bash">ssh-copy-id -i C:/Users/电脑用户名/.ssh/id_rsa.pub git@server_ip
-<span class="token function">ssh</span> git@server_ip // 测试能否登录
-</code></pre>
-<img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230209200559093.png" alt="登录情况" style="zoom: 80%;" />
-
-<p>注意本地 ssh-keygen生成密钥对时<strong>最好不要对密钥对进行重命名</strong></p>
-<h2 id="12-限制-git-用户的权限"><a href="#12-限制-git-用户的权限" class="headerlink" title="12.限制 git 用户的权限"></a>12.限制 git 用户的权限</h2><p>为了安全起见，最好是将 git 用户的权限设置为只能执行 <strong>git clone , git push</strong> 命令等等：</p>
-<p>/usr/bin/git-shell</p>
-<pre class=" language-bash"><code class="language-bash">// 查看 git-shell 是否在登录方式里面
-<span class="token function">cat</span> /etc/shells 
-// 查看是否安装
-<span class="token function">which</span> git-shell
-//添加第2步显示出来的路径，通常为 /usr/bin/git-shell
-vim /etc/shells
-</code></pre>
-<p>/etc/shells内容：</p>
-<img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230209201858460.png" alt="/etc/shells内容" style="zoom:80%;" />
-
-<p>同时修改 /etc/passwd 文件内容，更改权限：</p>
-<pre class=" language-bash"><code class="language-bash">将原来的:
-git:x:1002:1002::/home/git:/bin/bash //原来的
-修改为:
-git:x:1001:1001::/home/git:/usr/bin/git-shell //修改之后
-</code></pre>
-<h2 id="13-安装配置-Nginx"><a href="#13-安装配置-Nginx" class="headerlink" title="13.安装配置 Nginx"></a>13.安装配置 Nginx</h2><h4 id="13-1安装"><a href="#13-1安装" class="headerlink" title="13.1安装"></a>13.1安装</h4><pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> /usr/local/src 
-<span class="token function">wget</span> <span class="token string">"http://nginx.org/download/nginx-1.17.8.tar.gz"</span> //下载安装文件
-<span class="token function">tar</span> -xvzf nginx-1.17.8.tar.gz -C <span class="token punctuation">..</span>/
-<span class="token function">cd</span> <span class="token punctuation">..</span>/nginx-1.17.8
-./configure --prefix<span class="token operator">=</span>/usr/local/nginx-webServer --with-http_stub_status_module --with-http_ssl_module --with-file-aio --with-http_realip_module 
-<span class="token function">make</span> <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span> // 编译安装
-<span class="token function">alias</span> nginx<span class="token operator">=</span><span class="token string">'/usr/local/nginx-webServer/sbin/nginx'</span> //取别名为nginx，方便调用
-</code></pre>
-<p>根据上面的步骤，安装完成，在控制台输入</p>
-<h4 id="13-2查看版本"><a href="#13-2查看版本" class="headerlink" title="13.2查看版本"></a>13.2查看版本</h4><pre class=" language-bash"><code class="language-bash">nginx -v
-</code></pre>
-<p>可看到版本信息，代表安装成功</p>
-<img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230209202213615.png" alt="nginx版本" style="zoom:80%;" />
-
-<h4 id="13-3运行"><a href="#13-3运行" class="headerlink" title="13.3运行"></a>13.3运行</h4><pre class=" language-bash"><code class="language-bash">nginx
-</code></pre>
-<p>如果80端口被占用</p>
-<h4 id="13-4安装iptables服务"><a href="#13-4安装iptables服务" class="headerlink" title="13.4安装iptables服务"></a>13.4安装iptables服务</h4><p>需要通过防火墙开放对外端口。如果服务器上没有iptables服务，需要安装。如果有，则跳过。</p>
-<pre class=" language-bash"><code class="language-bash">yum <span class="token function">install</span> iptables-services
-systemctl mask firewalld.service
-systemctl <span class="token function">enable</span> iptables.service
-systemctl <span class="token function">enable</span> ip6tables.service
-</code></pre>
-<h4 id="13-5配置端口"><a href="#13-5配置端口" class="headerlink" title="13.5配置端口"></a>13.5配置端口</h4><p>进入iptables配置80端口，因为nginx默认是由80端口访问</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">vi</span> /etc/sysconfig/iptables
-</code></pre>
-<p>打开后，默认的配置信息如下（加粗部分为新添加的）：</p>
-<pre class=" language-bash"><code class="language-bash">INPUT ACCEPT <span class="token punctuation">[</span>0:0<span class="token punctuation">]</span>
-:FORWARD ACCEPT <span class="token punctuation">[</span>0:0<span class="token punctuation">]</span>
-:OUTPUT ACCEPT <span class="token punctuation">[</span>6:696<span class="token punctuation">]</span>
--A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
--A INPUT -p icmp -j ACCEPT
--A INPUT -i lo -j ACCEPT
--A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
-
--A INPUT -p tcp -m state --state NEW -m tcp --dport 21 -j ACCEPT
--A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
-
-A INPUT -p tcp -m state --state NEW -m tcp --dport 30000:30999 -j ACCEPT
--A INPUT -j REJECT --reject-with icmp-host-prohibited
--A FORWARD -j REJECT --reject-with icmp-host-prohibited
-COMMIT
-</code></pre>
-<p>后续需要开放其它端口，也是在此文件中添加修改即可！</p>
-<p>修改完后，保存退出文件编辑。</p>
-<pre class=" language-bash"><code class="language-bash">:wq
-</code></pre>
-<h4 id="13-6重启防火墙"><a href="#13-6重启防火墙" class="headerlink" title="13.6重启防火墙"></a>13.6重启防火墙</h4><pre class=" language-bash"><code class="language-bash">systemctl restart iptables.service
-</code></pre>
-<h4 id="13-7端口占用问题"><a href="#13-7端口占用问题" class="headerlink" title="13.7端口占用问题"></a>13.7端口占用问题</h4><p>1）<strong>先查看80端口被什么占用了</strong></p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">fuser</span> -n tcp 80
-</code></pre>
-<p>2）<strong>将占用端口杀掉</strong></p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">kill</span> -9 进程号
-</code></pre>
-<img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230209203733586.png" alt="杀掉占用端口" style="zoom:80%;" />
-
-<h2 id="14-Nginx详细配置"><a href="#14-Nginx详细配置" class="headerlink" title="14.Nginx详细配置"></a>14.Nginx详细配置</h2><p>将 user 修改为 root //避免权限不足无法访问博客目录<br>将 root 解析路径修改为博客目录 /home/git/project/hexo-blog</p>
-<pre class=" language-bash"><code class="language-bash">nginx -s stop //先停止nginx
-<span class="token function">cd</span> /usr/local/nginx-webServer/conf
-vim nginx.conf //打开配置文件
-nginx -s reload //重启nginx
-</code></pre>
-<img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230209213256203.png" alt="Nginx原先配置" style="zoom:80%;" />
-
-<p>更改之后</p>
-<img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230209213508091.png" alt="Nginx配置更新" style="zoom:80%;" />
-
-<h2 id="15-配置站点配置文件"><a href="#15-配置站点配置文件" class="headerlink" title="15.配置站点配置文件"></a>15.配置站点配置文件</h2><p>config.yml 的 deploy:</p>
-<pre class=" language-shel"><code class="language-shel">deploy:
-  type: git
-  repo: 
-        server: git@server_ip:/home/git/repos/hexo-blog-repo.git
-  branch: master
-</code></pre>
-<p>server_ip : 即你购买的服务器的 IP 地址</p>
-<p>部署</p>
-<pre class=" language-bash"><code class="language-bash">hexo g -d
-</code></pre>
-<img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230221194613138.png" alt="image-20230221194613138" style="zoom:50%;" />
-
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/359394085">【Nginx/Hexo】在云服务器上搭建个人博客 - 知乎 (zhihu.com)</a></p>
-
+                <h1 id="code-0612"><a href="#code-0612" class="headerlink" title="code_0612"></a>code_0612</h1>
                 
             </div>
             <hr/>
@@ -753,7 +559,7 @@ nginx -s reload //重启nginx
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hexo.lhsin.cn/2023/02/09/%E5%B0%86Hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">https://hexo.lhsin.cn/2023/02/09/%E5%B0%86Hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</a>
+                    <a href="https://hexo.lhsin.cn/2023/06/12/%E7%AE%97%E6%B3%95/code_0612/">https://hexo.lhsin.cn/2023/06/12/%E7%AE%97%E6%B3%95/code_0612/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -791,24 +597,16 @@ nginx -s reload //重启nginx
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
-                                    <span class="chip bg-color">环境配置</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">算法</span>
                                 </a>
                             
-                                <a href="/tags/CentOS/">
-                                    <span class="chip bg-color">CentOS</span>
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
                                 </a>
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
-                                </a>
-                            
-                                <a href="/tags/git/">
-                                    <span class="chip bg-color">git</span>
-                                </a>
-                            
-                                <a href="/tags/nginx/">
-                                    <span class="chip bg-color">nginx</span>
+                                <a href="/tags/%E5%8A%9B%E6%89%A3/">
+                                    <span class="chip bg-color">力扣</span>
                                 </a>
                             
                         </div>
@@ -978,46 +776,56 @@ nginx -s reload //重启nginx
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/02/10/%E6%AF%8F%E5%A4%A9%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%BC%93%E5%AD%98/">
+                <a href="/2023/06/12/%E7%AE%97%E6%B3%95/code_0612/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="缓存">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="code_0612">
                         
-                        <span class="card-title">缓存</span>
+                        <span class="card-title">code_0612</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            缓存是将请求结果存储在与原始存储位置或临时存储位置不同位置的过程，可以避免重复执行相同操作。
+                            
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="post-category">
-                                    小知识
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BC%93%E5%AD%98/">
-                        <span class="chip bg-color">缓存</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8A%9B%E6%89%A3/">
+                        <span class="chip bg-color">力扣</span>
                     </a>
                     
                 </div>
@@ -1031,31 +839,31 @@ nginx -s reload //重启nginx
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/02/09/CentOS%E5%AE%89%E8%A3%85yum/">
+                <a href="/2023/06/11/%E7%AE%97%E6%B3%95/code_0611/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="CentOS下安装yum">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="code_0611">
                         
-                        <span class="card-title">CentOS下安装yum</span>
+                        <span class="card-title">code_0611</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            CentOS下安装yum
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="post-category">
-                                    环境配置
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -1065,16 +873,16 @@ nginx -s reload //重启nginx
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
-                        <span class="chip bg-color">环境配置</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
                     </a>
                     
-                    <a href="/tags/CentOS/">
-                        <span class="chip bg-color">CentOS</span>
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
-                    <a href="/tags/yum/">
-                        <span class="chip bg-color">yum</span>
+                    <a href="/tags/%E5%8A%9B%E6%89%A3/">
+                        <span class="chip bg-color">力扣</span>
                     </a>
                     
                 </div>
