@@ -196,9 +196,9 @@
     
     <category term="CentOS" scheme="http://lhsin.cn/tags/CentOS/"/>
     
-    <category term="hexo" scheme="http://lhsin.cn/tags/hexo/"/>
-    
     <category term="git" scheme="http://lhsin.cn/tags/git/"/>
+    
+    <category term="hexo" scheme="http://lhsin.cn/tags/hexo/"/>
     
     <category term="nginx" scheme="http://lhsin.cn/tags/nginx/"/>
     
