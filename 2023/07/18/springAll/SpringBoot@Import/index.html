@@ -591,19 +591,20 @@
 <span class="token annotation punctuation">@Getter</span>
 <span class="token annotation punctuation">@ToString</span>
 <span class="token annotation punctuation">@EqualsAndHashCode</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> Long id<span class="token punctuation">;</span>
     <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
 <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 
 <span class="token comment" spellcheck="true">/**
-* 直接使用@Import导入person类，然后尝试从applicationContext中取，成功拿到
+* 直接使用@Import导入User类，然后尝试从applicationContext中取，成功拿到
 **/</span>
-<span class="token annotation punctuation">@Import</span><span class="token punctuation">(</span>Person<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Import</span><span class="token punctuation">(</span>User<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo1</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
  
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
         AnnotationConfigApplicationContext applicationContext <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AnnotationConfigApplicationContext</span><span class="token punctuation">(</span>Demo1<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        Person bean <span class="token operator">=</span> applicationContext<span class="token punctuation">.</span><span class="token function">getBean</span><span class="token punctuation">(</span>Person<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        User bean <span class="token operator">=</span> applicationContext<span class="token punctuation">.</span><span class="token function">getBean</span><span class="token punctuation">(</span>User<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>bean<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
@@ -620,6 +621,7 @@
 <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
 <p>这个注册器实现了ImportBeanDefinitionRegistrar接口，并且重写了里面的registerBeanDefinitions方法<br>看他做了什么事：创建了一个新的bean定义，他的类型就是A，然后把这个bean定义注册到BeanDefinitionMap里面，key值我们可以人为设置，这里就设置成”a”<br>这样在传递一个注册器的时候，我们就可以把注册器中新增的bean定义注册进来使用。</p>
+<p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230718190411758.png" alt="image-20230718190411758"></p>
 <p>BeanDefinition（<a target="_blank" rel="noopener" href="https://jingzh.blog.csdn.net/article/details/123162295">点此了解Spring中beandefinition</a>），可以简单理解为bean的定义(bean的元数据)，也是需要放在IOC容器中进行管理的，先有bean的元数据，applicationContext再根据bean的元数据去创建Bean。</p>
 <h3 id="第三种：-Import-MyImportSelector-class"><a href="#第三种：-Import-MyImportSelector-class" class="headerlink" title="第三种：@Import(MyImportSelector.class)"></a>第三种：@Import(MyImportSelector.class)</h3><p>Application.class</p>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@SpringBootApplication</span>
@@ -1002,18 +1004,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/07/18/springAll/SpringBoot@Import/">
+                <a href="/2023/07/19/springAll/SpringBoot%20%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%EF%BC%88%E9%85%8D%E7%BD%AE%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="SpringBoot@Import和@ImportResource和@PropertySource">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="SpringBoot 自动装配（配置）">
                         
-                        <span class="card-title">SpringBoot@Import和@ImportResource和@PropertySource</span>
+                        <span class="card-title">SpringBoot 自动装配（配置）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1023,9 +1024,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-18
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-19
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1038,7 +1039,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1046,8 +1046,8 @@
                         <span class="chip bg-color">SpringBoot</span>
                     </a>
                     
-                    <a href="/tags/%E6%B3%A8%E8%A7%A3/">
-                        <span class="chip bg-color">注解</span>
+                    <a href="/tags/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D/">
+                        <span class="chip bg-color">自动装配</span>
                     </a>
                     
                 </div>
@@ -1249,7 +1249,7 @@
 
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">164.6k</span>&nbsp;字
+                class="white-color">165.4k</span>&nbsp;字
             
             
             

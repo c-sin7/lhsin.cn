@@ -6,7 +6,7 @@
   <link href="http://lhsin.cn/atom.xml" rel="self"/>
   
   <link href="http://lhsin.cn/"/>
-  <updated>2023-07-18T10:46:34.579Z</updated>
+  <updated>2023-07-19T01:18:46.144Z</updated>
   <id>http://lhsin.cn/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SpringBoot 自动装配（配置）</title>
+    <link href="http://lhsin.cn/2023/07/19/springAll/SpringBoot%20%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%EF%BC%88%E9%85%8D%E7%BD%AE%EF%BC%89/"/>
+    <id>http://lhsin.cn/2023/07/19/springAll/SpringBoot%20%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%EF%BC%88%E9%85%8D%E7%BD%AE%EF%BC%89/</id>
+    <published>2023-07-19T01:05:10.187Z</published>
+    <updated>2023-07-19T01:18:46.144Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SpringBoot-自动装配（配置）&quot;&gt;&lt;a href=&quot;#SpringBoot-自动装配（配置）&quot; class=&quot;headerlink&quot; title=&quot;SpringBoot 自动装配（配置）&quot;&gt;&lt;/a&gt;SpringBoot 自动装配（配置）&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="SpringBoot" scheme="http://lhsin.cn/categories/SpringBoot/"/>
+    
+    
+    <category term="SpringBoot" scheme="http://lhsin.cn/tags/SpringBoot/"/>
+    
+    <category term="自动装配" scheme="http://lhsin.cn/tags/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SpringBoot@Import和@ImportResource和@PropertySource</title>
     <link href="http://lhsin.cn/2023/07/18/springAll/SpringBoot@Import/"/>
     <id>http://lhsin.cn/2023/07/18/springAll/SpringBoot@Import/</id>
     <published>2023-07-18T07:36:23.689Z</published>
-    <updated>2023-07-18T10:46:34.579Z</updated>
+    <updated>2023-07-18T11:05:26.733Z</updated>
     
     
       
@@ -495,31 +522,6 @@
     
     
     <category term="ASM" scheme="http://lhsin.cn/tags/ASM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>about hexo</title>
-    <link href="http://lhsin.cn/2023/06/13/about%20hexo/"/>
-    <id>http://lhsin.cn/2023/06/13/about%20hexo/</id>
-    <published>2023-06-13T03:17:47.592Z</published>
-    <updated>2023-02-10T13:34:23.759Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="环境配置" scheme="http://lhsin.cn/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    
-    <category term="hexo" scheme="http://lhsin.cn/tags/hexo/"/>
     
   </entry>
   
