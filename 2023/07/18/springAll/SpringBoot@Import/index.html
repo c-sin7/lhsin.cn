@@ -558,7 +558,7 @@
 </code></pre>
 <p>方式一简单粗暴，直接解决问题，但是，这种解决方式，仅仅只适合知道该类的包名，在此基础之上，就延伸出了 @Import</p>
 <p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/image-20230718163855602.png" alt="image-20230718163855602"></p>
-<h2 id="一、-3个注解概述"><a href="#一、-3个注解概述" class="headerlink" title="一、 3个注解概述"></a>一、 3个注解概述</h2><p>概述：</p>
+<h2 id="一、3个注解概述"><a href="#一、3个注解概述" class="headerlink" title="一、3个注解概述"></a>一、3个注解概述</h2><p>概述：</p>
 <p>@Import注解是引入java类：</p>
 <ol>
 <li>导入@Configuration注解的配置类（4.2版本之前只可以导入配置类，4.2版本之后也可以导入普通类）</li>
@@ -567,7 +567,7 @@
 </ol>
 <p>@ImportResource是引入spring配置文件.xml</p>
 <p>@PropertySource是引入自定义配置文件(yml或properties)，用于spring boot 配置文件(yml或properties)与实体属性映射</p>
-<h2 id="二、-Import：获取某个类的bean对象"><a href="#二、-Import：获取某个类的bean对象" class="headerlink" title="二、 @Import：获取某个类的bean对象"></a>二、 @Import：获取某个类的bean对象</h2><p>@Import 注解出自spring-context包中，该注解主要是用作导入一个配置类（Configuration），正常我们创建一个配置文件，都是在 @SpringBootApplication 的可扫描范围内，然后业务在使用到这个配置的时候，直接 @Autowired 注入就可以正常使用</p>
+<h2 id="二、-Import：获取某个类的bean对象"><a href="#二、-Import：获取某个类的bean对象" class="headerlink" title="二、@Import：获取某个类的bean对象"></a>二、@Import：获取某个类的bean对象</h2><p>@Import 注解出自spring-context包中，该注解主要是用作导入一个配置类（Configuration），正常我们创建一个配置文件，都是在 @SpringBootApplication 的可扫描范围内，然后业务在使用到这个配置的时候，直接 @Autowired 注入就可以正常使用</p>
 <h3 id="使用详情"><a href="#使用详情" class="headerlink" title="使用详情"></a>使用详情</h3><p>Import注解源码的定义非常简单，就一个属性 value，而且是一个 Class 类型的数组。</p>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Target</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>ElementType<span class="token punctuation">.</span>TYPE<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
 <span class="token annotation punctuation">@Retention</span><span class="token punctuation">(</span>RetentionPolicy<span class="token punctuation">.</span>RUNTIME<span class="token punctuation">)</span>
@@ -1249,7 +1249,7 @@
 
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">165.4k</span>&nbsp;字
+                class="white-color">167.2k</span>&nbsp;字
             
             
             
