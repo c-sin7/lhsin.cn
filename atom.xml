@@ -6,7 +6,7 @@
   <link href="http://lhsin.cn/atom.xml" rel="self"/>
   
   <link href="http://lhsin.cn/"/>
-  <updated>2023-07-20T11:35:05.782Z</updated>
+  <updated>2023-07-20T12:52:30.613Z</updated>
   <id>http://lhsin.cn/</id>
   
   <author>
@@ -21,32 +21,29 @@
     <link href="http://lhsin.cn/2023/07/20/%E5%A4%A7%E5%8E%82%E7%A0%94%E5%8F%91%E6%B5%81%E7%A8%8B/"/>
     <id>http://lhsin.cn/2023/07/20/%E5%A4%A7%E5%8E%82%E7%A0%94%E5%8F%91%E6%B5%81%E7%A8%8B/</id>
     <published>2023-07-20T06:52:56.943Z</published>
-    <updated>2023-07-20T11:35:05.782Z</updated>
+    <updated>2023-07-20T12:52:30.613Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;一线大厂研发流程&quot;&gt;&lt;a href=&quot;#一线大厂研发流程&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;一线大厂研发流程&quot;&gt;&lt;a href=&quot;#一线大厂研发流程&quot; class=&quot;headerlink&quot; title=&quot;一线大厂研发流程&quot;&gt;&lt;/a&gt;一线大厂研发流程&lt;/h1&gt;&lt;p&gt;可以分为很多个阶段，用一张思维导图来概括: &lt;/p&gt;
+&lt;img</summary>
         
       
     
     
     
-    
-    <category term="环境配置" scheme="http://lhsin.cn/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    
-    <category term="hexo" scheme="http://lhsin.cn/tags/hexo/"/>
     
   </entry>
   
   <entry>
-    <title></title>
+    <title>前端学习路线</title>
     <link href="http://lhsin.cn/2023/07/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
     <id>http://lhsin.cn/2023/07/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</id>
     <published>2023-07-20T06:52:56.940Z</published>
-    <updated>2022-03-01T16:42:30.000Z</updated>
+    <updated>2023-07-20T12:52:49.129Z</updated>
     
     
       
@@ -63,11 +60,11 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>Python 学习路线</title>
     <link href="http://lhsin.cn/2023/07/20/Python%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
     <id>http://lhsin.cn/2023/07/20/Python%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</id>
     <published>2023-07-20T06:52:56.932Z</published>
-    <updated>2022-03-01T16:42:30.000Z</updated>
+    <updated>2023-07-20T12:54:08.477Z</updated>
     
     
       
@@ -85,11 +82,11 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>Linux学习路线</title>
     <link href="http://lhsin.cn/2023/07/20/Linux%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
     <id>http://lhsin.cn/2023/07/20/Linux%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</id>
     <published>2023-07-20T06:52:56.929Z</published>
-    <updated>2022-03-01T16:42:30.000Z</updated>
+    <updated>2023-07-20T12:53:47.056Z</updated>
     
     
       
@@ -107,11 +104,11 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>Java学习路线</title>
     <link href="http://lhsin.cn/2023/07/20/Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
     <id>http://lhsin.cn/2023/07/20/Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</id>
     <published>2023-07-20T06:52:56.925Z</published>
-    <updated>2022-03-01T16:42:30.000Z</updated>
+    <updated>2023-07-20T12:53:23.397Z</updated>
     
     
       
