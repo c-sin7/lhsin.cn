@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SpringBoot 自动装配（配置）, sin">
+    <meta name="keywords" content="sin">
     <meta name="description" content="呆头鹅的随手记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SpringBoot 自动装配（配置） | sin</title>
+    <title>sin</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -41,7 +41,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SpringBoot 自动装配（配置）, sin">
+    <meta name="keywords" content="sin">
     <meta name="description" content="呆头鹅的随手记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -53,7 +53,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SpringBoot 自动装配（配置） | sin</title>
+    <title>sin</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -348,12 +348,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SpringBoot 自动装配（配置）</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -467,29 +467,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/SpringBoot/">
-                                <span class="chip bg-color">SpringBoot</span>
-                            </a>
-                        
-                            <a href="/tags/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D/">
-                                <span class="chip bg-color">自动装配</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/SpringBoot/" class="post-category">
-                                SpringBoot
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -498,7 +481,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-07-19
+                    2023-07-20
                 </div>
                 
 
@@ -507,14 +490,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    794
+                    49
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -529,36 +512,16 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="SpringBoot-自动装配（配置）"><a href="#SpringBoot-自动装配（配置）" class="headerlink" title="SpringBoot 自动装配（配置）"></a>SpringBoot 自动装配（配置）</h1><h2 id="一、自动装配："><a href="#一、自动装配：" class="headerlink" title="一、自动装配："></a>一、自动装配：</h2><p>自动把第三方组件的Bean装载到IOC容器中，不需要开发人员再去写Bean相关配置。在SpringBoot应用中，只需要在启动类上加上SpringBootApplication注解就可以实现自动装配</p>
-<h2 id="二、实现原理："><a href="#二、实现原理：" class="headerlink" title="二、实现原理："></a>二、实现原理：</h2><p>自动装配的实现主要依靠三个核心技术：</p>
-<ol>
-<li>引入start，启动组件时组件内必须包含Configuration配置类，在配置类中通过Bean声明需要装配到IOC容器中的Bean对象</li>
-<li>配置类放第三方jar包中，通过SpringBoot中约定优于配置的理念去配配置类的路径，这一步主要使用SpringFactoriesLoader类完成</li>
-<li>SpringBoot拿到第三方所有jar包声明的配置类后，通过Spring提供的ImportSelector接口实现对这些类的动态加载从而完成自动装配</li>
-</ol>
-<p><strong>好处：SpringBoot的自动装配简化了Spring应用程序的开发和部署过程，可以省去很多繁琐的配置和依赖管理工作，提高开发效率和代码质量。</strong></p>
-<h2 id="三、开启自动部署："><a href="#三、开启自动部署：" class="headerlink" title="三、开启自动部署："></a>三、开启自动部署：</h2><p>将 <code>@EnableAutoConfiguration</code> 或 <code>@SpringBootApplication</code> 注解添加到你的 <code>@Configuration</code> 类中，从而开启自动配置功能。这两个注解你应该只添加一个，建议添加到主要的 <code>@Configuration</code> 类上。</p>
-<blockquote>
-<p>注：Spring Boot的自动装配机制会试图根据你所添加的依赖来自动配置你的Spring应用程序。 </p>
+                <h1 id="鱼皮编程学习路线"><a href="#鱼皮编程学习路线" class="headerlink" title="鱼皮编程学习路线"></a>鱼皮编程学习路线</h1><blockquote>
+<p>励志打造最贴心的编程学习路线</p>
 </blockquote>
-<p>例如，如果你添加了 <code>HSQLDB</code> 依赖，而且你没有手动配置任何DataSource Bean，那么Spring Boot就会自动配置内存数据库。</p>
-<h2 id="四、逐步取代自动配置"><a href="#四、逐步取代自动配置" class="headerlink" title="四、逐步取代自动配置"></a>四、逐步取代自动配置</h2><p>自动配置是非侵入性的。 在任何时候，你都可以开始定义你自己的配置来取代自动配置的特定部分。 </p>
-<p>例如，如果你添加了你自己的 <code>DataSource bean</code>，默认的嵌入式数据库支持就会“退步”从而让你的自定义配置生效。</p>
-<p>如果你想知道在应用中使用了哪些自动配置，你可以在启动命令后添加 <code>--debug</code> 参数。 这个参数会为核心的logger开启debug级别的日志，会在控制台输出自动装配项目以及触发自动装配的条件。</p>
-<h2 id="五、禁用指定的自动装配类"><a href="#五、禁用指定的自动装配类" class="headerlink" title="五、禁用指定的自动装配类"></a>五、禁用指定的自动装配类</h2><p>想禁用掉项目中某些自动装配类，你可以在 <code>@SpringBootApplication</code> 注解的 <code>exclude</code> 属性中指定，如下例所示。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token punctuation">.</span>autoconfigure<span class="token punctuation">.</span>SpringBootApplication<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token punctuation">.</span>autoconfigure<span class="token punctuation">.</span>jdbc<span class="token punctuation">.</span>DataSourceAutoConfiguration<span class="token punctuation">;</span>
-
-<span class="token annotation punctuation">@SpringBootApplication</span><span class="token punctuation">(</span>exclude <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> DataSourceAutoConfiguration<span class="token punctuation">.</span><span class="token keyword">class</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyApplication</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-</code></pre>
-<p>如果要禁用的自动装配类不在classpath上（没有导入），那么你可以在注解的 <code>excludeName</code> 属性中指定类的全路径名称。</p>
-<p> <code>exclude</code> 和 <code>excludeName</code> 属性在 <code>@EnableAutoConfiguration</code> 中也可以使用。</p>
-<p>也可以在配置文件中通过 <code>spring.autoconfigure.exclude[]</code> 配置来定义要禁用的自动配置类列表。</p>
-<p>可以同时使用<strong>注解 + 配置</strong>的方式来禁用自动装配类。</p>
-<p>自动配置类一般都是 <code>public</code> 的，除了这个类的名称以外（用来禁用它）的任何东西，例如它的方法和属性，包括嵌套的配置类。都不建议你去使用。</p>
+<ul>
+<li><a href="roadmap/Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.md">Java 学习路线</a></li>
+<li><a href="roadmap/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.md">前端学习路线</a></li>
+<li><a href="roadmap/Linux%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.md">Linux 学习路线</a></li>
+<li><a href="roadmap/Python%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.md">Python 学习路线</a></li>
+<li><a href="roadmap/%E5%A4%A7%E5%8E%82%E7%A0%94%E5%8F%91%E6%B5%81%E7%A8%8B.md">大厂研发流程</a></li>
+</ul>
 
                 
             </div>
@@ -585,7 +548,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://lhsin.cn/2023/07/19/springAll/SpringBoot%20%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%EF%BC%88%E9%85%8D%E7%BD%AE%EF%BC%89/">http://lhsin.cn/2023/07/19/springAll/SpringBoot%20%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%EF%BC%88%E9%85%8D%E7%BD%AE%EF%BC%89/</a>
+                    <a href="http://lhsin.cn/2023/07/20/code-roadmap-main/docs/README/">http://lhsin.cn/2023/07/20/code-roadmap-main/docs/README/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -622,15 +585,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/SpringBoot/">
-                                    <span class="chip bg-color">SpringBoot</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D/">
-                                    <span class="chip bg-color">自动装配</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -802,13 +757,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/07/19/springAll/yaml/">
+                <a href="/2023/07/20/code-roadmap-main/docs/roadmap/Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="yaml文件">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">yaml文件</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -819,31 +774,15 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-19
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-20
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/SpringBoot/" class="post-category">
-                                    SpringBoot
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            sin
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/SpringBoot/">
-                        <span class="chip bg-color">SpringBoot</span>
-                    </a>
-                    
-                    <a href="/tags/yaml/">
-                        <span class="chip bg-color">yaml</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -855,13 +794,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/07/18/springAll/SpringBoot@Import/">
+                <a href="/2023/07/20/code-roadmap-main/docs/index/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="SpringBoot@Import和@ImportResource和@PropertySource">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">SpringBoot@Import和@ImportResource和@PropertySource</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -872,31 +811,15 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-20
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/SpringBoot/" class="post-category">
-                                    SpringBoot
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            sin
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/SpringBoot/">
-                        <span class="chip bg-color">SpringBoot</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%B3%A8%E8%A7%A3/">
-                        <span class="chip bg-color">注解</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1047,7 +970,7 @@
 
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">167.2k</span>&nbsp;字
+                class="white-color">289.2k</span>&nbsp;字
             
             
             
