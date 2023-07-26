@@ -6,7 +6,7 @@
   <link href="http://lhsin.cn/atom.xml" rel="self"/>
   
   <link href="http://lhsin.cn/"/>
-  <updated>2023-07-20T12:52:30.613Z</updated>
+  <updated>2023-07-26T02:24:11.524Z</updated>
   <id>http://lhsin.cn/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>白盒测试</title>
+    <link href="http://lhsin.cn/2023/07/26/%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95/"/>
+    <id>http://lhsin.cn/2023/07/26/%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95/</id>
+    <published>2023-07-26T02:10:23.506Z</published>
+    <updated>2023-07-26T02:24:11.524Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;白盒测试&quot;&gt;&lt;a href=&quot;#白盒测试&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="测试" scheme="http://lhsin.cn/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="测试" scheme="http://lhsin.cn/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://lhsin.cn/2023/07/20/%E8%8B%B1%E8%AF%AD%E9%97%AE%E7%AD%94/"/>
+    <id>http://lhsin.cn/2023/07/20/%E8%8B%B1%E8%AF%AD%E9%97%AE%E7%AD%94/</id>
+    <published>2023-07-20T13:39:13.242Z</published>
+    <updated>2023-07-20T13:41:04.465Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;常见情况处理&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;若考官问其他的，没有听明白，可以说(记住，一定要微笑)：&lt;/p&gt;
+&lt;p&gt;Could you please make the question simpler?</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>一线大厂研发流程</title>
@@ -466,58 +514,6 @@
     
     
     <category term="线程" scheme="http://lhsin.cn/tags/%E7%BA%BF%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>正则表达式</title>
-    <link href="http://lhsin.cn/2023/06/13/%E6%AF%8F%E5%A4%A9%E5%B0%8F%E7%9F%A5%E8%AF%86/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    <id>http://lhsin.cn/2023/06/13/%E6%AF%8F%E5%A4%A9%E5%B0%8F%E7%9F%A5%E8%AF%86/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
-    <published>2023-06-13T03:17:48.255Z</published>
-    <updated>2023-02-10T13:46:30.360Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;正则表达式&quot;&gt;&lt;a href=&quot;#正则表达式&quot; class=&quot;headerlink&quot; title=&quot;正则表达式&quot;&gt;&lt;/a&gt;正则表达式&lt;/h1&gt;&lt;h2 id=&quot;普通字符&quot;&gt;&lt;a href=&quot;#普通字符&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="小知识" scheme="http://lhsin.cn/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
-    
-    
-    <category term="正则表达式" scheme="http://lhsin.cn/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>多线程</title>
-    <link href="http://lhsin.cn/2023/06/13/%E6%AF%8F%E5%A4%A9%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    <id>http://lhsin.cn/2023/06/13/%E6%AF%8F%E5%A4%A9%E5%B0%8F%E7%9F%A5%E8%AF%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</id>
-    <published>2023-06-13T03:17:48.252Z</published>
-    <updated>2023-02-12T17:48:40.700Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;多线程&quot;&gt;&lt;a href=&quot;#多线程&quot; class=&quot;headerlink&quot; title=&quot;多线程&quot;&gt;&lt;/a&gt;&lt;strong&gt;多线程&lt;/strong&gt;&lt;/h1&gt;&lt;h3 id=&quot;1-synchronized的实现原理&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="小知识" scheme="http://lhsin.cn/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
-    
-    
-    <category term="小知识" scheme="http://lhsin.cn/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
-    
-    <category term="多线程" scheme="http://lhsin.cn/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
