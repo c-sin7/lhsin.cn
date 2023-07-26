@@ -6,7 +6,7 @@
   <link href="http://lhsin.cn/atom.xml" rel="self"/>
   
   <link href="http://lhsin.cn/"/>
-  <updated>2023-07-26T02:24:11.524Z</updated>
+  <updated>2023-07-26T08:28:30.929Z</updated>
   <id>http://lhsin.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>黑盒测试</title>
+    <link href="http://lhsin.cn/2023/07/26/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95/"/>
+    <id>http://lhsin.cn/2023/07/26/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95/</id>
+    <published>2023-07-26T08:14:07.784Z</published>
+    <updated>2023-07-26T08:28:30.929Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;黑盒测试&quot;&gt;&lt;a href=&quot;#黑盒测试&quot; class=&quot;headerlink&quot; title=&quot;黑盒测试&quot;&gt;&lt;/a&gt;黑盒测试&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="测试" scheme="http://lhsin.cn/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="测试" scheme="http://lhsin.cn/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>白盒测试</title>
@@ -488,32 +513,6 @@
     
     
     <category term="缓存" scheme="http://lhsin.cn/tags/%E7%BC%93%E5%AD%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>线程</title>
-    <link href="http://lhsin.cn/2023/06/13/%E6%AF%8F%E5%A4%A9%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%BA%BF%E7%A8%8B/"/>
-    <id>http://lhsin.cn/2023/06/13/%E6%AF%8F%E5%A4%A9%E5%B0%8F%E7%9F%A5%E8%AF%86/%E7%BA%BF%E7%A8%8B/</id>
-    <published>2023-06-13T03:17:48.257Z</published>
-    <updated>2023-02-10T13:49:18.676Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;线程&quot;&gt;&lt;a href=&quot;#线程&quot; class=&quot;headerlink&quot; title=&quot;线程&quot;&gt;&lt;/a&gt;线程&lt;/h3&gt;&lt;p&gt;线程包括以下这几个状态：&lt;/p&gt;
-&lt;p&gt;创建(new)、就绪(runnable)、运行(running)、阻塞(blocked)、time</summary>
-        
-      
-    
-    
-    
-    <category term="小知识" scheme="http://lhsin.cn/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
-    
-    
-    <category term="线程" scheme="http://lhsin.cn/tags/%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   

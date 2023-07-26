@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>黑盒测试</title>
+      <link href="/2023/07/26/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95/"/>
+      <url>/2023/07/26/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="黑盒测试"><a href="#黑盒测试" class="headerlink" title="黑盒测试"></a>黑盒测试</h1><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_04.jpg" alt="黑盒测试设计方法_04"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_05.jpg" alt="黑盒测试设计方法_05"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_06.jpg" alt="黑盒测试设计方法_06"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_07.jpg" alt="黑盒测试设计方法_07"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_08.jpg" alt="黑盒测试设计方法_08"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_09.jpg" alt="黑盒测试设计方法_09"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_10.jpg" alt="黑盒测试设计方法_10"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_11.jpg" alt="黑盒测试设计方法_11"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_12.jpg" alt="黑盒测试设计方法_12"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_13.jpg" alt="黑盒测试设计方法_13"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_14.jpg" alt="黑盒测试设计方法_14"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_15.jpg" alt="黑盒测试设计方法_15"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_16.jpg" alt="黑盒测试设计方法_16"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_017.jpg" alt="黑盒测试设计方法_17"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_18.jpg" alt="黑盒测试设计方法_18"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_019.jpg" alt="黑盒测试设计方法_19"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_20.jpg" alt="黑盒测试设计方法_20"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_21.jpg" alt="黑盒测试设计方法_21"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_22.jpg" alt="黑盒测试设计方法_22"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_23.jpg" alt="黑盒测试设计方法_23"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_24.jpg" alt="黑盒测试设计方法_24"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_025.jpg" alt="黑盒测试设计方法_25"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_026.jpg" alt="黑盒测试设计方法_26"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_27.jpg" alt="黑盒测试设计方法_27"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_28.jpg" alt="黑盒测试设计方法_28"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_29.jpg" alt="黑盒测试设计方法_29"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_30.jpg" alt="黑盒测试设计方法_30"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_31.jpg" alt="黑盒测试设计方法_31"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_32.jpg" alt="黑盒测试设计方法_32"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_33.jpg" alt="黑盒测试设计方法_33"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_034.jpg" alt="黑盒测试设计方法_34"></p><p><img src="https://raw.githubusercontent.com/c-sin7/picgoIMG/main/%E9%BB%91%E7%9B%92%E6%B5%8B%E8%AF%95%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95_035.jpg" alt="黑盒测试设计方法_35"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>白盒测试</title>
       <link href="/2023/07/26/%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95/"/>
       <url>/2023/07/26/%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95/</url>
